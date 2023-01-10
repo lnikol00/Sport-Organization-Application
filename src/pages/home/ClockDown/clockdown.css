@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.title h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+}
+
+.title p {
+    font-size: 34px;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+}
+
+.title p::after {
+    content: "";
+    border-bottom: 4px solid black;
+    /* border-radius: 4px; */
+    border-radius: 0 0 85% 85% / 50%;
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+    padding-top: 6px;
+}
+
+
+.clock {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.clock div {
+    display: flex;
+}
+
+.clock p {
+    display: flex;
+    background: yellow;
+    margin: 30px 1rem 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 25px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.clock small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 920px) {
+    .clock div {
+        display: flex;
+        margin: 0;
+    }
+
+    .middle {
+        flex-direction: column;
+    }
+
+    .title {
+        display: flex;
+        margin: 0 30px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .clock div {
+        display: flex;
+    }
+
+    .title {
+        display: block;
+        margin: 0 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .middle {
+        flex-direction: column;
+    }
+
+    .title {
+        margin: 0 30px;
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .title p {
+        font-size: 20px;
+    }
+
+    .clock p {
+        margin: 0 15px;
+    }
+
+    .clock div {
+        display: block;
+    }
+}

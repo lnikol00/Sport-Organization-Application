@@ -1,0 +1,438 @@
+#info {
+    margin: 10px 20px 50px;
+}
+
+#info h2 {
+    margin: 0px 20px;
+    padding: 10px 0px;
+    font-size: 22px;
+}
+
+
+#info h2::after {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 930px;
+    display: block;
+    padding-top: 8px;
+    margin: 0px auto;
+}
+
+.text {
+    font-size: 12px;
+}
+
+
+.text p {
+    padding-top: 10px;
+    padding-left: 20px;
+    line-height: 20px;
+}
+
+.populacija h3 {
+    margin: 0px 20px;
+    padding: 20px 0px 10px;
+    font-size: 20px;
+}
+
+.populacija h3::after {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 600px;
+    display: block;
+    padding-top: 8px;
+}
+
+.populacija p {
+    padding-top: 10px;
+    margin: 0px 20px;
+    font-size: 12px;
+}
+
+.populacija img {
+    padding: 14px 20px;
+    width: 600px;
+}
+
+.object h3 {
+    margin: 0px 20px;
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+.object h3::after {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 600px;
+    display: block;
+    padding-top: 8px;
+}
+
+.slike {
+    display: flex;
+    margin: 5px 20px 5px;
+    padding: 5px;
+    border: 1px solid black;
+    float: left;
+}
+
+.slika1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.slika1 span {
+    padding: 5px 0px 0px;
+    font-size: 12px;
+}
+
+.slika1 img {
+    width: 110px;
+    height: 100px;
+}
+
+.slika2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.slika2 span {
+    padding: 5px 0px 0px;
+    font-size: 12px;
+}
+
+.slika2 img {
+    width: 110px;
+    height: 100px;
+}
+
+.church {
+    padding: 10px 0px;
+}
+
+.church h4 {
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.church p {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px;
+}
+
+.groblje {
+    padding: 10px 0px;
+}
+
+.groblje h4 {
+    font-size: 14px;
+    padding: 5px 0px 5px 20px;
+}
+
+.groblje p {
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 20px;
+}
+
+.udruga h3 {
+    margin: 0px 20px;
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+.udruga h3::after {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 600px;
+    display: block;
+    padding-top: 8px;
+}
+
+.grb {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px 5px;
+    padding: 5px;
+    width: 250px;
+    border: 1px solid black;
+    float: left;
+}
+
+.grb span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px 0px;
+    font-size: 12px;
+}
+
+.podatci p {
+    padding: 5px 0px 0px 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.himna {
+    display: flex;
+    flex-direction: column;
+
+    margin: 10px 20px;
+}
+
+.himna iframe {
+    height: 250px;
+    width: 350px;
+}
+
+.himna span {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+/* ASSIDE */
+.asside {
+    float: right;
+    margin: 10px 20px 0px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.heading h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    margin: 5px 5px 8px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.heading .image {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 3px 5px;
+    border: 1px solid black;
+}
+
+.image img {
+    margin: 5px 5px 8px;
+    padding: 5px;
+    border: 1px solid black;
+    width: 280px;
+}
+
+.image span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 5px;
+    font-size: 10px;
+}
+
+.data {
+    margin: 5px 5px 8px;
+}
+
+.data table {
+    font-size: 10px;
+}
+
+.data th {
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+.data td {
+    padding-left: 100px;
+}
+
+.data img {
+    max-width: 25px;
+    min-width: 10px;
+    margin-right: 10px;
+}
+
+.population {
+    margin: 5px 5px 8px;
+}
+
+.population h4 {
+    font-size: 14px;
+}
+
+.population table {
+    font-size: 10px;
+}
+
+.population .year {
+    display: flex;
+    gap: 50px;
+}
+
+.population h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 0px 0px 5px;
+}
+
+.population th {
+    display: inline-flex;
+    justify-content: flex-start;
+    padding-left: 80px;
+}
+
+.population td {
+    padding-left: 70px;
+}
+
+.year {
+    padding: 10px 0px;
+}
+
+.year h5 {
+    font-size: 12px;
+}
+
+.year span {
+    font-size: 12px;
+}
+
+.image2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 3px 5px;
+    border: 1px solid black;
+}
+
+.image2 img {
+    margin: 5px 5px 8px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.image2 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 5px;
+    font-size: 10px;
+}
+
+.image3 {
+    margin: 0px 3px 5px;
+}
+
+.image3 img {
+    margin: 5px 5px 8px;
+    padding: 5px;
+    width: 280px;
+}
+
+@media screen and (max-width: 800px) {
+    #info h2::after {
+        width: 92vw;
+    }
+
+    .populacija h3::after {
+        width: 32vw;
+    }
+
+    .object h3::after {
+        width: 92vw;
+    }
+
+    .udruga h3::after {
+        width: 92vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #info {
+        margin: 0px auto;
+    }
+
+    #info h2::after {
+        width: 85vw;
+    }
+
+    .populacija h3::after {
+        width: 85vw;
+    }
+
+    .object h3::after {
+        width: 85vw;
+    }
+
+    .udruga h3::after {
+        width: 85vw;
+    }
+
+    .populacija img {
+        width: 85vw;
+    }
+
+    .text {
+        padding-right: 14px;
+    }
+
+    .podatci {
+        padding-right: 14px;
+    }
+
+    .church h4 {
+        padding-top: 140px;
+    }
+
+    .church p {
+        padding: 5px 8px 0px 14px;
+    }
+
+    .slike {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .groblje p {
+        padding-right: 14px;
+    }
+
+    .groblje h4 {
+        padding-left: 14px;
+    }
+
+    .church h4 {
+        padding-left: 14px;
+    }
+
+
+    .image2 span {
+        padding: 0px 8px 5px;
+    }
+
+    .asside {
+        margin: 10px 20px 10px;
+    }
+
+    .himna iframe {
+        width: 85vw;
+    }
+
+    .asside {
+        float: none;
+        margin: 0px auto;
+        width: 90vw;
+    }
+
+    .image3 {
+        margin: 0px auto;
+    }
+
+    .image3 img {
+        width: 87vw;
+    }
+}

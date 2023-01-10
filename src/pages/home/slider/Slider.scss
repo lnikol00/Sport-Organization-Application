@@ -1,0 +1,163 @@
+.slider {
+    width: 100%;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+
+.slide img {
+    height: 720px;
+}
+
+.content {
+    position: absolute;
+    top: 6rem;
+    left: 5rem;
+    opacity: 0;
+    width: 50%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    animation: slide-up 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    // visibility: hidden;
+}
+
+@keyframes slide-up {
+    0% {
+        visibility: visible;
+        top: 6rem;
+
+    }
+
+    100% {
+        visibility: visible;
+        top: 3rem;
+    }
+
+}
+
+.content>* {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.current {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.current .content {
+    opacity: 1;
+}
+
+.arrow {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 90%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.arrow:hover {
+    background: #fff;
+    color: #777;
+}
+
+.next {
+    right: 1.5rem;
+}
+
+.prev {
+    left: 1.5rem;
+}
+
+.primary {
+    background-color: blue;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+hr {
+    height: 2px;
+    background: white;
+    // width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+    .slide img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .slider {
+        height: 360px;
+    }
+
+    .arrow {
+        top: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        width: 50%;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem;
+        animation: none;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .slider {
+        height: 260px;
+    }
+
+    .arrow {
+        top: 87%;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .content {
+        display: none;
+    }
+
+    .slider {
+        height: 260px;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .slide img {
+        width: 100%;
+        height: 100%;
+    }
+}

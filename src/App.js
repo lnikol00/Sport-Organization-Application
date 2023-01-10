@@ -1,24 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Header from './components/header/Header';
+import Home from './pages/home/Home';
+import FanShop from './pages/FanShop/FanShop';
+import Info from './pages/info/Info';
+import Gallery from './pages/Galery/Gallery';
+import Speeds from './pages/Speeds/Speeds';
+import News from './pages/home/News/News';
+import Footer from './components/footer/Footer';
+import Cart from './pages/FanShop/Cart';
+import Product from './pages/FanShop/Product';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <div className='main-container'>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route exact path='fan-shop' element={<FanShop />} />
+            <Route exact path='info' element={<Info />} />
+            <Route exact path='gallery' element={<Gallery />} />
+            <Route exact path='speeds' element={<Speeds />} />
+            <Route exact path="/news/:id" element={<News />} />
+            <Route exact path="fan-shop/cart" element={<Cart />} />
+            <Route exact path="fan-shop/product" element={<Product />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
     </div>
+
   );
 }
 
