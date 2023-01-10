@@ -10,7 +10,7 @@ import slika1 from "./img/slikaa1.png"
 
 
 
-function Product() {
+function Product(addItem) {
 
     const [counter, setCounter] = useState(0)
     const [number, setNumber] = useState(1)

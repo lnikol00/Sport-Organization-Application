@@ -286,3 +286,94 @@ select {
     background-color: black;
     color: white;
 }
+
+.items {
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.items p {
+    text-align: center;
+}
+
+.in {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.product {
+    display: flex;
+}
+
+.product img {
+    height: 150px;
+    width: 150px;
+}
+
+.details {
+    display: flex;
+    padding: 20px;
+    font-size: 16px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.details h5 {
+    font-weight: 100;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.details b {
+    text-transform: none;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.iznos {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.iznos span {
+    padding: 0px 10px;
+    font-size: 16px;
+}
+
+.minus {
+    border-radius: 50%;
+    padding: 5px 6px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #A8A8A8;
+}
+
+.plus {
+    border-radius: 50%;
+    padding: 5px 6px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #A8A8A8;
+}
+
+.desc {
+    width: 300px;
+}
+
+.desc h5 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.iks {
+    cursor: pointer;
+}

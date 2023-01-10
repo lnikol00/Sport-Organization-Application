@@ -6,14 +6,15 @@ import * as AiIcons from "react-icons/ai"
 
 import "./fanshop.css"
 import { productsData } from './ProductsData'
-import Products from './Products'
-import Cart from './Cart'
+import { useCart } from 'react-use-cart'
+
 
 
 
 function FanShop() {
+
+    const { addItem, totalUniqueItems } = useCart()
     const { products } = productsData
-    const [counter, setCounter] = useState(0)
 
     return (
         <section id='shop'>
@@ -34,11 +35,29 @@ function FanShop() {
                         <AiIcons.AiOutlineShoppingCart className='cartt' />
                     </Link>
 
-                    <span>{counter}</span>
+                    <span>{totalUniqueItems}</span>
                 </div>
             </div>
             <hr />
-            <Products products={products} />
+            <div className='container'>
+                {products.map((item) => {
+                    return (
+                        <div className='main' key={item.id}>
+                            <img src={item.img} />
+                            <div className='info2'>
+                                <div className='icon' onClick={() => addItem(item)}>
+                                    <AiIcons.AiOutlineShoppingCart />
+                                </div>
+                                <Link to={"product"}>
+                                    <div className='icon'>
+                                        <AiIcons.AiOutlineSearch />
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </section>
     )
 }

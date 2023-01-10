@@ -15,6 +15,7 @@ import Product from './pages/FanShop/Product';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
+
 function App() {
 
 
@@ -25,12 +26,12 @@ function App() {
         <div className='main-container'>
           <Routes>
             <Route index element={<Home />} />
-            <Route exact path='fan-shop' element={<FanShop />} />
             <Route exact path='info' element={<Info />} />
+            <Route exact path="fan-shop/cart" element={<Cart />} />
+            <Route exact path='fan-shop' element={<FanShop />} />
             <Route exact path='gallery' element={<Gallery />} />
             <Route exact path='speeds' element={<Speeds />} />
             <Route exact path="/news/:id" element={<News />} />
-            <Route exact path="fan-shop/cart" element={<Cart />} />
             <Route exact path="fan-shop/product" element={<Product />} />
           </Routes>
         </div>
