@@ -13,7 +13,7 @@ import { useCart } from 'react-use-cart'
 
 function FanShop() {
 
-    const { addItem, totalUniqueItems } = useCart()
+    const { addItem, totalItems } = useCart()
     const { products } = productsData
 
     return (
@@ -35,7 +35,7 @@ function FanShop() {
                         <AiIcons.AiOutlineShoppingCart className='cartt' />
                     </Link>
 
-                    <span>{totalUniqueItems}</span>
+                    <span>{totalItems}</span>
                 </div>
             </div>
             <hr />
@@ -48,7 +48,7 @@ function FanShop() {
                                 <div className='icon' onClick={() => addItem(item)}>
                                     <AiIcons.AiOutlineShoppingCart />
                                 </div>
-                                <Link to={"product"}>
+                                <Link to={`product/${item.id}`}>
                                     <div className='icon'>
                                         <AiIcons.AiOutlineSearch />
                                     </div>

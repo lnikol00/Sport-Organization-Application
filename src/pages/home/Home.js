@@ -10,6 +10,8 @@ import "./News/news.css"
 
 function Home() {
 
+    const { news } = NewsData
+
     const [timerDays, setTimerDays] = useState()
     const [timerHours, setTimerHours] = useState()
     const [timerMinutes, setTimerMinutes] = useState()
@@ -57,14 +59,13 @@ function Home() {
             <section className='news'>
                 <h2>Novosti</h2>
                 <div className='articles'>
-                    {NewsData.map((item) => {
+                    {news.map((item) => {
                         return (
-                            <Link to={'/news/${item.id}'} className="links">
-                                <article key={item.id}>
-
+                            <article key={item.id}>
+                                <Link to={`news/${item.id}`} className="links">
                                     <img src={item.image} />
                                     <h5>
-                                        {item.title}
+                                        {item.name}
                                     </h5>
                                     <span>
                                         {item.date}
@@ -72,9 +73,8 @@ function Home() {
                                     <p>
                                         {item.desc}
                                     </p>
-
-                                </article>
-                            </Link>
+                                </Link>
+                            </article>
                         )
                     })}
                 </div>

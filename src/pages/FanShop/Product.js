@@ -1,64 +1,56 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
-import * as AiIcons from "react-icons/ai"
-import * as BsIcons from "react-icons/bs"
+import { productsData } from './ProductsData'
 
 import "./fanshop.css"
 
-import slika1 from "./img/slikaa1.png"
+import { useCart } from 'react-use-cart'
 
 
 
-function Product(addItem) {
+function Product() {
 
-    const [counter, setCounter] = useState(0)
-    const [number, setNumber] = useState(1)
+    const navigate = useNavigate()
 
-    const divide = () => {
-        setNumber(number === 1 ? number : number - 1)
+    const handleClick = () => {
+        addItem(item);
+        navigate(-1)
     }
 
-    const add = () => {
-        setNumber(number + 1)
-    }
+    const { id } = useParams()
+
+    const { products } = productsData
+
+    const item = products.find((item) => item.id === id)
+
+    const { img, title, price, desc } = item
+
+    const { addItem } = useCart()
 
     return (
         <div id='item'>
             <div className='wraper'>
-                <div className='left'>
-                    <span>HR</span>
-                    <label>
-                        <input></input>
-                        <BsIcons.BsSearch />
-
-                    </label>
-                </div>
                 <div className='center'>
                     <h2>Službeni Web Shop</h2>
-                </div>
-                <div className='right'>
-                    <Link to="cart">
-                        <AiIcons.AiOutlineShoppingCart className='cartt' />
-                    </Link>
-                    <span>{counter}</span>
                 </div>
             </div>
             <hr />
 
             <div className='wrapper'>
                 <div className='imagee'>
-                    <img src={slika1} alt='slika' />
+                    <img src={img} alt='slika' />
                 </div>
 
                 <div className='information'>
                     <h1>
-                        Veslačka majica 2022.
+                        {title}
                     </h1>
                     <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                        {desc}
                     </p>
-                    <span>€ 5.50</span>
+                    <span>{price}
+                    </span>
                     <form>
                         <label>
                             Veličina:
@@ -74,12 +66,9 @@ function Product(addItem) {
                         </label>
                     </form>
                     <div className='add'>
-                        <div className='amount'>
-                            <button onClick={divide} className='minus'>-</button>
-                            <span>{number}</span>
-                            <button onClick={add} className='plus'>+</button>
-                        </div>
-                        <button className='basket'>Dodaj u košaricu</button>
+                        <Link to>
+                            <button onClick={handleClick} className='basket'>Dodaj u košaricu</button>
+                        </Link>
                     </div>
                 </div>
             </div>

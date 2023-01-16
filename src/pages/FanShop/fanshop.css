@@ -366,6 +366,10 @@ select {
 }
 
 .desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 300px;
 }
 
@@ -376,4 +380,193 @@ select {
 
 .iks {
     cursor: pointer;
+}
+
+.total-price {
+    padding: 10px 0px;
+}
+
+@media screen and (max-width: 980px) {
+    .left input {
+        width: 100px;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+
+    .main {
+        margin: 0px auto;
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left span {
+        display: none;
+    }
+
+    .left input {
+        width: 50px;
+    }
+
+    .center h1 {
+        font-size: 20px;
+    }
+
+    .center h2 {
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .main {
+        margin: 0px auto;
+        width: 260px;
+    }
+
+    .desc {
+        display: none;
+    }
+
+    .details h5 {
+        font-size: 16px;
+    }
+
+    .details {
+        font-size: 16px;
+    }
+
+    .product img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .iks {
+        font-size: 16px;
+        top: 50px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .imagee img {
+        width: 50vh;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .left label {
+        margin-left: 0;
+    }
+
+    .center h1 {
+        font-size: 18px;
+    }
+
+    .center h2 {
+        font-size: 18px;
+    }
+
+    .right .cartt {
+        margin-right: 30px;
+    }
+
+    .right span {
+        right: 45px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .main {
+        margin: 0px auto;
+        width: 280px;
+    }
+
+    .top button {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .desc {
+        display: none;
+    }
+
+    .product {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .details h5 {
+        font-size: 12px;
+    }
+
+    .details {
+        font-size: 12px;
+    }
+
+    .product img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .iks {
+        font-size: 10px;
+        top: 50px;
+    }
+
+    .price {
+        font-size: 10px;
+    }
+
+    .wrapper {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .imagee {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .imagee img {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    .information h1 {
+
+        font-size: 22px;
+    }
+
+    .information p {
+        font-size: 12px;
+    }
+
+    .information span {
+        font-size: 22px;
+    }
+
+    form {
+        margin: 10px 0px;
+    }
+
+    select {
+        margin-left: 10px;
+        padding: 2px;
+    }
+
+    .basket {
+        font-size: 12px;
+    }
 }

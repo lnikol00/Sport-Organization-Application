@@ -20,7 +20,7 @@ export const productsData = {
             img: slika1,
             title: "Žuti veslački šorc",
             price: "13.28€",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Markonov šorc u žutoj boji ukrašen grbom Šarić Struge. Ovakvi šorcevi korišteni su za veslanje posljednja dva maratona. Iznimno kvalitetni i udboni.",
             nmb: "91573167",
         },
         {
@@ -28,7 +28,7 @@ export const productsData = {
             img: slika2,
             title: "Bijeli veslački šorc",
             price: "13.28€",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Markonov šorc u bijeloj boji ukrašen grbom Šarić Struge. Ovakvi šorcevi korišteni su uglavnom od strane naših veslača na treninzima. Iznimno kvalitetni i udboni.",
             nmb: "15461924",
         },
         {
@@ -37,7 +37,7 @@ export const productsData = {
             title: "Navijački dres 2022",
             price: "6.64€",
             nmb: "47978706",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Navijačke majice napravljene za 25. maraton lađa. Majice su se u početku radile isključivo za veslače, a sada su dostupne i za vas putem našeg Web Shopa. Najveći sponzor je Vinarija Vučica",
         },
         {
             id: "4",
@@ -45,7 +45,7 @@ export const productsData = {
             title: "Navijački dres 2021",
             price: "6.64€",
             nmb: "49034563",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Majice napravljene za 24. maraton lađa. Jedan od najvećih sponzora ove godine su bile Hrvatske Šume. Iz tog razloga tiskano i prodano puno ovakvih majica, još uvijek su dostupne u našem Web Shopu, ali u manjem broju.",
         },
         {
             id: "5",
@@ -53,7 +53,7 @@ export const productsData = {
             title: "Navijački dres 2020",
             price: "6.64€",
             nmb: "12165079",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Majice tiskane u godini povratka ekipe, za 23. maraton lađa. Tiskane su manjem broju jer su sponzori bili ograničeni. Dostupno u velikim količina putem našeg Web Shopa.",
         },
         {
             id: "6",
@@ -61,7 +61,7 @@ export const productsData = {
             title: "Navijački dres 2017",
             price: "4.64€",
             nmb: "58283964",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Stari dres iz 2017. godine. Ostao je mali broj majica. S obzirom da se radi o starijem kroju i dizajnu snižene su cijene.",
         },
         {
             id: "7",
@@ -69,7 +69,7 @@ export const productsData = {
             title: "Slim Fit Veslački Dres 2022",
             price: "40€",
             nmb: "85847389",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Slim fit majica s kojom su naši lađari izveslali 25. maraton. U početku tiskan je točan broj majica za lađare. Ukoliko naručite putem Web Shopa majica se posebno tiska pa je cijena veća.",
         },
         {
             id: "8",
@@ -77,15 +77,15 @@ export const productsData = {
             title: "Slim Fit Veslački Dres 2021",
             price: "40€",
             nmb: "99355579",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Slim fit majica s kojom su naši lađari izveslali 24. maraton. U početku tiskan je točan broj majica za lađare. Ukoliko naručite putem Web Shopa majica se posebno tiska pa je cijena veća.",
         },
         {
             id: "9",
             img: slika9,
             title: "Slim Fit Veslački Dres 2020",
-            price: "40€",
+            price: "30€",
             nmb: "36820528",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Slim fit majica s kojom su naši lađari izveslali 23. maraton. U početku tiskan je točan broj majica za lađare. Cijena snižena",
         },
         {
             id: "10",
@@ -93,7 +93,7 @@ export const productsData = {
             title: "Bijele čarape",
             price: "4€",
             nmb: "19712918",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Paket od tri para bijelih čarapa sa logom ULŠS.",
         },
         {
             id: "11",
@@ -101,7 +101,7 @@ export const productsData = {
             title: "Žute čarape",
             price: "4€",
             nmb: "95949935",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Paket od tri para žutih čarapa sa logom ULŠS.",
         },
         {
             id: "12",
@@ -109,7 +109,7 @@ export const productsData = {
             title: "Trenerka (gornji i donji dio)",
             price: "66.67€",
             nmb: "67852515",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Gornji i donji dio žuto crne trenerke sa logom udruge lađara ŠS. Također se posebno tiskaju inicijali pa je cijena malo povišena.",
         },
         {
             id: "13",
@@ -117,7 +117,7 @@ export const productsData = {
             title: "Tenisice",
             price: "66.67€",
             nmb: "39443016",
-            desc: "Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.",
+            desc: "Tenisice sa logom ULŠS. Dizajn napravljen za buduće generacije. Ne radi se o veslačkim tenisicama.",
         },
 
     ]

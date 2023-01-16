@@ -63,6 +63,83 @@ article p {
     row-gap: 20px;
 }
 
+/* artikal */
+
+.novosti {
+    margin: 30px 30px 200px;
+}
+
+.desno {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: center;
+    align-items: center;
+}
+
+.maraton .okvir {
+    border: 5px solid blue;
+    margin-left: 20px;
+    width: 250px;
+    font-size: 14px;
+    padding: 12px 40px;
+}
+
+.maraton .okvir2 {
+    border: 5px solid blue;
+    margin-left: 20px;
+    width: 250px;
+    font-size: 14px;
+    padding: 12px 60px;
+}
+
+.maraton .godina {
+    font-size: 18px;
+    padding: 12px 60px;
+}
+
+.maraton .godinaa {
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 12px 60px;
+}
+
+.maraton .godina2 {
+    font-size: 18px;
+    padding: 12px 50px;
+}
+
+.maraton .infoo {
+    padding: 12px 5px 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.medalje img {
+    width: 200px;
+}
+
+.textt img {
+    width: 650px;
+    height: 350px;
+    border-radius: 6px;
+}
+
+.textt h2 {
+    font-size: 28px;
+    padding: 10px 0px 12px;
+}
+
+.paragraf {
+    padding: 10px 0px;
+    font-size: 12px;
+}
+
+.paragraf p {
+    padding-top: 14px;
+    line-height: 25px;
+}
+
 @media screen and (max-width:980px) {
     .articles {
 
@@ -78,6 +155,15 @@ article p {
 
     .news article {
         width: 280px;
+    }
+
+    .desno {
+        display: none;
+    }
+
+    .textt img {
+        width: 80vw;
+        height: 50vw;
     }
 }
 
@@ -97,6 +183,15 @@ article p {
     .news article {
         width: 280px;
     }
+
+    .desno {
+        display: none;
+    }
+
+    .textt img {
+        width: 80vw;
+        height: 50vw;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -114,5 +209,27 @@ article p {
 
     .news article {
         width: 280px;
+    }
+
+    /* artikal */
+    .desno {
+        display: none;
+    }
+
+    .textt {
+        margin: 0px auto;
+    }
+
+    .textt h2 {
+        font-size: 16px;
+    }
+
+    .paragraf {
+        font-size: 12px;
+    }
+
+    .textt img {
+        width: 80vw;
+        height: 50vw;
     }
 }
