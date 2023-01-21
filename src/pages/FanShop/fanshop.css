@@ -94,6 +94,10 @@ label input {
     /* height: 75%; */
 }
 
+.main h1 {
+    display: none;
+}
+
 /* .circle {
     width: 200px;
     height: 200px;

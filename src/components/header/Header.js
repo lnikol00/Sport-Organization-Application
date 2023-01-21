@@ -19,7 +19,7 @@ class Header extends Component {
                 <div className='menu-icon' onClick={this.handleCliCk}>
                     <i className={this.state.clicked ? "fa fa-times" : "fa fa-bars"}></i>
                 </div>
-                <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+                <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"} onClick={this.handleCliCk}>
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>

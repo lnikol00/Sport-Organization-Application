@@ -18,7 +18,7 @@ function News() {
 
     const item = news.find((item) => item.id === id)
 
-    const { image, name, text, text2, text3, date, img, txt } = item
+    const { image, name, text, text2, text3, date } = item
 
     return (
         <div className='novosti'>
