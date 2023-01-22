@@ -11,7 +11,6 @@ function News() {
 
     const { id } = useParams()
     const { news } = NewsData;
-    const newsLengh = news.length
     const navigate = useNavigate()
 
     const handleNext = () => {
