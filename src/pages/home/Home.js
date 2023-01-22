@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useNavigate, generatePath } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NewsData } from './News/NewsData'
 import { Link } from 'react-router-dom'
 

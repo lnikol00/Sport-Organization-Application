@@ -15,7 +15,7 @@ function Product() {
 
     const handleClick = () => {
         addItem(item);
-        navigate(-1)
+        navigate(-1);
     }
 
     const { id } = useParams()

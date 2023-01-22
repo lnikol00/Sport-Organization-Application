@@ -1,20 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NewsData } from './NewsData';
 
 import "./news.css"
 
 import medalja from "./img/medalje_desno.png"
-import { useParams } from 'react-router-dom';
-
-
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 function News() {
 
-
-    const { news } = NewsData;
-
     const { id } = useParams()
+    const { news } = NewsData;
+    const newsLengh = news.length
+    const navigate = useNavigate()
+
+    const handleNext = () => {
+        navigate(`/news/${Number(id) + 1}`)
+
+    }
+
+    const handlePrev = () => {
+        navigate(`/news/${Number(id) - 1}`)
+    }
 
     const item = news.find((item) => item.id === id)
 
@@ -55,6 +62,10 @@ function News() {
                     <p>{text2}</p>
                     <p>{text3}</p>
                 </div>
+            </div>
+            <div className='buttons'>
+                <button className='prev' onClick={handlePrev}>Prev</button>
+                <button className='next' onClick={handleNext}>Next</button>
             </div>
         </div>
     )

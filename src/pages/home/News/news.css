@@ -125,6 +125,10 @@ article p {
     border-radius: 6px;
 }
 
+.textt span {
+    font-size: 12px;
+}
+
 .textt h2 {
     font-size: 28px;
     padding: 10px 0px 12px;
@@ -138,6 +142,40 @@ article p {
 .paragraf p {
     padding-top: 14px;
     line-height: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 0px;
+    gap: 100px;
+}
+
+.buttons .next {
+    padding: 2px 4px;
+    background-color: blue;
+    color: white;
+    width: 40px;
+    border: none;
+    height: 25px;
+    font-size: 12px;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons .prev {
+    padding: 2px 4px;
+    background-color: blue;
+    color: white;
+    width: 40px;
+    height: 25px;
+    border: none;
+    font-size: 12px;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 @media screen and (max-width:980px) {
