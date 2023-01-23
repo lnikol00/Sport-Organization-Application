@@ -1,5 +1,3 @@
-import React from "react"
-
 
 export const MenuItems = [
     {
@@ -23,8 +21,8 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Brzinske',
-        url: '/speeds',
+        title: 'Kviz',
+        url: '/quiz',
         cName: 'nav-links'
     },
 ]

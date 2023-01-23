@@ -1,0 +1,221 @@
+.mainContainer {
+    margin-bottom: 500px;
+}
+
+.quizContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start-btn.disabled {
+    display: none;
+}
+
+.start-btn span {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.start-btn button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    height: 40px;
+    background-color: yellow;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+}
+
+.info-box {
+    display: none;
+}
+
+.info-box.active {
+    display: block;
+    border-radius: 4px;
+    background-color: yellow;
+    padding: 20px;
+    font-size: 13px;
+    width: 400px;
+    border: 1px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.info-list {
+    margin: 10px 0px;
+    border-bottom: 1px solid black;
+}
+
+.info-list div {
+    padding-bottom: 10px;
+}
+
+.info-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.info-title span {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.information span {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttonss {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.buttonss .quit {
+    padding: 4px 10px;
+    width: 70px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.buttonss .restart {
+    padding: 4px 10px;
+    width: 70px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.quiz-box {
+    display: none;
+}
+
+.quiz-box.active {
+    display: block;
+    border-radius: 4px;
+    background-color: yellow;
+    padding: 20px;
+    width: 400px;
+    border: 1px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.end .crown {
+    font-size: 80px;
+}
+
+.completed {
+    padding: 0px 0px 10px;
+}
+
+.score-section {
+    padding: 10px 0px;
+}
+
+.reset-buttons {
+    display: flex;
+    gap: 50px;
+    padding: 10px 0px;
+}
+
+.reset-buttons button {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+.question-count {
+    padding: 0px 0px 10px;
+    border-bottom: 1px solid black;
+}
+
+.question {
+    display: flex;
+    padding: 10px 0px;
+}
+
+.answer-section-wrapper {
+    padding: 0px 0px 10px;
+    list-style: none;
+    border-bottom: 1px solid black;
+}
+
+.answer-list button {
+    border: 1px solid black;
+    margin: 5px 0px 0px;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+}
+
+.answer-list button:disabled {
+    color: black;
+}
+
+.answer-list button:disabled {
+    color: black;
+}
+
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px 0px;
+}
+
+.button .next {
+    padding: 4px 10px;
+    width: 70px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.button .next:disabled {
+    cursor: not-allowed;
+}
+
+
+.answer-list .correct {
+    background: green;
+}
