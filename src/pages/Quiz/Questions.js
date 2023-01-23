@@ -40,7 +40,7 @@ export const Questions = [
         ],
     },
     {
-        nmb: 4,
+        nmb: 5,
         text: "Sa trenutnim brojem stanovnika vodimo se kao najmanje selo sa aktivnom udrugom. O kojem broju se radi?",
         options: [
             { id: 0, text: "150", isCorrect: false },
