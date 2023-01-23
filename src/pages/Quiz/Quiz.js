@@ -11,13 +11,12 @@ function Quiz() {
 
     const [shown, setShown] = useState(true)
     const [hidden, setHidden] = useState(true)
-
-
     const [quiz, setQuiz] = useState(true)
 
     const handleClick = () => {
         setHidden(!hidden)
         setShown(!shown)
+
     }
 
     const clickChange = () => {
@@ -30,9 +29,7 @@ function Quiz() {
         setShown(true)
         setHidden(true)
         setQuiz(!quiz)
-        setScore(0);
-        setCurentQuestion(0);
-        setShowScore(false);
+        restartGame();
     }
 
     const [curentQuestion, setCurentQuestion] = useState(0);
@@ -107,7 +104,7 @@ function Quiz() {
                         <div>
                             <div className='question-section-wrapper'>
                                 <div className='question-count'>
-                                    Pitanja: {curentQuestion + 1} of {Questions.length}
+                                    Pitanja: {curentQuestion + 1} od {Questions.length}
                                 </div>
                                 <div className='question'>
                                     {Questions[curentQuestion].nmb}.

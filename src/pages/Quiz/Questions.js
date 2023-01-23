@@ -1,12 +1,12 @@
 export const Questions = [
     {
         nmb: 1,
-        text: "Naša lađarska udruga osnovana je koje godine?",
+        text: "Koje godine je osnovana Udruga lađara Šarić Struga?",
         options: [
-            { id: 0, text: "2008", isCorrect: false },
-            { id: 1, text: "2007", isCorrect: true },
-            { id: 2, text: "2006", isCorrect: false },
-            { id: 3, text: "2005", isCorrect: false },
+            { id: 0, text: "2012", isCorrect: false },
+            { id: 1, text: "2011", isCorrect: true },
+            { id: 2, text: "2010", isCorrect: false },
+            { id: 3, text: "2009", isCorrect: false },
         ],
     },
     {
@@ -47,6 +47,46 @@ export const Questions = [
             { id: 1, text: "194", isCorrect: true },
             { id: 2, text: "220", isCorrect: false },
             { id: 3, text: "245", isCorrect: false },
+        ],
+    },
+    {
+        nmb: 6,
+        text: "Kojoj župi pripada Šarić Struga?",
+        options: [
+            { id: 0, text: "Župa Ploče", isCorrect: false },
+            { id: 1, text: "Župa Rogotin", isCorrect: false },
+            { id: 2, text: "Župa Komin", isCorrect: false },
+            { id: 3, text: "Župa Plina Stablina", isCorrect: true },
+        ],
+    },
+    {
+        nmb: 7,
+        text: "Kako se naziva Stržanska crkva, nazvana po zaštitnici sela?",
+        options: [
+            { id: 0, text: "Crkva Gospe Fatimske", isCorrect: false },
+            { id: 1, text: "Crkva Gospe od Zdravlja", isCorrect: false },
+            { id: 2, text: "Crkva Uznesenja Blažene Djevice Marije", isCorrect: true },
+            { id: 3, text: "Crkva Kraljice Neba i Zemlje", isCorrect: false },
+        ],
+    },
+    {
+        nmb: 8,
+        text: "Blagdan Velike Gospe, zaštitnice sela, proslavlja se svake godine u Kolovozu na koji datum?",
+        options: [
+            { id: 0, text: "15. Kolovoza", isCorrect: true },
+            { id: 1, text: "14. Kolovoza", isCorrect: false },
+            { id: 2, text: "13. Kolovoza", isCorrect: false },
+            { id: 3, text: "12. Kolovoza", isCorrect: false },
+        ],
+    },
+    {
+        nmb: 9,
+        text: "2012 smo udomaćili ekipu iz Slavonije koja je htjela sudjelovati na Maratonu. O kojem mjestu u Slavoniji se radi?",
+        options: [
+            { id: 0, text: "Slavonski Brod", isCorrect: false },
+            { id: 1, text: "Vukovar", isCorrect: false },
+            { id: 2, text: "Ilok", isCorrect: false },
+            { id: 3, text: "Šarengrad", isCorrect: true },
         ],
     },
 ]
