@@ -3,10 +3,10 @@ export const Questions = [
         nmb: 1,
         text: "Naša lađarska udruga osnovana je koje godine?",
         options: [
-            { id: 0, text: "", isCorrect: false },
-            { id: 1, text: "", isCorrect: true },
-            { id: 2, text: "", isCorrect: false },
-            { id: 3, text: "", isCorrect: false },
+            { id: 0, text: "2008", isCorrect: false },
+            { id: 1, text: "2007", isCorrect: true },
+            { id: 2, text: "2006", isCorrect: false },
+            { id: 3, text: "2005", isCorrect: false },
         ],
     },
     {
