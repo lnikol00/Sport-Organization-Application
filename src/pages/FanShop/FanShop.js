@@ -51,7 +51,6 @@ function FanShop() {
                     return (
                         <div className='main' key={item.id}>
                             <img src={item.img} />
-                            <h1>{item.title}</h1>
                             <div className='info2'>
                                 <div className='icon' onClick={() => addItem(item)}>
                                     <AiIcons.AiOutlineShoppingCart />

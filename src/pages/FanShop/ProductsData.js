@@ -18,7 +18,7 @@ export const productsData = {
         {
             id: "1",
             img: slika1,
-            title: "Žuti veslački šorc",
+            title: "Žuti šorc",
             price: "13.28€",
             desc: "Markonov šorc u žutoj boji ukrašen grbom Šarić Struge. Ovakvi šorcevi korišteni su za veslanje posljednja dva maratona. Iznimno kvalitetni i udboni.",
             nmb: "91573167",
@@ -26,7 +26,7 @@ export const productsData = {
         {
             id: "2",
             img: slika2,
-            title: "Bijeli veslački šorc",
+            title: "Bijeli šorc",
             price: "13.28€",
             desc: "Markonov šorc u bijeloj boji ukrašen grbom Šarić Struge. Ovakvi šorcevi korišteni su uglavnom od strane naših veslača na treninzima. Iznimno kvalitetni i udboni.",
             nmb: "15461924",
@@ -34,7 +34,7 @@ export const productsData = {
         {
             id: "3",
             img: slika3,
-            title: "Navijački dres 2022",
+            title: "Navijačka majica 2022",
             price: "6.64€",
             nmb: "47978706",
             desc: "Navijačke majice napravljene za 25. maraton lađa. Majice su se u početku radile isključivo za veslače, a sada su dostupne i za vas putem našeg Web Shopa. Najveći sponzor je Vinarija Vučica",
@@ -42,7 +42,7 @@ export const productsData = {
         {
             id: "4",
             img: slika4,
-            title: "Navijački dres 2021",
+            title: "Navijačka majica 2021",
             price: "6.64€",
             nmb: "49034563",
             desc: "Majice napravljene za 24. maraton lađa. Jedan od najvećih sponzora ove godine su bile Hrvatske Šume. Iz tog razloga tiskano i prodano puno ovakvih majica, još uvijek su dostupne u našem Web Shopu, ali u manjem broju.",
@@ -50,7 +50,7 @@ export const productsData = {
         {
             id: "5",
             img: slika5,
-            title: "Navijački dres 2020",
+            title: "Navijačka majica 2020",
             price: "6.64€",
             nmb: "12165079",
             desc: "Majice tiskane u godini povratka ekipe, za 23. maraton lađa. Tiskane su manjem broju jer su sponzori bili ograničeni. Dostupno u velikim količina putem našeg Web Shopa.",
@@ -58,15 +58,15 @@ export const productsData = {
         {
             id: "6",
             img: slika6,
-            title: "Navijački dres 2017",
+            title: "Navijačka majica 2017",
             price: "4.64€",
             nmb: "58283964",
             desc: "Stari dres iz 2017. godine. Ostao je mali broj majica. S obzirom da se radi o starijem kroju i dizajnu snižene su cijene.",
         },
         {
-            id: "7",
+            id: " 7",
             img: slika7,
-            title: "Slim Fit Veslački Dres 2022",
+            title: "Slim fit veslačka majica 2022",
             price: "40€",
             nmb: "85847389",
             desc: "Slim fit majica s kojom su naši lađari izveslali 25. maraton. U početku tiskan je točan broj majica za lađare. Ukoliko naručite putem Web Shopa majica se posebno tiska pa je cijena veća.",
@@ -74,7 +74,7 @@ export const productsData = {
         {
             id: "8",
             img: slika8,
-            title: "Slim Fit Veslački Dres 2021",
+            title: "Slim fit veslačka majica 2021",
             price: "40€",
             nmb: "99355579",
             desc: "Slim fit majica s kojom su naši lađari izveslali 24. maraton. U početku tiskan je točan broj majica za lađare. Ukoliko naručite putem Web Shopa majica se posebno tiska pa je cijena veća.",
@@ -82,7 +82,7 @@ export const productsData = {
         {
             id: "9",
             img: slika9,
-            title: "Slim Fit Veslački Dres 2020",
+            title: "Slim fit veslačka majica 2020",
             price: "30€",
             nmb: "36820528",
             desc: "Slim fit majica s kojom su naši lađari izveslali 23. maraton. U početku tiskan je točan broj majica za lađare. Cijena snižena",

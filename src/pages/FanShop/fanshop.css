@@ -94,18 +94,6 @@ label input {
     /* height: 75%; */
 }
 
-.main h1 {
-    display: none;
-}
-
-/* .circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-} */
-
 .info2 {
     opacity: 0;
     width: 100%;
@@ -488,13 +476,30 @@ select {
     }
 
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr; */
         gap: 15px;
+    }
+
+    /* .main {
+        margin: 0px auto;
+        width: 280px;
+    } */
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
     }
 
     .main {
         margin: 0px auto;
-        width: 280px;
+        width: 130px;
+        height: 180px;
+    }
+
+    .main img {
+        height: 100px;
     }
 
     .top button {

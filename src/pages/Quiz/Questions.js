@@ -61,7 +61,7 @@ export const Questions = [
     },
     {
         nmb: 7,
-        text: "Kako se naziva Stržanska crkva, nazvana po zaštitnici sela?",
+        text: "Kako se naziva Stružanska crkva, nazvana po zaštitnici sela?",
         options: [
             { id: 0, text: "Crkva Gospe Fatimske", isCorrect: false },
             { id: 1, text: "Crkva Gospe od Zdravlja", isCorrect: false },
@@ -81,7 +81,7 @@ export const Questions = [
     },
     {
         nmb: 9,
-        text: "2012 smo udomaćili ekipu iz Slavonije koja je htjela sudjelovati na Maratonu. O kojem mjestu u Slavoniji se radi?",
+        text: "2014 smo udomaćili ekipu iz Slavonije koja je htjela sudjelovati na Maratonu. O kojem mjestu u Slavoniji se radi?",
         options: [
             { id: 0, text: "Slavonski Brod", isCorrect: false },
             { id: 1, text: "Vukovar", isCorrect: false },
