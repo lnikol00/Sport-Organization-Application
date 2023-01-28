@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import "./clockdown.css"
 
-const ClockDown = ({ timerMonths, timerDays, timerHours, timerMinutes, timerSeconds }) => {
+function ClockDown({ timerMonths, timerDays, timerHours, timerMinutes, timerSeconds }) {
     return (
         <Fragment>
             <div className='middle'>

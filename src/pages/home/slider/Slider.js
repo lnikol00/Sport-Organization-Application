@@ -3,7 +3,7 @@ import * as AiIcons from "react-icons/ai"
 import { sliderData } from './SliderData'
 import "./Slider.scss"
 
-const Slider = () => {
+function Slider() {
 
     const autoScroll = true;
     let slideInterval;
