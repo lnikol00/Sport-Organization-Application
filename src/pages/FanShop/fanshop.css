@@ -15,7 +15,7 @@
 }
 
 .left span {
-    font-size: 14px;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     margin-left: 25px;
-    padding: 5px;
+    padding: 10px;
 }
 
 label input {
@@ -39,6 +39,7 @@ label input {
 
 .center h1 {
     font-weight: bold;
+    font-size: 36px;
 }
 
 .right {
@@ -49,7 +50,7 @@ label input {
 }
 
 .right .cartt {
-    font-size: 20px;
+    font-size: 26px;
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -57,9 +58,9 @@ label input {
 
 .right span {
     position: absolute;
-    font-size: 10px;
+    font-size: 16px;
     padding-bottom: 20px;
-    right: 15px;
+    right: 10px;
 }
 
 
@@ -70,6 +71,7 @@ label input {
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
     align-items: center;
     justify-content: center;
 }
@@ -82,8 +84,8 @@ label input {
     align-items: center;
     margin: 5px;
     /* min-width: 280px; */
-    width: 230px;
-    height: 325px;
+    width: 350px;
+    height: 425px;
     background-color: #dadfe1;
     position: relative;
 }
@@ -115,8 +117,8 @@ label input {
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: white;
     display: flex;
@@ -124,6 +126,7 @@ label input {
     align-items: center;
     margin: 10px;
     transition: all 0.5s ease;
+    font-size: 22px;
     cursor: pointer;
     color: black;
 }
@@ -138,6 +141,10 @@ label input {
 }
 
 /* proizvod */
+
+.center h2 {
+    font-size: 36px;
+}
 
 .wrapper {
     padding: 40px;
@@ -161,26 +168,31 @@ label input {
 
 .information h1 {
     font-weight: 200;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .information p {
     margin: 20px 0px;
-    font-size: 14px;
+    font-size: 22px;
 }
 
-.information span {
+.information b {
     font-weight: 100;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 form {
     margin: 10px 0px;
 }
 
+form label {
+    font-size: 22px;
+}
+
 select {
     margin-left: 10px;
     padding: 5px;
+    font-size: 22px;
 }
 
 .add {
@@ -191,34 +203,15 @@ select {
     margin: 15px 0px;
 }
 
-.amount {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-}
-
-.amount span {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid teal;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 5px;
-}
-
-.minus {
-    font-size: 30px;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid teal;
-    padding-bottom: 3px;
+.basket {
+    padding: 10px;
+    border: none;
+    color: black;
+    font-weight: 600;
+    background-color: yellow;
     cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
 }
 
 .plus {
@@ -233,14 +226,16 @@ select {
     cursor: pointer;
 }
 
-.basket {
-    padding: 10px;
-    border: none;
-    color: black;
-    font-weight: 600;
-    background-color: yellow;
+.minus {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid teal;
+    padding-bottom: 3px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 /* KOŠARICA */
@@ -251,6 +246,7 @@ select {
 }
 
 .cart h3 {
+    font-size: 32px;
     padding: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -260,6 +256,10 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.items p {
+    font-size: 20px;
 }
 
 .top button {
@@ -272,11 +272,14 @@ select {
     background-color: white;
     border: 1px solid black;
     box-shadow: 1px 2px 5px;
+    font-size: 18px;
 }
 
 .done {
     background-color: black;
     color: white;
+    padding: 20px;
+    font-size: 18px;
 }
 
 .items {
@@ -307,14 +310,14 @@ select {
 .details {
     display: flex;
     padding: 20px;
-    font-size: 16px;
+    font-size: 20px;
     justify-content: space-around;
     flex-direction: column;
 }
 
 .details h5 {
     font-weight: 100;
-    font-size: 16px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -329,21 +332,25 @@ select {
     flex-direction: column;
 }
 
+.price span {
+    font-size: 22px;
+}
+
 .iznos {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .iznos span {
     padding: 0px 10px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .minus {
     border-radius: 50%;
-    padding: 5px 6px;
+    padding: 14px;
     cursor: pointer;
     font-size: 16px;
     border: 1px solid #A8A8A8;
@@ -351,7 +358,7 @@ select {
 
 .plus {
     border-radius: 50%;
-    padding: 5px 6px;
+    padding: 14px;
     cursor: pointer;
     font-size: 16px;
     border: 1px solid #A8A8A8;
@@ -362,35 +369,75 @@ select {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 300px;
+    width: 400px;
+    font-size: 22px;
 }
 
 .desc h5 {
     text-align: center;
     padding-bottom: 10px;
+    font-size: 22px;
 }
 
 .iks {
     cursor: pointer;
+    font-size: 24px;
 }
 
 .total-price {
     padding: 10px 0px;
+    font-size: 22px;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1460px) {
     .left input {
         width: 100px;
     }
 
     .container {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 15px;
     }
 
     .main {
         margin: 0px auto;
         width: 240px;
+    }
+}
+
+@media screen and (max-width:960px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .details h5 {
+        font-size: 16px;
+    }
+
+    .details {
+        font-size: 16px;
+    }
+
+    .price span {
+        font-size: 16px;
+    }
+
+    .minus {
+        padding: 5px;
+    }
+
+    .plus {
+        padding: 5px;
+    }
+
+    .imagee img {
+        width: 50vh;
+        height: 50vh;
     }
 }
 
@@ -447,6 +494,11 @@ select {
         font-size: 16px;
     }
 
+    .wrapper {
+        padding: 10px;
+        flex-direction: column;
+    }
+
     .imagee img {
         width: 50vh;
         height: 50vh;
@@ -454,6 +506,10 @@ select {
 }
 
 @media screen and (max-width: 600px) {
+
+    .cart h3 {
+        font-size: 22px;
+    }
 
     .left label {
         margin-left: 0;
@@ -472,7 +528,7 @@ select {
     }
 
     .right span {
-        right: 45px;
+        right: 40px;
     }
 
     .container {
@@ -490,11 +546,12 @@ select {
         width: 30px;
         height: 30px;
         margin: 5px;
+        font-size: 16px;
     }
 
     .main {
         margin: 0px auto;
-        width: 130px;
+        width: 160px;
         height: 180px;
     }
 
@@ -544,38 +601,60 @@ select {
     }
 
     .imagee {
-        width: 80%;
+        width: 90%;
         margin: 0px auto;
     }
 
     .imagee img {
-        width: 50vh;
+        width: 40vh;
         height: 50vh;
     }
 
     .information h1 {
 
-        font-size: 22px;
+        font-size: 32px;
     }
 
     .information p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
-    .information span {
-        font-size: 22px;
+    .information b {
+        font-size: 26px;
     }
 
     form {
         margin: 10px 0px;
+
+    }
+
+    form select {
+        font-size: 18px;
     }
 
     select {
         margin-left: 10px;
         padding: 2px;
+        font-size: 18px;
     }
 
     .basket {
         font-size: 12px;
+    }
+
+    .price span {
+        font-size: 16px;
+    }
+
+    .minus {
+        padding: 5px;
+    }
+
+    .plus {
+        padding: 5px;
+    }
+
+    .items p {
+        font-size: 16px;
     }
 }

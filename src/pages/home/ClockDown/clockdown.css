@@ -4,18 +4,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    margin-top: 20px;
+    gap: 50px;
+    margin-top: 40px;
 }
 
 .title h1 {
-    font-size: 26px;
+    font-size: 46px;
     text-transform: uppercase;
     font-family: 'Lobster', cursive;
 }
 
 .title p {
-    font-size: 34px;
+    font-size: 46px;
     font-weight: 600;
     font-family: 'Lobster', cursive;
 }
@@ -25,7 +25,7 @@
     border-bottom: 4px solid black;
     /* border-radius: 4px; */
     border-radius: 0 0 85% 85% / 50%;
-    width: 300px;
+    width: 400px;
     display: block;
     margin: 0px auto;
     padding-top: 6px;
@@ -48,9 +48,9 @@
     display: flex;
     background: yellow;
     margin: 30px 1rem 5px;
-    height: 40px;
-    width: 100px;
-    font-size: 25px;
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
     border: 1px solid black;
     justify-content: center;
     align-items: center;
@@ -62,11 +62,12 @@
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    margin-top: 10px;
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1200px) {
     .clock div {
         display: flex;
         margin: 0;
@@ -77,19 +78,26 @@
     }
 
     .title {
-        display: flex;
+        display: block;
         margin: 0 30px;
         gap: 10px;
         align-items: center;
         justify-content: center;
     }
-
-
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 740px) {
+
     .clock div {
-        display: flex;
+        display: block;
+    }
+
+    .title p {
+        font-size: 34px;
+    }
+
+    .title h1 {
+        font-size: 36px;
     }
 
     .title {
@@ -97,7 +105,9 @@
         margin: 0 30px;
         text-align: center;
     }
+
 }
+
 
 @media screen and (max-width: 600px) {
     .middle {
@@ -109,12 +119,12 @@
         text-align: center;
     }
 
-    .title h1 {
-        font-size: 20px;
+    .title p {
+        font-size: 34px;
     }
 
-    .title p {
-        font-size: 20px;
+    .title h1 {
+        font-size: 36px;
     }
 
     .clock p {
@@ -123,5 +133,9 @@
 
     .clock div {
         display: block;
+    }
+
+    .title p::after {
+        width: 300px;
     }
 }

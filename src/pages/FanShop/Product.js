@@ -49,8 +49,7 @@ function Product() {
                     <p>
                         {desc}
                     </p>
-                    <span>{price}
-                    </span>
+                    <b>{price}</b>
                     <form>
                         <label>
                             Veličina:

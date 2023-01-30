@@ -1,7 +1,7 @@
 .news h2 {
     text-align: center;
-    font-size: 30px;
-    padding: 10px 0px;
+    font-size: 40px;
+    padding: 20px 0px;
 }
 
 .links {
@@ -21,7 +21,7 @@
     padding: 0px 0px 10px;
     /* margin-top: 10px; */
     margin: 0px auto;
-    width: 280px;
+    width: 420px;
 }
 
 .news article:hover {
@@ -30,25 +30,25 @@
 }
 
 article img {
-    width: 280px;
-    height: 200px;
+    width: 420px;
+    height: 300px;
     border-radius: 6px;
 }
 
 article h5 {
-    font-size: 16px;
+    font-size: 20px;
     padding: 12px 5px;
     color: black;
 }
 
 article span {
-    font-size: 10px;
+    font-size: 16px;
     padding: 12px 5px;
     color: black;
 }
 
 article p {
-    font-size: 12px;
+    font-size: 16px;
     padding: 12px 5px 0px;
     color: black;
 }
@@ -80,63 +80,64 @@ article p {
 .maraton .okvir {
     border: 5px solid blue;
     margin-left: 20px;
-    width: 250px;
-    font-size: 14px;
+    width: 370px;
+    font-size: 24px;
     padding: 12px 40px;
 }
 
 .maraton .okvir2 {
     border: 5px solid blue;
     margin-left: 20px;
-    width: 250px;
-    font-size: 14px;
-    padding: 12px 60px;
+    width: 370px;
+    font-size: 24px;
+    padding: 12px 80px;
 }
 
 .maraton .godina {
-    font-size: 18px;
-    padding: 12px 60px;
+    font-size: 30px;
+    padding: 12px 50px;
 }
 
 .maraton .godinaa {
     margin-left: 10px;
     font-size: 18px;
-    padding: 12px 60px;
+    padding: 12px 120px;
 }
 
 .maraton .godina2 {
-    font-size: 18px;
+    font-size: 30px;
     padding: 12px 50px;
 }
 
 .maraton .infoo {
-    padding: 12px 5px 30px;
+    padding: 12px 10px 50px;
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .medalje img {
-    width: 200px;
+    width: 300px;
+    margin-bottom: 500px;
 }
 
 .textt img {
-    width: 650px;
-    height: 350px;
+    width: 980px;
+    height: 500px;
     border-radius: 6px;
 }
 
 .textt span {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .textt h2 {
-    font-size: 28px;
+    font-size: 40px;
     padding: 10px 0px 12px;
 }
 
 .paragraf {
-    padding: 10px 0px;
-    font-size: 12px;
+    padding: 28px 0px;
+    font-size: 18px;
 }
 
 .paragraf p {
@@ -150,16 +151,17 @@ article p {
     align-items: center;
     padding: 10px 20px 0px;
     gap: 100px;
+    margin-bottom: 350px;
 }
 
 .buttons .next {
     padding: 2px 4px;
     background-color: blue;
     color: white;
-    width: 40px;
+    width: 60px;
     border: none;
-    height: 25px;
-    font-size: 12px;
+    height: 30px;
+    font-size: 16px;
     outline: none;
     border-radius: 4px;
     cursor: pointer;
@@ -169,16 +171,16 @@ article p {
     padding: 2px 4px;
     background-color: blue;
     color: white;
-    width: 40px;
-    height: 25px;
+    width: 60px;
+    height: 30px;
     border: none;
-    font-size: 12px;
+    font-size: 16px;
     outline: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:1460px) {
     .articles {
 
         grid-template-columns: 1fr 1fr 1fr;
@@ -187,12 +189,12 @@ article p {
     }
 
     article img {
-        width: 280px;
-        height: 200px;
+        width: 340px;
+        height: 300px;
     }
 
     .news article {
-        width: 280px;
+        width: 340px;
     }
 
     .desno {
@@ -205,7 +207,7 @@ article p {
     }
 }
 
-@media screen and (max-width:870px) {
+@media screen and(max-width:960px) {
     .articles {
 
         grid-template-columns: 1fr 1fr;
@@ -214,12 +216,31 @@ article p {
     }
 
     article img {
-        width: 280px;
-        height: 200px;
+        width: 340px;
+        height: 300px;
     }
 
     .news article {
-        width: 280px;
+        width: 340px;
+    }
+}
+
+
+@media screen and (max-width:780px) {
+    .articles {
+
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    article img {
+        width: 340px;
+        height: 300px;
+    }
+
+    .news article {
+        width: 340px;
     }
 
     .desno {
@@ -231,6 +252,25 @@ article p {
         height: 50vw;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .articles {
+
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    article img {
+        width: 340px;
+        height: 300px;
+    }
+
+    .news article {
+        width: 340px;
+    }
+}
+
 
 @media screen and (max-width: 600px) {
     .articles {
@@ -241,12 +281,12 @@ article p {
     }
 
     article img {
-        width: 280px;
-        height: 200px;
+        width: 340px;
+        height: 300px;
     }
 
     .news article {
-        width: 280px;
+        width: 340px;
     }
 
     /* artikal */
@@ -259,15 +299,15 @@ article p {
     }
 
     .textt h2 {
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .paragraf {
-        font-size: 12px;
+        font-size: 18px;
     }
 
     .textt img {
-        width: 80vw;
-        height: 50vw;
+        width: 87vw;
+        height: 55vw;
     }
 }

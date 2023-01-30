@@ -75,11 +75,11 @@ function Quiz() {
                         <span>Pravila kviza</span>
                     </div>
                     <div className="info-list">
-                        <div className="information">1. Imaš samo <span>15 sekundi</span> po pitanju.</div>
-                        <div className="information">2. Jednom kada odabereš odgovor ne možeš odabrati drugi.</div>
-                        <div className="information">3. Ne možeš odabrati nijedan odgovor nakon što ti iscuri vrijeme.</div>
-                        <div className="information">4. Ne možeš izaći iz kviza dok traje</div>
-                        <div className="information">5. Dobit ćeš onoliko bodova koliko bude točnih odgovora.</div>
+                        <div className="informationn">1. Imaš samo <span>15 sekundi</span> po pitanju.</div>
+                        <div className="informationn">2. Jednom kada odabereš odgovor ne možeš odabrati drugi.</div>
+                        <div className="informationn">3. Ne možeš odabrati nijedan odgovor nakon što ti iscuri vrijeme.</div>
+                        <div className="informationn">4. Ne možeš izaći iz kviza dok traje</div>
+                        <div className="informationn">5. Dobit ćeš onoliko bodova koliko bude točnih odgovora.</div>
                     </div>
                     <div class="buttonss">
                         <button className="quit" onClick={handleClick}>Izađi</button>

@@ -1,69 +1,69 @@
 #info {
-    margin: 10px 20px 50px;
+    margin: 10px 50px 50px;
 }
 
 #info h2 {
     margin: 0px 20px;
     padding: 10px 0px;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 
 #info h2::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 930px;
+    width: 1400px;
     display: block;
     padding-top: 8px;
     margin: 0px auto;
 }
 
 .text {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 
 .text p {
-    padding-top: 10px;
+    padding-top: 14px;
     padding-left: 20px;
-    line-height: 20px;
+    line-height: 25px;
 }
 
 .populacija h3 {
     margin: 0px 20px;
     padding: 20px 0px 10px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .populacija h3::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 600px;
+    width: 900px;
     display: block;
     padding-top: 8px;
 }
 
 .populacija p {
-    padding-top: 10px;
+    padding-top: 14px;
     margin: 0px 20px;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .populacija img {
     padding: 14px 20px;
-    width: 600px;
+    width: 800px;
 }
 
 .object h3 {
     margin: 0px 20px;
     padding: 10px 0px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .object h3::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 600px;
+    width: 900px;
     display: block;
     padding-top: 8px;
 }
@@ -83,12 +83,11 @@
 
 .slika1 span {
     padding: 5px 0px 0px;
-    font-size: 12px;
 }
 
 .slika1 img {
-    width: 110px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .slika2 {
@@ -98,12 +97,11 @@
 
 .slika2 span {
     padding: 5px 0px 0px;
-    font-size: 12px;
 }
 
 .slika2 img {
-    width: 110px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .church {
@@ -111,14 +109,13 @@
 }
 
 .church h4 {
-    font-size: 14px;
+    font-size: 20px;
     padding-bottom: 5px;
 }
 
 .church p {
-    font-size: 12px;
-    line-height: 20px;
-    padding: 5px;
+    font-size: 18px;
+    line-height: 25px;
 }
 
 .groblje {
@@ -126,26 +123,26 @@
 }
 
 .groblje h4 {
-    font-size: 14px;
-    padding: 5px 0px 5px 20px;
+    font-size: 20px;
+    padding: 5px 0px 10px 20px;
 }
 
 .groblje p {
-    font-size: 12px;
-    line-height: 20px;
-    padding-left: 20px;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 5px 0px 10px 20px;
 }
 
 .udruga h3 {
     margin: 0px 20px;
     padding: 10px 0px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .udruga h3::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 600px;
+    width: 900px;
     display: block;
     padding-top: 8px;
 }
@@ -155,7 +152,6 @@
     flex-direction: column;
     margin: 5px 20px 5px;
     padding: 5px;
-    width: 250px;
     border: 1px solid black;
     float: left;
 }
@@ -165,13 +161,12 @@
     justify-content: center;
     align-items: center;
     padding: 5px 0px 0px;
-    font-size: 12px;
 }
 
 .podatci p {
-    padding: 5px 0px 0px 20px;
-    line-height: 20px;
-    font-size: 12px;
+    padding: 14px 0px 0px 20px;
+    line-height: 25px;
+    font-size: 18px;
 }
 
 .himna {
@@ -182,20 +177,19 @@
 }
 
 .himna iframe {
-    height: 250px;
-    width: 350px;
+    height: 315px;
+    width: 450px;
 }
 
 .himna span {
-    font-size: 12px;
-    padding-bottom: 10px;
+    font-size: 18px;
+    padding-bottom: 14px;
 }
 
 /* ASSIDE */
 .asside {
     float: right;
     margin: 10px 20px 0px;
-    width: 300px;
     border: 2px solid black;
 }
 
@@ -206,7 +200,6 @@
     background: yellow;
     margin: 5px 5px 8px;
     padding: 5px;
-    font-size: 14px;
 }
 
 .heading .image {
@@ -220,7 +213,6 @@
     margin: 5px 5px 8px;
     padding: 5px;
     border: 1px solid black;
-    width: 280px;
 }
 
 .image span {
@@ -228,15 +220,10 @@
     justify-content: center;
     align-items: center;
     padding: 0px 0px 5px;
-    font-size: 10px;
 }
 
 .data {
     margin: 5px 5px 8px;
-}
-
-.data table {
-    font-size: 10px;
 }
 
 .data th {
@@ -258,13 +245,6 @@
     margin: 5px 5px 8px;
 }
 
-.population h4 {
-    font-size: 14px;
-}
-
-.population table {
-    font-size: 10px;
-}
 
 .population .year {
     display: flex;
@@ -275,14 +255,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 16px;
     padding: 0px 0px 5px;
 }
 
 .population th {
     display: inline-flex;
     justify-content: flex-start;
-    padding-left: 80px;
+    padding-left: 130px;
 }
 
 .population td {
@@ -294,12 +274,9 @@
 }
 
 .year h5 {
-    font-size: 12px;
+    font-size: 16px;
 }
 
-.year span {
-    font-size: 12px;
-}
 
 .image2 {
     display: flex;
@@ -319,7 +296,6 @@
     justify-content: center;
     align-items: center;
     padding: 0px 0px 5px;
-    font-size: 10px;
 }
 
 .image3 {
@@ -329,7 +305,6 @@
 .image3 img {
     margin: 5px 5px 8px;
     padding: 5px;
-    width: 280px;
 }
 
 @media screen and (max-width: 800px) {
