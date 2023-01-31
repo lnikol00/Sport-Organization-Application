@@ -94,45 +94,45 @@ function Info() {
                     zadnje vrijeme
                     turizam.</p>
             </div>
-            <div class="populacija">
+            <div className="populacija">
                 <h3>Stanovništvo</h3>
                 <p>Prema popisu stanovništva iz 2011. godine, naselje je imalo 235 stanovnika.</p>
                 <p>Naselje Šarić Struga: Kretanje broja stanovnika od 1857. do 2021.</p>
                 <img src={slika5} />
             </div>
 
-            <div class="object">
+            <div className="object">
                 <h3>Sakralni objekti</h3>
-                <div class="slike">
-                    <div class="slika1">
+                <div className="slike">
+                    <div className="slika1">
                         <img src={slika6} />
                         <span>Crkva Velike Gospe</span>
                     </div>
-                    <div class="slika2">
+                    <div className="slika2">
                         <img src={slika7} />
                         <span>Groblje s kapelicom</span>
                     </div>
                 </div>
-                <div class="church">
+                <div className="church">
                     <h4>Crkva Velike Gospe</h4>
                     <p>Podignuta je 2003. za vrijeme župnika fra Frane Lace prema nacrtu dipl. inž. arh. Ante Barbira.
                         Betonska građevina sa
                         zvonikom na preslicu nalazi se s istočne strane groblja. Duga je 16,35 i široka 8,50 metara.</p>
                 </div>
-                <div class="groblje">
+                <div className="groblje">
                     <h4>Grobljanska kapela</h4>
                     <p>Sagrađena je 1970-ih za vrijeme župnika fra Aleksandra Ribičića na groblju u Šarić Strugi. Na
                         vrhu pročelja je zvonik na
                         preslicu za jedno zvono, a duga je 5 i široka 4,50 metara.</p>
                 </div>
             </div>
-            <div class="udruga">
+            <div className="udruga">
                 <h3>Udruga lađara Šarić Struga</h3>
-                <div class="grb">
+                <div className="grb">
                     <img src={slika8} />
                     <span>Grb udruge lađara Šarić Struga</span>
                 </div>
-                <div class="podatci">
+                <div className="podatci">
                     <p>Udruga lađara Šarić Struge je udruga veslača sa ciljem očuvanja tradicije , promidžbe športskih i
                         kulturnih aktivnosti, te zaštite i očuvanja prirode i okoliša.</p>
                     <p>
@@ -151,7 +151,7 @@ function Info() {
                     <p>Član, te ujedno i kapetan ekipe Šarić Struge Nino Radonić ima izvelsane sve dosadašnje maratone.
                     </p>
                 </div>
-                <div class="himna">
+                <div className="himna">
                     <span>Himna Udruge lađara Šarić Struga:</span>
                     <iframe src="https://www.youtube.com/embed/ugTblfE2Cdk?playlist=ugTblfE2Cdk&loop=1">
                     </iframe>

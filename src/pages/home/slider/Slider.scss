@@ -91,7 +91,8 @@
 .primary {
     background-color: blue;
     border: none;
-    padding: 5px;
+    padding: 10px;
+    font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -149,15 +150,15 @@ hr {
     }
 
     .slider {
-        height: 320px;
+        height: 280px;
     }
 
     .slide img {
-        height: 320px;
+        height: 280px;
     }
 
     .arrow {
-        top: 85%;
+        top: 80%;
     }
 }
 

@@ -129,10 +129,15 @@
 
     .clock p {
         margin: 0 15px;
+        font-size: 26px;
     }
 
     .clock div {
         display: block;
+    }
+
+    .clock small {
+        font-size: 18px;
     }
 
     .title p::after {
