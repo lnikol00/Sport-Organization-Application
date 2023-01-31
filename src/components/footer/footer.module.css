@@ -1,22 +1,22 @@
-.footer {
+.container {
     background-color: #222222;
     top: 0;
     color: white;
     padding: 20px 0px;
 }
 
-.podnožje {
+.footerContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.podnožje h2 {
+.footerContainer h2 {
     font-size: 30px;
     padding: 20px 0px 20px 160px;
     font-weight: 100;
 }
 
-.podnožje h2::after {
+.footerContainer h2::after {
     content: "";
     border-bottom: 2px solid white;
     width: 100px;
@@ -24,13 +24,13 @@
     padding-top: 12px;
 }
 
-.net ul {
+.links ul {
     display: inline-flex;
     padding: 20px 0px 20px 170px;
     list-style: none;
 }
 
-.net a {
+.links a {
     display: flex;
     text-decoration: none;
     box-sizing: border-box;
@@ -48,21 +48,21 @@
     font-size: 20px;
 }
 
-.upit {
+.queryContainer {
     padding: 10px 0px 0px 50px;
 }
 
-.upit h1 {
+.queryContainer h1 {
     font-size: 40px;
     padding-bottom: 20px;
     font-weight: 100;
 }
 
-.ulaz div {
+.input div {
     padding-bottom: 20px;
 }
 
-.ulaz input {
+.input input {
     width: 450px;
     height: 50px;
     outline: none;
@@ -71,7 +71,7 @@
 
 }
 
-.ulaz textarea {
+.input textarea {
     width: 450px;
     height: 150px;
     outline: none;
@@ -79,14 +79,14 @@
     padding: 20px;
 }
 
-.ulaz button {
+.input button {
     text-transform: uppercase;
     padding: 16px;
     font-size: 16px;
     cursor: pointer;
 }
 
-.ime h5 {
+.name h5 {
     padding: 10px 0px 0px 160px;
     font-size: 20px;
     background-color: #515151;
@@ -94,26 +94,26 @@
 }
 
 @media screen and (max-width: 1100px) {
-    .podnožje {
+    .footerContainer {
         grid-template-columns: 1fr;
     }
 
-    .upit h1 {
+    .queryContainer h1 {
         font-size: 40px;
     }
 
-    .upit {
+    .queryContainer {
         padding: 10px 0px 0px 170px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .podnožje h2 {
+    .footerContainer h2 {
         padding: 10px 54px;
         font-size: 5vw;
     }
 
-    .net ul {
+    .links ul {
         margin: 0px auto;
         padding: 40px 0px 40px 60px;
         font-size: 20px;
@@ -123,28 +123,28 @@
         padding: 0px 54px 40px;
     }
 
-    .ulaz input {
+    .input input {
         width: 70vw;
     }
 
-    .ulaz textarea {
+    .input textarea {
         width: 70vw;
     }
 
-    .upit h1 {
+    .queryContainer h1 {
         font-size: 7vw;
     }
 
-    .upit {
+    .queryContainer {
         padding: 10px 0px 0px 50px;
     }
 
-    .ulaz button {
+    .input button {
         padding: 8px 8px;
         margin-bottom: 15px;
     }
 
-    .ime h5 {
+    .name h5 {
         padding: 10px 50px 0px;
     }
 }

@@ -9,23 +9,23 @@ import slika6 from "./img/Crkva_Saric_Struga.jpg"
 import slika7 from "./img/Groblje_Saric_Struga.jpg"
 import slika8 from "./img/grb.jpg"
 
-import "./info.css"
+import styles from "./info.module.css"
 
 function Info() {
     return (
-        <section id='info'>
+        <div className={styles.infoContainer}>
             <h2>Šarić Struga</h2>
-            <div className='asside'>
+            <div className={styles.assideContainer}>
                 <aside>
-                    <div className='heading'>
+                    <div className={styles.heading}>
                         <h3>Šarić Struga</h3>
-                        <div className='image'>
+                        <div className={styles.image}>
                             <img src={slika1} />
                             <span>Šarić Struga na zemljovidu Hrvatske</span>
                         </div>
                     </div>
                     <hr />
-                    <div className='data'>
+                    <div className={styles.data}>
                         <table>
                             <tbody>
                                 <th>Država</th>
@@ -42,9 +42,9 @@ function Info() {
                         </table>
                     </div>
                     <hr />
-                    <div className='population'>
+                    <div className={styles.population}>
                         <h4>Stanovništvo (2021.)</h4>
-                        <div className='year'>
+                        <div className={styles.year}>
                             <h5>Ukupno:</h5>
                             <span>194</span>
                         </div>
@@ -65,17 +65,17 @@ function Info() {
                         </table>
                     </div>
                     <hr />
-                    <div className='image2'>
+                    <div className={styles.image2}>
                         <img src={slika3} />
                         <span>Šarić Struga na zemljovidu Dubrovačko-neretvanske županije</span>
                     </div>
                     <hr />
-                    <div className='image3'>
+                    <div className={styles.image3}>
                         <img src={slika4} />
                     </div>
                 </aside>
             </div>
-            <div className="text">
+            <div className={styles.desc}>
                 <p>Šarić Struga je naselje u Republici Hrvatskoj, u sastavu Grada Ploča, Dubrovačko-neretvanska
                     županija.</p>
 
@@ -94,45 +94,45 @@ function Info() {
                     zadnje vrijeme
                     turizam.</p>
             </div>
-            <div className="populacija">
+            <div className={styles.populationDesc}>
                 <h3>Stanovništvo</h3>
                 <p>Prema popisu stanovništva iz 2011. godine, naselje je imalo 235 stanovnika.</p>
                 <p>Naselje Šarić Struga: Kretanje broja stanovnika od 1857. do 2021.</p>
                 <img src={slika5} />
             </div>
 
-            <div className="object">
+            <div className={styles.object}>
                 <h3>Sakralni objekti</h3>
-                <div className="slike">
-                    <div className="slika1">
+                <div className={styles.objectImage}>
+                    <div className={styles.objectImage1}>
                         <img src={slika6} />
                         <span>Crkva Velike Gospe</span>
                     </div>
-                    <div className="slika2">
+                    <div className={styles.objectImage2}>
                         <img src={slika7} />
                         <span>Groblje s kapelicom</span>
                     </div>
                 </div>
-                <div className="church">
+                <div className={styles.church}>
                     <h4>Crkva Velike Gospe</h4>
                     <p>Podignuta je 2003. za vrijeme župnika fra Frane Lace prema nacrtu dipl. inž. arh. Ante Barbira.
                         Betonska građevina sa
                         zvonikom na preslicu nalazi se s istočne strane groblja. Duga je 16,35 i široka 8,50 metara.</p>
                 </div>
-                <div className="groblje">
+                <div className={styles.cemetery}>
                     <h4>Grobljanska kapela</h4>
                     <p>Sagrađena je 1970-ih za vrijeme župnika fra Aleksandra Ribičića na groblju u Šarić Strugi. Na
                         vrhu pročelja je zvonik na
                         preslicu za jedno zvono, a duga je 5 i široka 4,50 metara.</p>
                 </div>
             </div>
-            <div className="udruga">
+            <div className={styles.association}>
                 <h3>Udruga lađara Šarić Struga</h3>
-                <div className="grb">
+                <div className={styles.associationImage}>
                     <img src={slika8} />
                     <span>Grb udruge lađara Šarić Struga</span>
                 </div>
-                <div className="podatci">
+                <div className={styles.associationDesc}>
                     <p>Udruga lađara Šarić Struge je udruga veslača sa ciljem očuvanja tradicije , promidžbe športskih i
                         kulturnih aktivnosti, te zaštite i očuvanja prirode i okoliša.</p>
                     <p>
@@ -151,7 +151,7 @@ function Info() {
                     <p>Član, te ujedno i kapetan ekipe Šarić Struge Nino Radonić ima izvelsane sve dosadašnje maratone.
                     </p>
                 </div>
-                <div className="himna">
+                <div className={styles.anthem}>
                     <span>Himna Udruge lađara Šarić Struga:</span>
                     <iframe src="https://www.youtube.com/embed/ugTblfE2Cdk?playlist=ugTblfE2Cdk&loop=1">
                     </iframe>
@@ -160,7 +160,7 @@ function Info() {
             </div>
 
 
-        </section >
+        </div>
     )
 }
 

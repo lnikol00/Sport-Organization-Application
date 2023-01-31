@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 
 import { productsData } from './ProductsData'
 
-import "./fanshop.css"
+import styles from "./fanshop.module.css"
 
 import { useCart } from 'react-use-cart'
 
@@ -29,20 +29,20 @@ function Product() {
     const { addItem } = useCart()
 
     return (
-        <div id='item'>
-            <div className='wraper'>
-                <div className='center'>
+        <div className={styles.item}>
+            <div className={styles.wraper}>
+                <div className={styles.center}>
                     <h2>Službeni Web Shop</h2>
                 </div>
             </div>
             <hr />
 
-            <div className='wrapper'>
-                <div className='imagee'>
+            <div className={styles.wrapperContainer}>
+                <div className={styles.image}>
                     <img src={img} alt='slika' />
                 </div>
 
-                <div className='information'>
+                <div className={styles.information}>
                     <h1>
                         {title}
                     </h1>
@@ -64,9 +64,9 @@ function Product() {
                             </select>
                         </label>
                     </form>
-                    <div className='add'>
+                    <div className={styles.add}>
                         <Link to>
-                            <button onClick={handleClick} className='basket'>Dodaj u košaricu</button>
+                            <button onClick={handleClick} className={styles.basket}>Dodaj u košaricu</button>
                         </Link>
                     </div>
                 </div>

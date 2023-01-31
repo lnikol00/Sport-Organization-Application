@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-.middle {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +73,7 @@
         margin: 0;
     }
 
-    .middle {
+    .container {
         flex-direction: column;
     }
 
@@ -110,7 +110,7 @@
 
 
 @media screen and (max-width: 600px) {
-    .middle {
+    .container {
         flex-direction: column;
     }
 

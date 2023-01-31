@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import * as BsIcons from "react-icons/bs"
 import * as AiIcons from "react-icons/ai"
 
-import "./fanshop.css"
+import styles from "./fanshop.module.css"
 import { productsData } from './ProductsData'
 import { useCart } from 'react-use-cart'
 
@@ -18,9 +18,9 @@ function FanShop() {
     const { products } = productsData
 
     return (
-        <section id='shop'>
-            <div className='wraper'>
-                <div className='left'>
+        <div className={styles.shopContainer}>
+            <div className={styles.wraper}>
+                <div className={styles.left}>
                     <span>HR</span>
                     <label>
                         <input onChange={event => setQuery(event.target.value)} />
@@ -28,19 +28,19 @@ function FanShop() {
 
                     </label>
                 </div>
-                <div className='center'>
+                <div className={styles.center}>
                     <h1>Službeni Web Shop</h1>
                 </div>
-                <div className='right'>
+                <div className={styles.right}>
                     <Link to="cart">
-                        <AiIcons.AiOutlineShoppingCart className='cartt' />
+                        <AiIcons.AiOutlineShoppingCart className={styles.cart} />
                     </Link>
 
                     <span>{totalItems}</span>
                 </div>
             </div>
             <hr />
-            <div className='container'>
+            <div className={styles.container}>
                 {products.filter(item => {
                     if (query === "") {
                         return item;
@@ -49,14 +49,14 @@ function FanShop() {
                     }
                 }).map((item) => {
                     return (
-                        <div className='main' key={item.id}>
+                        <div className={styles.main} key={item.id}>
                             <img src={item.img} />
-                            <div className='info2'>
-                                <div className='icon' onClick={() => addItem(item)}>
+                            <div className={styles.info}>
+                                <div className={styles.icon} onClick={() => addItem(item)}>
                                     <AiIcons.AiOutlineShoppingCart />
                                 </div>
                                 <Link to={`product/${item.id}`}>
-                                    <div className='icon'>
+                                    <div className={styles.icon}>
                                         <AiIcons.AiOutlineSearch />
                                     </div>
                                 </Link>
@@ -65,7 +65,7 @@ function FanShop() {
                     )
                 })}
             </div>
-        </section>
+        </div>
     )
 }
 

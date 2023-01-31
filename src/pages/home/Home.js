@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import ClockDown from './ClockDown/ClockDown'
 import Slider from './slider/Slider'
 
-import "./News/news.css"
+import styles from "./News/news.module.css"
 
 function Home() {
 
@@ -56,13 +56,13 @@ function Home() {
                 timerMinutes={timerMinutes}
                 timerSeconds={timerSeconds}
             />
-            <section className='news'>
+            <section className={styles.newsContainer}>
                 <h2>Novosti</h2>
-                <div className='articles'>
+                <div className={styles.articles}>
                     {news.map((item) => {
                         return (
                             <article key={item.id}>
-                                <Link to={`news/${item.id}`} className="links">
+                                <Link to={`news/${item.id}`} className={styles.links}>
                                     <img src={item.image} />
                                     <h5>
                                         {item.name}

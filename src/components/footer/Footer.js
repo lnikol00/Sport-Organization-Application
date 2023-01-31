@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-import "./footer.css"
+import styles from "./footer.module.css"
 
 import * as ImIcons from "react-icons/im"
 import * as FiIcons from "react-icons/fi"
@@ -12,10 +11,10 @@ import * as CiIcons from "react-icons/ci"
 
 function Footer() {
     return (
-        <section className='footer'>
-            <div className='podnožje'>
+        <div className={styles.container}>
+            <div className={styles.footerContainer}>
                 <div>
-                    <div className='net'>
+                    <div className={styles.links}>
                         <h2>Potražite nas na društvenim mrežama</h2>
                         <ul>
                             <li>
@@ -47,9 +46,9 @@ function Footer() {
                         </ul>
                     </div>
 
-                    <div className='kontakt'>
+                    <div className={styles.contactsContainer}>
                         <h2>Kontaktirajte nas</h2>
-                        <div className='info'>
+                        <div className={styles.info}>
                             <div>
                                 <i><FaIcons.FaMapMarkerAlt /></i>
                                 <span>Adresa - Šarić Struga 50</span>
@@ -66,9 +65,9 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className='upit'>
+                <div className={styles.queryContainer}>
                     <h1>Pošaljite upit</h1>
-                    <form className='ulaz'>
+                    <form className={styles.input}>
                         <div>
                             <input type="ime" name='ime' id='ime' placeholder='VAŠE IME'></input>
                         </div>
@@ -82,10 +81,10 @@ function Footer() {
                     </form>
                 </div>
             </div>
-            <div className='ime'>
+            <div className={styles.name}>
                 <h5>Udruga lađara Šarić Struga</h5>
             </div>
-        </section>
+        </div>
     )
 }
 

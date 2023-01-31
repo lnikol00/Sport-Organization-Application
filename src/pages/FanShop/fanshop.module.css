@@ -1,4 +1,4 @@
-#shop {
+.shopContainer {
     margin-bottom: 200px;
 }
 
@@ -49,7 +49,7 @@ label input {
     justify-content: flex-end;
 }
 
-.right .cartt {
+.right .cart {
     font-size: 26px;
     cursor: pointer;
     text-decoration: none;
@@ -96,7 +96,7 @@ label input {
     /* height: 75%; */
 }
 
-.info2 {
+.info {
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -112,7 +112,7 @@ label input {
     cursor: pointer;
 }
 
-.info2:hover {
+.info:hover {
     opacity: 1;
 }
 
@@ -136,26 +136,26 @@ label input {
     transform: scale(1.1);
 }
 
-#item {
+/* proizvod */
+
+.item {
     margin-bottom: 50px;
 }
-
-/* proizvod */
 
 .center h2 {
     font-size: 36px;
 }
 
-.wrapper {
+.wrapperContainer {
     padding: 40px;
     display: flex;
 }
 
-.imagee {
+.image {
     flex: 1;
 }
 
-.imagee img {
+.image img {
     width: 100%;
     height: 90vh;
     object-fit: cover;
@@ -214,7 +214,7 @@ select {
     border-radius: 5px;
 }
 
-.plus {
+.addButton {
     font-size: 20px;
     width: 20px;
     height: 20px;
@@ -226,7 +226,7 @@ select {
     cursor: pointer;
 }
 
-.minus {
+.subrtractButton {
     font-size: 20px;
     width: 20px;
     height: 20px;
@@ -240,19 +240,19 @@ select {
 
 /* KOŠARICA */
 
-.cart {
+.cartContainer {
     padding: 20px;
     margin-bottom: 50px;
 }
 
-.cart h3 {
+.cartContainer h3 {
     font-size: 32px;
     padding: 20px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.top {
+.topButtons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -262,20 +262,20 @@ select {
     font-size: 20px;
 }
 
-.top button {
+.topButtons button {
     padding: 10px;
     font-weight: 600;
     cursor: pointer;
 }
 
-.continue {
+.continueButton {
     background-color: white;
     border: 1px solid black;
     box-shadow: 1px 2px 5px;
     font-size: 18px;
 }
 
-.done {
+.doneButton {
     background-color: black;
     color: white;
     padding: 20px;
@@ -336,19 +336,19 @@ select {
     font-size: 22px;
 }
 
-.iznos {
+.amount {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
     font-size: 40px;
 }
 
-.iznos span {
+.amount span {
     padding: 0px 10px;
     font-size: 20px;
 }
 
-.minus {
+.subrtractButton {
     border-radius: 50%;
     padding: 14px;
     cursor: pointer;
@@ -356,7 +356,7 @@ select {
     border: 1px solid #A8A8A8;
 }
 
-.plus {
+.addButton {
     border-radius: 50%;
     padding: 14px;
     cursor: pointer;
@@ -379,12 +379,12 @@ select {
     font-size: 22px;
 }
 
-.iks {
+.removeButton {
     cursor: pointer;
     font-size: 24px;
 }
 
-.total-price {
+.totalPrice {
     padding: 10px 0px;
     font-size: 22px;
 }
@@ -427,15 +427,15 @@ select {
         font-size: 16px;
     }
 
-    .minus {
+    .subrtractButton {
         padding: 5px;
     }
 
-    .plus {
+    .addButton {
         padding: 5px;
     }
 
-    .imagee img {
+    .image img {
         width: 50vh;
         height: 50vh;
     }
@@ -485,7 +485,7 @@ select {
         width: 120px;
     }
 
-    .iks {
+    .removeButton {
         font-size: 16px;
         top: 50px;
     }
@@ -494,12 +494,12 @@ select {
         font-size: 16px;
     }
 
-    .wrapper {
+    .wrapperContainer {
         padding: 10px;
         flex-direction: column;
     }
 
-    .imagee img {
+    .image img {
         width: 50vh;
         height: 50vh;
     }
@@ -507,7 +507,7 @@ select {
 
 @media screen and (max-width: 600px) {
 
-    .cart h3 {
+    .cartContainer h3 {
         font-size: 22px;
     }
 
@@ -523,7 +523,7 @@ select {
         font-size: 18px;
     }
 
-    .right .cartt {
+    .right .cart {
         margin-right: 30px;
     }
 
@@ -559,7 +559,7 @@ select {
         height: 100px;
     }
 
-    .top button {
+    .topButtons button {
         padding: 5px;
         font-size: 12px;
     }
@@ -595,17 +595,17 @@ select {
         font-size: 10px;
     }
 
-    .wrapper {
+    .wrapperContainer {
         padding: 10px;
         flex-direction: column;
     }
 
-    .imagee {
+    .image {
         width: 90%;
         margin: 0px auto;
     }
 
-    .imagee img {
+    .image img {
         width: 40vh;
         height: 50vh;
     }
@@ -646,11 +646,11 @@ select {
         font-size: 16px;
     }
 
-    .minus {
+    .subrtractButton {
         padding: 5px;
     }
 
-    .plus {
+    .addButton {
         padding: 5px;
     }
 

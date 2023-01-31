@@ -1,15 +1,15 @@
-#info {
+.infoContainer {
     margin: 10px 50px 50px;
 }
 
-#info h2 {
+.infoContainer h2 {
     margin: 0px 20px;
     padding: 10px 0px;
     font-size: 30px;
 }
 
 
-#info h2::after {
+.infoContainer h2::after {
     content: "";
     border-bottom: 1px solid black;
     width: 1400px;
@@ -18,24 +18,24 @@
     margin: 0px auto;
 }
 
-.text {
+.desc {
     font-size: 18px;
 }
 
 
-.text p {
+.desc p {
     padding-top: 14px;
     padding-left: 20px;
     line-height: 25px;
 }
 
-.populacija h3 {
+.populationDesc h3 {
     margin: 0px 20px;
     padding: 20px 0px 10px;
     font-size: 30px;
 }
 
-.populacija h3::after {
+.populationDesc h3::after {
     content: "";
     border-bottom: 1px solid black;
     width: 900px;
@@ -43,13 +43,13 @@
     padding-top: 8px;
 }
 
-.populacija p {
+.populationDesc p {
     padding-top: 14px;
     margin: 0px 20px;
     font-size: 18px;
 }
 
-.populacija img {
+.populationDesc img {
     padding: 14px 20px;
     width: 800px;
 }
@@ -68,7 +68,7 @@
     padding-top: 8px;
 }
 
-.slike {
+.objectImage {
     display: flex;
     margin: 5px 20px 5px;
     padding: 5px;
@@ -76,30 +76,30 @@
     float: left;
 }
 
-.slika1 {
+.objectImage1 {
     display: flex;
     flex-direction: column;
 }
 
-.slika1 span {
+.objectImage1 span {
     padding: 5px 0px 0px;
 }
 
-.slika1 img {
+.objectImage1 img {
     width: 150px;
     height: 150px;
 }
 
-.slika2 {
+.objectImage2 {
     display: flex;
     flex-direction: column;
 }
 
-.slika2 span {
+.objectImage2 span {
     padding: 5px 0px 0px;
 }
 
-.slika2 img {
+.objectImage2 img {
     width: 150px;
     height: 150px;
 }
@@ -110,36 +110,37 @@
 
 .church h4 {
     font-size: 20px;
-    padding-bottom: 5px;
+    padding: 5px 0px 10px 20px;
 }
 
 .church p {
     font-size: 18px;
     line-height: 25px;
+    padding: 5px 0px 10px 20px;
 }
 
-.groblje {
+.cemetery {
     padding: 10px 0px;
 }
 
-.groblje h4 {
+.cemetery h4 {
     font-size: 20px;
     padding: 5px 0px 10px 20px;
 }
 
-.groblje p {
+.cemetery p {
     font-size: 18px;
     line-height: 25px;
     padding: 5px 0px 10px 20px;
 }
 
-.udruga h3 {
+.association h3 {
     margin: 0px 20px;
     padding: 10px 0px;
     font-size: 30px;
 }
 
-.udruga h3::after {
+.association h3::after {
     content: "";
     border-bottom: 1px solid black;
     width: 900px;
@@ -147,7 +148,7 @@
     padding-top: 8px;
 }
 
-.grb {
+.associationImage {
     display: flex;
     flex-direction: column;
     margin: 5px 20px 5px;
@@ -156,38 +157,38 @@
     float: left;
 }
 
-.grb span {
+.associationImage span {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 0px 0px;
 }
 
-.podatci p {
+.associationDesc p {
     padding: 14px 0px 0px 20px;
     line-height: 25px;
     font-size: 18px;
 }
 
-.himna {
+.anthem {
     display: flex;
     flex-direction: column;
 
     margin: 10px 20px;
 }
 
-.himna iframe {
+.anthem iframe {
     height: 315px;
     width: 450px;
 }
 
-.himna span {
+.anthem span {
     font-size: 18px;
     padding-bottom: 14px;
 }
 
 /* ASSIDE */
-.asside {
+.assideContainer {
     float: right;
     margin: 10px 20px 0px;
     border: 2px solid black;
@@ -308,11 +309,11 @@
 }
 
 @media screen and (max-width: 800px) {
-    #info h2::after {
+    .infoContainer h2::after {
         width: 92vw;
     }
 
-    .populacija h3::after {
+    .populationDesc h3::after {
         width: 32vw;
     }
 
@@ -320,21 +321,21 @@
         width: 92vw;
     }
 
-    .udruga h3::after {
+    .association h3::after {
         width: 92vw;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    #info {
+    .infoContainer {
         margin: 0px auto;
     }
 
-    #info h2::after {
+    .infoContainer h2::after {
         width: 85vw;
     }
 
-    .populacija h3::after {
+    .populationDesc h3::after {
         width: 85vw;
     }
 
@@ -342,28 +343,25 @@
         width: 85vw;
     }
 
-    .udruga h3::after {
+    .association h3::after {
         width: 85vw;
     }
 
-    .populacija img {
+    .populationDesc img {
         width: 85vw;
     }
 
-    .text {
+    .desc {
         padding-right: 14px;
     }
 
-    .podatci {
+    .associationDesc {
         padding-right: 14px;
     }
 
     .church h4 {
-        padding-top: 140px;
-    }
-
-    .church p {
-        padding: 5px 8px 0px 14px;
+        padding-left: 14px;
+        margin-top: 10px;
     }
 
     .slike {
@@ -372,11 +370,7 @@
         align-items: center;
     }
 
-    .groblje p {
-        padding-right: 14px;
-    }
-
-    .groblje h4 {
+    .cemetery h4 {
         padding-left: 14px;
     }
 
@@ -389,15 +383,15 @@
         padding: 0px 8px 5px;
     }
 
-    .asside {
+    .assideContainer {
         margin: 10px 20px 10px;
     }
 
-    .himna iframe {
+    .anthem iframe {
         width: 85vw;
     }
 
-    .asside {
+    .assideContainer {
         float: none;
         margin: 0px auto;
         width: 90vw;
