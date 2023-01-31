@@ -20,7 +20,7 @@ function Info() {
                     <div className={styles.heading}>
                         <h3>Šarić Struga</h3>
                         <div className={styles.image}>
-                            <img src={slika1} />
+                            <img src={slika1} alt='' />
                             <span>Šarić Struga na zemljovidu Hrvatske</span>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ function Info() {
                         <table>
                             <tbody>
                                 <th>Država</th>
-                                <td><img src={slika2} /></td>
+                                <td><img src={slika2} alt='' /></td>
                             </tbody>
                             <tbody>
                                 <th>Županija</th>
@@ -66,12 +66,12 @@ function Info() {
                     </div>
                     <hr />
                     <div className={styles.image2}>
-                        <img src={slika3} />
+                        <img src={slika3} alt='' />
                         <span>Šarić Struga na zemljovidu Dubrovačko-neretvanske županije</span>
                     </div>
                     <hr />
                     <div className={styles.image3}>
-                        <img src={slika4} />
+                        <img src={slika4} alt='' />
                     </div>
                 </aside>
             </div>
@@ -98,18 +98,18 @@ function Info() {
                 <h3>Stanovništvo</h3>
                 <p>Prema popisu stanovništva iz 2011. godine, naselje je imalo 235 stanovnika.</p>
                 <p>Naselje Šarić Struga: Kretanje broja stanovnika od 1857. do 2021.</p>
-                <img src={slika5} />
+                <img src={slika5} alt='' />
             </div>
 
             <div className={styles.object}>
                 <h3>Sakralni objekti</h3>
                 <div className={styles.objectImage}>
                     <div className={styles.objectImage1}>
-                        <img src={slika6} />
+                        <img src={slika6} alt='' />
                         <span>Crkva Velike Gospe</span>
                     </div>
                     <div className={styles.objectImage2}>
-                        <img src={slika7} />
+                        <img src={slika7} alt='' />
                         <span>Groblje s kapelicom</span>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ function Info() {
             <div className={styles.association}>
                 <h3>Udruga lađara Šarić Struga</h3>
                 <div className={styles.associationImage}>
-                    <img src={slika8} />
+                    <img src={slika8} alt='' />
                     <span>Grb udruge lađara Šarić Struga</span>
                 </div>
                 <div className={styles.associationDesc}>
@@ -153,7 +153,7 @@ function Info() {
                 </div>
                 <div className={styles.anthem}>
                     <span>Himna Udruge lađara Šarić Struga:</span>
-                    <iframe src="https://www.youtube.com/embed/ugTblfE2Cdk?playlist=ugTblfE2Cdk&loop=1">
+                    <iframe src="https://www.youtube.com/embed/ugTblfE2Cdk?playlist=ugTblfE2Cdk&loop=1" title='himna'>
                     </iframe>
 
                 </div>

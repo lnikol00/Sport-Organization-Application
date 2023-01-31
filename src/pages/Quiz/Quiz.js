@@ -5,7 +5,7 @@ import { Questions } from './Questions'
 
 import * as FaIcons from "react-icons/fa"
 
-import "./quiz.css"
+import styles from "./quiz.module.css"
 
 function Quiz() {
 
@@ -64,60 +64,60 @@ function Quiz() {
     };
 
     return (
-        <div className='mainContainer'>
-            <div className='quizContainer'>
-                <div className={shown ? 'start-btn' : 'start-btn disabled'}>
+        <div className={styles.mainContainer}>
+            <div className={styles.quizContainer}>
+                <div className={shown ? `${styles.startBtn}` : ` ${styles.startBtnDisabled}`}>
                     <button onClick={handleClick}>Započni kviz</button>
                 </div>
 
-                <div className={hidden ? "info-box" : "info-box active"}>
-                    <div className="info-title">
+                <div className={hidden ? `${styles.infoBox}` : ` ${styles.infoBoxActive}`}>
+                    <div className={styles.infoTitle}>
                         <span>Pravila kviza</span>
                     </div>
-                    <div className="info-list">
-                        <div className="informationn">1. Imaš samo <span>15 sekundi</span> po pitanju.</div>
-                        <div className="informationn">2. Jednom kada odabereš odgovor ne možeš odabrati drugi.</div>
-                        <div className="informationn">3. Ne možeš odabrati nijedan odgovor nakon što ti iscuri vrijeme.</div>
-                        <div className="informationn">4. Ne možeš izaći iz kviza dok traje</div>
-                        <div className="informationn">5. Dobit ćeš onoliko bodova koliko bude točnih odgovora.</div>
+                    <div className={styles.infoList}>
+                        <div className={styles.information}>1. Imaš samo <span>15 sekundi</span> po pitanju.</div>
+                        <div className={styles.information}>2. Jednom kada odabereš odgovor ne možeš odabrati drugi.</div>
+                        <div className={styles.information}>3. Ne možeš odabrati nijedan odgovor nakon što ti iscuri vrijeme.</div>
+                        <div className={styles.information}>4. Ne možeš izaći iz kviza dok traje</div>
+                        <div className={styles.information}>5. Dobit ćeš onoliko bodova koliko bude točnih odgovora.</div>
                     </div>
-                    <div class="buttonss">
-                        <button className="quit" onClick={handleClick}>Izađi</button>
-                        <button className="restart" onClick={clickChange}>Nastavi</button>
+                    <div class={styles.buttons}>
+                        <button className={styles.quitBtn} onClick={handleClick}>Izađi</button>
+                        <button className={styles.startBtn} onClick={clickChange}>Nastavi</button>
                     </div>
                 </div>
 
-                <div className={quiz ? "quiz-box" : "quiz-box active"}>
+                <div className={quiz ? `${styles.quizBox}` : ` ${styles.quizBoxActive}`}>
                     {showScore ? (
-                        <div className='end'>
-                            <div className='crown'><FaIcons.FaCrown /></div>
-                            <div className='completed'>Završili ste kviz</div>
-                            <div className='score-section'>
+                        <div className={styles.endContainer}>
+                            <div className={styles.crown}><FaIcons.FaCrown /></div>
+                            <div className={styles.completed}>Završili ste kviz</div>
+                            <div className={styles.scoreContainer}>
                                 Imate {score} od {Questions.length} točnih odgovora!
                             </div>
-                            <div className='reset-buttons'>
+                            <div className={styles.resetButtons}>
                                 <button onClick={() => restartGame()}>Ponovi kviz</button>
                                 <button onClick={exitChange}>Izađi</button>
                             </div>
                         </div>
                     ) : (
                         <div>
-                            <div className='question-section-wrapper'>
-                                <div className='question-count'>
+                            <div className={styles.questionContainer}>
+                                <div className={styles.questionCount}>
                                     Pitanja: {curentQuestion + 1} od {Questions.length}
                                 </div>
-                                <div className='question'>
+                                <div className={styles.question}>
                                     {Questions[curentQuestion].nmb}.
                                     {Questions[curentQuestion].text}
                                 </div>
                             </div>
 
-                            <div className='answer-section-wrapper'>
+                            <div className={styles.answerContainer}>
                                 {Questions[curentQuestion].options.map((option) => (
-                                    <li className='answer-list' key={option.id} >
+                                    <li className={styles.answerList} key={option.id} >
                                         <button
                                             disabled={clicked}
-                                            className={`answer-button ${clicked && option.isCorrect ? "correct" : ""}`}
+                                            className={`${styles.answerButton} ${clicked && option.isCorrect ? `${styles.correct} ` : ""}`}
                                             onClick={() => handleCorrectAnswer(option.isCorrect)}
                                         >
                                             {option.text}
@@ -127,8 +127,8 @@ function Quiz() {
                                 )}
                             </div>
 
-                            <div className='button'>
-                                <button className='next' onClick={handleNextQuestion} disabled={!clicked}>
+                            <div className={styles.nextContainer}>
+                                <button className={styles.nextBtn} onClick={handleNextQuestion} disabled={!clicked}>
                                     Next
                                 </button>
                             </div>
