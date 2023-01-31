@@ -1,5 +1,5 @@
 .infoContainer {
-    margin: 10px 50px 50px;
+    margin: 10px 50px 0px;
 }
 
 .infoContainer h2 {
@@ -140,6 +140,7 @@
     font-size: 30px;
 }
 
+
 .association h3::after {
     content: "";
     border-bottom: 1px solid black;
@@ -180,6 +181,7 @@
 .anthem iframe {
     height: 315px;
     width: 450px;
+    margin-bottom: 100px;
 }
 
 .anthem span {
