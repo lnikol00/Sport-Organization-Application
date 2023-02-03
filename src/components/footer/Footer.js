@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
 
 import styles from "./footer.module.css"
 
@@ -8,8 +9,87 @@ import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
 import * as BsIcons from "react-icons/bs"
 import * as CiIcons from "react-icons/ci"
+import PopUp from './PopUp';
 
 function Footer() {
+    const form = useRef();
+
+    const [userame, setUsername] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [disable, setDisable] = useState(true)
+
+    const handleusername = (e) => {
+        if (e.target.value === "") {
+            setDisable(true)
+        }
+        else {
+            setDisable(false)
+        }
+        const getUsername = e.target.value;
+        setUsername(getUsername);
+    }
+    const handleemail = (e) => {
+        if (e.target.value === "") {
+            setDisable(true)
+        }
+        else {
+            setDisable(false)
+        }
+        const getEmail = e.target.value;
+        setEmail(getEmail);
+    }
+    const handlemessage = (e) => {
+        if (e.target.value === "") {
+            setDisable(true)
+        }
+        else {
+            setDisable(false)
+        }
+        const getMessage = e.target.value;
+        setMessage(getMessage);
+    }
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
+    // }
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_0v2naub', 'template_yj8y0w4', form.current, 'e14dHShsfZvGSBG8B')
+            .then((result) => {
+                console.log(result.text);
+                console.log("upit poslan");
+                console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
+            }, (error) => {
+                console.log(error.text);
+            });
+        setUsername("");
+        setEmail("");
+        setMessage("");
+    };
+
+    const [showPopup, setShowPopUp] = useState(false)
+
+    const showPopupHandler = () => {
+        setShowPopUp(true)
+    }
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowPopUp(false);
+        }, 3000)
+
+        return () => { clearTimeout(timer) }
+    }, [showPopup])
+
+    let popup = null
+    if (showPopup) {
+        popup = <PopUp />
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.footerContainer}>
@@ -67,17 +147,20 @@ function Footer() {
 
                 <div className={styles.queryContainer}>
                     <h1>Pošaljite upit</h1>
-                    <form className={styles.input}>
+                    <div className={styles.popUp}>
+                        {popup}
+                    </div>
+                    <form className={styles.input} ref={form} onSubmit={sendEmail}>
                         <div>
-                            <input type="ime" name='ime' id='ime' placeholder='VAŠE IME'></input>
+                            <input type="ime" name='user_name' id='ime' placeholder='VAŠE IME' onChange={(e) => handleusername(e)}></input>
                         </div>
                         <div>
-                            <input type="email" name='mail' id='email' placeholder='VAŠA E-MAIL ADRESA'></input>
+                            <input type="email" name='user_email' id='email' placeholder='VAŠA E-MAIL ADRESA' onChange={(e) => handleemail(e)}></input>
                         </div>
                         <div>
-                            <textarea name='poruka' id='poruka' cols="10" rows="5" placeholder='VAŠA PORUKA'></textarea>
+                            <textarea name='message' id='poruka' cols="10" rows="5" placeholder='VAŠA PORUKA' onChange={(e) => handlemessage(e)}></textarea>
                         </div>
-                        <button>Pošalji poruku</button>
+                        <button onClick={showPopupHandler} disabled={disable}>Pošalji poruku</button>
                     </form>
                 </div>
             </div>

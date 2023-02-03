@@ -81,7 +81,7 @@ function Quiz() {
                         <div className={styles.information}>4. Ne možeš izaći iz kviza dok traje</div>
                         <div className={styles.information}>5. Dobit ćeš onoliko bodova koliko bude točnih odgovora.</div>
                     </div>
-                    <div class={styles.buttons}>
+                    <div className={styles.buttons}>
                         <button className={styles.quitBtn} onClick={handleClick}>Izađi</button>
                         <button className={styles.startBtn} onClick={clickChange}>Nastavi</button>
                     </div>

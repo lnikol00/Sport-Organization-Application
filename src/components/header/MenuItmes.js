@@ -20,5 +20,9 @@ export const MenuItems = [
         title: 'Kviz',
         url: '/quiz',
     },
+    // {
+    //     title: 'Kontakt',
+    //     url: '/',
+    // },
 ]
 
