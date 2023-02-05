@@ -49,7 +49,6 @@ function Footer() {
         const getMessage = e.target.value;
         setMessage(getMessage);
     }
-
     // const handleSubmit = (e) => {
     //     e.preventDefault();
     //     console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
@@ -63,19 +62,17 @@ function Footer() {
                 console.log(result.text);
                 console.log("upit poslan");
                 console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
+
             }, (error) => {
                 console.log(error.text);
+                setShowPopUp(false)
             });
-        setUsername("");
-        setEmail("");
-        setMessage("");
+
+        setShowPopUp(true)
+        form.current.reset();
     };
 
     const [showPopup, setShowPopUp] = useState(false)
-
-    const showPopupHandler = () => {
-        setShowPopUp(true)
-    }
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -94,7 +91,7 @@ function Footer() {
         <div className={styles.container}>
             <div className={styles.footerContainer}>
                 <div>
-                    <div className={styles.links}>
+                    <div className={styles.linksContainer}>
                         <h2>Potražite nas na društvenim mrežama</h2>
                         <ul>
                             <li>
@@ -160,7 +157,7 @@ function Footer() {
                         <div>
                             <textarea name='message' id='poruka' cols="10" rows="5" placeholder='VAŠA PORUKA' onChange={(e) => handlemessage(e)}></textarea>
                         </div>
-                        <button onClick={showPopupHandler} disabled={disable}>Pošalji poruku</button>
+                        <button disabled={disable}>Pošalji poruku</button>
                     </form>
                 </div>
             </div>

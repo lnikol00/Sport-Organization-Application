@@ -24,13 +24,13 @@
     padding-top: 12px;
 }
 
-.links ul {
+.linksContainer ul {
     display: inline-flex;
     padding: 20px 0px 20px 170px;
     list-style: none;
 }
 
-.links a {
+.linksContainer a {
     display: flex;
     text-decoration: none;
     box-sizing: border-box;
@@ -164,7 +164,7 @@
         font-size: 5vw;
     }
 
-    .links ul {
+    .linksContainer ul {
         margin: 0px auto;
         padding: 40px 0px 40px 60px;
         font-size: 20px;
