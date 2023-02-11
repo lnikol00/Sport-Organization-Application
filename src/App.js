@@ -20,7 +20,6 @@ import ScrollToTop from './components/Scroll/ScrollToTop';
 
 function App() {
 
-
   return (
     <div className="App">
       <Router >

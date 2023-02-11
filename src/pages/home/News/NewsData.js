@@ -17,20 +17,6 @@ export const NewsData = {
             text: "Pobjednik maratona lađa na Neretvi je ekipa lađara Zagreba. Oni su na zahtjevnoj stazu dugoj 25 kilometara za dva sata i deset minuta pokorili modrozelenu rijeku čime su stekli slavu vladara Neretve u idućoj godini, okitivši se zlatnim medaljama i velikim štitom kneza Domagoja. Drugi su bili lađari Stabline junački su se borili do samoga kraja, ali pobjednici su im umakli. Nema ljutnje, sport je sport, važno je sudjelovati, veseliti se i zabaviti a i dogodine je 26 maraton, kada sve opet kreće iznova.Treće mjesto, brončane medalje i mali štit kneza Domagoja otišao je ekipi Crni put Metković. Neka grmi i neka siva. Neretvom se pisma piva. Velika se fešta sada sprema i nema toga osim Boga da pokvari slavlje neretvanskog šampiona, pjevali su neretvanski lađari dok su munje parale neretvansko nebo a kiša lijevala kao iz kabla sve do pred start 25 Maratona lađa.A onda se razvedrilo, munje su utihnule i kiša prestala Maraton je mogao krenuti.",
             text2: "Neka nam je Bog u pomoći-uzviknuli su neretvanski lađari kada je pucnjem topa označen start 25 maratona.Zaveslale su domaće neretvanske ekipe pojačane s lađarima s kontinenta te lađarima iz Mostara i Sombora, koji su čitavo ljeto vježbali kako bi u što boljoj formi dočekali ovo lađarsko natjecanje. Kad zaprži ljeto i svi krenu prema moru lađari uzimaju vesla i neumorno vježbaju na Neretvi kako bi što spremnije izveslali svoj Maraton.Ova je godina posebna jer maraton slavi svoj srebreni jubilej, 25 godina postojanja pa trideset ekipa koliko ih se borilo za zlatne medalje i štit kneza Domagoja i nije preveliko iznenađenje. Maraton voze neretvanske lađarske ekipe pojačane lađarima iz Sombora i Mostara. Borba je velika. Nije lako pokoriti ćudljivu Neretvu.Utrkom dominiraju lađari Zagreba.Oni su prvi skrenuli u Crnu riku, koja u pravilu iznjedri pobjednika.Iza njih se bore Stablina i Crni put.Borba je između njih.",
             text3: "‘Ako i ne dođeš prvi nemoj da ti bude ža jer s tobom se ponosi cila Neretva‘, stihovi su lađarske himne koja evo već četvrt stoljeća prati ovo jedinstveno natjecanje koje je već odavno prešlo regionalne okvire postavši manifestacija na nacionalnoj razini.O maratonu se priča, piše govori.Tog dana svi putovi vodeni i kopneni vode prema Metkoviću i Pločama gdje se željno iščekuje start ispod Lučkog mosta ali i cilj na pločanskoj rivi. Zapjenila se Neretva od udaraca vesala neretvanskih gusara i pratećih brodova, lađa, kanua, skutera te ostalih plovila koji žele biti što bliže lađarima, ispratiti utrku do kraja i navijati za svoje favorite. Na Maratonu lađa je i Gašpar Matarić veslač sobarskih salašara. On je s još trojicom lađara biciklom došao iz Sombora. Putovali su 28 sati prevalivši preko 500 kilometara. ‘Nisam umoran.Veslat ću maraton.Ovo nam je 11 nastup i cilj nam je doveslati do Ploča‘, rekao je Matarić. Maraton lađa spasio je od zaborava tradicionalno plovilo neretvansku lađu u kojoj se rađalo, vjenčavalo i umiralo.Lađa je zahvaljujući ovom zanimljivom natjecanju proglašena kao nematerijalno kulturno dobro RH.",
-            post: [
-                {
-                    img: slika1,
-                    txt: "amen"
-                },
-                {
-                    img: slika2,
-                    txt: "amen"
-                },
-                {
-                    img: slika3,
-                    txt: "amen"
-                },
-            ]
         },
         {
             id: "2",

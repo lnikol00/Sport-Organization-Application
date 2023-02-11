@@ -52,6 +52,8 @@ function Footer() {
     // const handleSubmit = (e) => {
     //     e.preventDefault();
     //     console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
+    //     setShowPopUp(true)
+
     // }
 
     const sendEmail = (e) => {

@@ -242,7 +242,7 @@ select {
 
 .cartContainer {
     padding: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 300px;
 }
 
 .cartContainer h3 {
@@ -280,6 +280,10 @@ select {
     color: white;
     padding: 20px;
     font-size: 18px;
+}
+
+.doneButton:disabled {
+    cursor: not-allowed;
 }
 
 .items {
@@ -387,6 +391,105 @@ select {
 .totalPrice {
     padding: 10px 0px;
     font-size: 22px;
+}
+
+/* CHECKOUT */
+
+.cartContainerOpen {
+    padding: 20px;
+    margin-bottom: 300px;
+    filter: blur(5px);
+}
+
+.cartContainerOpen h3 {
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.checkoutContainerClosed {
+    display: none;
+}
+
+.checkoutContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 20px;
+    background-color: yellow;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.checkoutContainer>* {
+    margin: 15px 0px;
+}
+
+.checkoutContainer svg {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 450px;
+    overflow: auto;
+}
+
+.formInput::-webkit-scrollbar {
+    display: none;
+}
+
+.formInput label {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.formInput input {
+    width: 450px;
+    height: 40px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.formInput span {
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+.formInput input:invalid[focuse="true"] {
+    border: 1px solid red;
+}
+
+input:invalid[focused="true"]~span {
+    display: block;
+}
+
+.formInput button {
+    margin: 20px 0px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
 }
 
 @media screen and (max-width: 1460px) {
