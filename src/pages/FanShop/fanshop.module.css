@@ -425,17 +425,21 @@ select {
     z-index: 2;
 }
 
+
 .checkoutContainer>* {
     margin: 15px 0px;
 }
 
-.checkoutContainer svg {
+.checkoutContainer .close {
     position: absolute;
-    top: -5px;
+    top: 5px;
     right: 10px;
+    cursor: pointer;
+}
+
+.close svg {
     width: 20px;
     height: 20px;
-    cursor: pointer;
 }
 
 .formInput {
@@ -490,6 +494,38 @@ input:invalid[focused="true"]~span {
     outline: none;
     background-color: black;
     color: white;
+}
+
+.endShoping {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.endShoping p {
+    font-size: 20px;
+    padding: 20px 0px 5px;
+}
+
+.endShoping span {
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.endShoping button {
+    padding: 8px 16px;
+    font-size: 18px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.bag svg {
+    font-size: 8rem;
 }
 
 @media screen and (max-width: 1460px) {

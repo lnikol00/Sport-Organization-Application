@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from 'react-use-cart';
 import * as AiIcons from "react-icons/ai"
+import * as GiIcons from "react-icons/gi"
 
 import styles from "./fanshop.module.css"
 import FormInput from './FormInput';
@@ -12,6 +13,8 @@ function Cart() {
     const [disable, setDisable] = useState(true)
     const [showCheckout, setShowCheckout] = useState(false)
     const [blured, setBluder] = useState(true)
+    const [message, setMessage] = useState(true)
+    const navigate = useNavigate()
 
     const [values, setValues] = useState({
         name: "",
@@ -23,22 +26,22 @@ function Cart() {
     })
     const handleSubmit = (e) => {
         e.preventDefault();
+        setMessage(false)
     }
 
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
-    console.log(values)
 
-    const openCheckout = () => {
-        setShowCheckout(!showCheckout)
-        setBluder(!blured)
-    }
-
-    const closeCheckout = () => {
+    const openCheckout = (e) => {
         setShowCheckout(!showCheckout)
         setBluder(!blured)
         form.current.reset();
+    }
+
+    const shopReturn = () => {
+        emptyCart();
+        navigate(-1);
     }
 
     const {
@@ -48,6 +51,7 @@ function Cart() {
         cartTotal,
         updateItemQuantity,
         removeItem,
+        emptyCart,
     } = useCart();
 
 
@@ -75,15 +79,30 @@ function Cart() {
     return (
         <div className={styles.mainContainer}>
             <div className={showCheckout ? `${styles.checkoutContainer}` : `${styles.checkoutContainerClosed}`}>
-                <AiIcons.AiOutlineCloseCircle onClick={closeCheckout} />
-                <div className={styles.formInput}>
-                    <form onSubmit={handleSubmit} ref={form}>
-                        {inputs.map((input) => (
-                            <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
-                        ))}
-                        <button>Završi kupnju</button>
-                    </form>
-                </div>
+                {message ? (
+                    <div>
+                        <div className={styles.close}>
+                            <AiIcons.AiOutlineCloseCircle onClick={openCheckout} />
+                        </div>
+                        <div className={styles.formInput}>
+                            <form onSubmit={handleSubmit} ref={form}>
+                                {inputs.map((input) => (
+                                    <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
+                                ))}
+                                <button>Završi kupnju</button>
+                            </form>
+                        </div>
+                    </div>
+                ) : (
+                    <div className={styles.endShoping}>
+                        <div className={styles.bag}>
+                            <GiIcons.GiShoppingBag />
+                        </div>
+                        <p>Hvala na kupnji!</p>
+                        <span> Isporuka na adresu u roku 24h</span>
+                        <button onClick={shopReturn}>Povratak u Web-Shop</button>
+                    </div>
+                )}
             </div>
             <div className={blured ? `${styles.cartContainer}` : `${styles.cartContainerOpen}`}>
                 <h3>Vaša košarica ({totalItems})</h3>
