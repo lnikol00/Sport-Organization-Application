@@ -41,11 +41,12 @@ export const inputs = [
     {
         id: 5,
         name: "cardNumber",
-        type: "text",
+        type: "tel",
         placeholder: "xxxx - xxxx -xxxx -xxxx",
-        errorMessage: "Broj kartice mora sadržavati samo brojeve!",
+        errorMessage: "Broj kartice mora sadržavati samo 16 brojeva!",
         label: "Broj kartice",
-        pattern: "^(0|[1-9][0-9]*)$",
+        pattern: "^4[0-9]{12}(?:[0-9]{3})?$",
+        maxlenght: '19',
         required: true,
     },
     {
@@ -53,9 +54,9 @@ export const inputs = [
         name: "ccvNumber",
         type: "text",
         placeholder: "xxx",
-        errorMessage: "CCV broj mora sadržavati samo brojeve!",
+        errorMessage: "CCV broj mora sadržavati samo 3 broja!",
         label: "CCV",
-        pattern: "^(0|[1-9][0-9]*)$",
+        pattern: "^[0-9]{3}$",
         required: true,
     },
     {
@@ -65,7 +66,7 @@ export const inputs = [
         placeholder: "xx/yy",
         errorMessage: "Datum kartice neispravan!",
         label: "Datum isteka",
-        pattern: "^(0|[1-9][0-9]*)$",
+        pattern: "^(0[1-9]|1[0-2])\/?([0-9]{2})$",
         required: true,
     },
 ]

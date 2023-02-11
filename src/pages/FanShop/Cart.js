@@ -36,7 +36,6 @@ function Cart() {
     const openCheckout = (e) => {
         setShowCheckout(!showCheckout)
         setBluder(!blured)
-        form.current.reset();
     }
 
     const shopReturn = () => {
