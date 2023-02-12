@@ -152,7 +152,7 @@ function Cart() {
                                             +
                                         </button>
                                     </div>
-                                    <span><b>Cijena: </b>{item.price}  €</span>
+                                    <span><b>Cijena: </b>{item.price}€</span>
                                 </div>
 
                                 <div className={styles.desc}>
