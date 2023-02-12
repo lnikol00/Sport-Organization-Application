@@ -49,7 +49,7 @@ function Product() {
                     <p>
                         {desc}
                     </p>
-                    <b>{price}</b>
+                    <b>{price} €</b>
                     <form>
                         <label>
                             Veličina:

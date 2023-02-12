@@ -152,7 +152,7 @@ function Cart() {
                                             +
                                         </button>
                                     </div>
-                                    <span><b>Cijena: </b>{item.price}</span>
+                                    <span><b>Cijena: </b>{item.price}  €</span>
                                 </div>
 
                                 <div className={styles.desc}>
@@ -170,7 +170,7 @@ function Cart() {
 
                 </div>
                 <div className={styles.totalPrice}>
-                    <span>Ukupna cijena: € {cartTotal}</span>
+                    <span>Ukupna cijena: € {cartTotal.toFixed(2)}</span>
                 </div>
 
             </div>
