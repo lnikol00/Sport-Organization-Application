@@ -26,8 +26,11 @@ export const inputs = [
         name: "date",
         type: "date",
         placeholder: "",
-        errorMessage: "",
+        min: "1997-01-01",
+        max: "2030-12-31",
+        errorMessage: "Neispravan datum!",
         label: "Datum rođenja",
+        required: true,
     },
     {
         id: 4,

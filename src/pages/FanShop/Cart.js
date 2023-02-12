@@ -34,8 +34,13 @@ function Cart() {
     }
 
     const openCheckout = (e) => {
-        setShowCheckout(!showCheckout)
-        setBluder(!blured)
+        setShowCheckout(true)
+        setBluder(false)
+    }
+
+    const closeCheckout = () => {
+        setShowCheckout(false)
+        setBluder(true)
     }
 
     const shopReturn = () => {
@@ -81,7 +86,7 @@ function Cart() {
                 {message ? (
                     <div>
                         <div className={styles.close}>
-                            <AiIcons.AiOutlineCloseCircle onClick={openCheckout} />
+                            <AiIcons.AiOutlineCloseCircle onClick={closeCheckout} />
                         </div>
                         <div className={styles.formInput}>
                             <form onSubmit={handleSubmit} ref={form}>
