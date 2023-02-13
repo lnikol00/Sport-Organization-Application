@@ -2,7 +2,9 @@ import React, { Fragment } from 'react'
 
 import styles from "./clockdown.module.css"
 
-function ClockDown({ timerMonths, timerDays, timerHours, timerMinutes, timerSeconds }) {
+function ClockDown(props) {
+
+    const { timerDays, timerHours, timerMinutes, timerSeconds } = props;
     return (
         <Fragment>
             <div className={styles.container}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NewsData } from './NewsData';
 
 import styles from "./news.module.css"
@@ -12,7 +12,7 @@ function News() {
     const { id } = useParams()
     const { news } = NewsData;
     const navigate = useNavigate()
-    const newsLenght = news.length;
+    const [disable, setDisable] = useState(false)
 
     const handleNext = () => {
         navigate(`/news/${Number(id) + 1}`)
@@ -21,6 +21,9 @@ function News() {
     const handlePrev = () => {
         navigate(`/news/${Number(id) - 1}`)
     }
+
+
+
 
     const item = news.find((item) => item.id === id)
 
@@ -63,7 +66,7 @@ function News() {
                 </div>
             </div>
             <div className={styles.buttons}>
-                <button className={styles.prevButton} onClick={handlePrev}>Prev</button>
+                <button className={styles.prevButton} onClick={handlePrev} disabled={disable}>Prev</button>
                 <button className={styles.nextButton} onClick={handleNext}>Next</button>
             </div>
         </div >
