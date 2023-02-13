@@ -26,8 +26,7 @@ function Footer() {
         else {
             setDisable(false)
         }
-        const getUsername = e.target.value;
-        setUsername(getUsername);
+        setUsername(e.target.value);
     }
     const handleemail = (e) => {
         if (e.target.value === "") {
@@ -36,8 +35,7 @@ function Footer() {
         else {
             setDisable(false)
         }
-        const getEmail = e.target.value;
-        setEmail(getEmail);
+        setEmail(e.target.value);
     }
     const handlemessage = (e) => {
         if (e.target.value === "") {
@@ -46,8 +44,7 @@ function Footer() {
         else {
             setDisable(false)
         }
-        const getMessage = e.target.value;
-        setMessage(getMessage);
+        setMessage(e.target.value);
     }
     // const handleSubmit = (e) => {
     //     e.preventDefault();
