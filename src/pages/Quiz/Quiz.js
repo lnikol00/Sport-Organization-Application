@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
-
-
 import { Questions } from './Questions'
-
 import * as FaIcons from "react-icons/fa"
-
 import styles from "./quiz.module.css"
 
 function Quiz() {
-
     const [shown, setShown] = useState(true)
     const [hidden, setHidden] = useState(true)
     const [quiz, setQuiz] = useState(true)
@@ -16,7 +11,6 @@ function Quiz() {
     const handleClick = () => {
         setHidden(!hidden)
         setShown(!shown)
-
     }
 
     const clickChange = () => {
@@ -43,7 +37,6 @@ function Quiz() {
             setScore(score + 1);
         }
         setClicked(true);
-
     }
 
     const handleNextQuestion = () => {
@@ -105,6 +98,9 @@ function Quiz() {
                             <div className={styles.questionContainer}>
                                 <div className={styles.questionCount}>
                                     Pitanja: {curentQuestion + 1} od {Questions.length}
+                                    <div>
+
+                                    </div>
                                 </div>
                                 <div className={styles.question}>
                                     {Questions[curentQuestion].nmb}.

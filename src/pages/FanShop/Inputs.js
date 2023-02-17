@@ -6,9 +6,9 @@ export const inputs = [
         name: "name",
         type: "text",
         placeholder: "Upišite ime",
-        errorMessage: "Ima mora imati izmeđju 3-16 znakova i ne smije uključivati znakove ili brojeve!",
+        errorMessage: "Ime mora imati izmeđju 3-16 znakova i ne smije uključivati znakove ili brojeve!",
         label: "Ime",
-        pattern: "^-\p{L}[A-Za-z]{3,16}$",
+        pattern: "^-\p{L}[A-Za-z]{3,16}?$",
         required: true,
     },
     {
@@ -18,7 +18,7 @@ export const inputs = [
         placeholder: "Upišite prezime",
         errorMessage: "Ima mora imati izmeđju 3-16 znakova i ne smije uključivati znakove ili brojeve!",
         label: "Prezime",
-        pattern: "^-\p{L}[A-Za-z]{3,16}$",
+        pattern: "^-\p{L}[A-Za-z]{3,16}?$",
         required: true,
     },
     {

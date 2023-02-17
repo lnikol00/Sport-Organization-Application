@@ -166,6 +166,8 @@
     padding: 0px 0px 10px;
     border-bottom: 1px solid black;
     font-size: 22px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .question {
