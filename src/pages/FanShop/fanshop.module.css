@@ -800,4 +800,16 @@ input:invalid[focused="true"]~span {
     .totalPrice span {
         font-size: 18px;
     }
+
+    .checkoutContainer {
+        width: 300px;
+    }
+
+    .formInput {
+        width: 300px;
+    }
+
+    .formInput input {
+        width: 260px;
+    }
 }

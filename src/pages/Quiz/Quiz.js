@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Questions } from './Questions'
 import * as FaIcons from "react-icons/fa"
 import styles from "./quiz.module.css"
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+
 
 function Quiz() {
     const [shown, setShown] = useState(true)
@@ -17,6 +19,7 @@ function Quiz() {
         setHidden(!hidden)
         setShown(false)
         setQuiz(!quiz)
+        setStart(true)
     }
 
     const exitChange = () => {
@@ -37,11 +40,13 @@ function Quiz() {
             setScore(score + 1);
         }
         setClicked(true);
+        setStart(false)
     }
 
     const handleNextQuestion = () => {
-
         setClicked(false);
+        setReset(reset + 1);
+        setStart(true)
         if (curentQuestion < Questions.length - 1) {
             setCurentQuestion(curentQuestion + 1)
         }
@@ -55,6 +60,21 @@ function Quiz() {
         setCurentQuestion(0);
         setShowScore(false);
     };
+
+    const [start, setStart] = useState(false);
+    const [reset, setReset] = useState(0);
+
+    const renderTime = ({ remainingTime }) => {
+        if (remainingTime === 0) {
+            setClicked(true)
+            setStart(false)
+        }
+        return (
+            <div>
+                <div className={styles.time}>{remainingTime}</div>
+            </div>
+        );
+    }
 
     return (
         <div className={styles.mainContainer}>
@@ -99,7 +119,16 @@ function Quiz() {
                                 <div className={styles.questionCount}>
                                     Pitanja: {curentQuestion + 1} od {Questions.length}
                                     <div>
-
+                                        <CountdownCircleTimer
+                                            isPlaying={start}
+                                            duration={15}
+                                            key={reset}
+                                            size={48}
+                                            colors={["#004777", "#A30000"]}
+                                            colorsTime={[15, 0]}
+                                        >
+                                            {renderTime}
+                                        </CountdownCircleTimer>
                                     </div>
                                 </div>
                                 <div className={styles.question}>

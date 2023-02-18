@@ -65,7 +65,7 @@ export const Questions = [
         options: [
             { id: 0, text: "Crkva Gospe Fatimske", isCorrect: false },
             { id: 1, text: "Crkva Gospe od Zdravlja", isCorrect: false },
-            { id: 2, text: "Crkva Uznesenja Blažene Djevice Marije", isCorrect: true },
+            { id: 2, text: "Crkva Velike Gospe", isCorrect: true },
             { id: 3, text: "Crkva Kraljice Neba i Zemlje", isCorrect: false },
         ],
     },

@@ -8,7 +8,7 @@ export const inputs = [
         placeholder: "Upišite ime",
         errorMessage: "Ime mora imati izmeđju 3-16 znakova i ne smije uključivati znakove ili brojeve!",
         label: "Ime",
-        pattern: "^-\p{L}[A-Za-z]{3,16}?$",
+        pattern: "^[A-Za-z]{3,16}?$",
         required: true,
     },
     {
@@ -18,7 +18,7 @@ export const inputs = [
         placeholder: "Upišite prezime",
         errorMessage: "Ima mora imati izmeđju 3-16 znakova i ne smije uključivati znakove ili brojeve!",
         label: "Prezime",
-        pattern: "^-\p{L}[A-Za-z]{3,16}?$",
+        pattern: "^[A-Za-z]{3,16}?$",
         required: true,
     },
     {
@@ -55,7 +55,7 @@ export const inputs = [
     {
         id: 6,
         name: "ccvNumber",
-        type: "text",
+        type: "tel",
         placeholder: "xxx",
         errorMessage: "CCV broj mora sadržavati samo 3 broja!",
         label: "CCV",
@@ -65,7 +65,7 @@ export const inputs = [
     {
         id: 7,
         name: "dateNumber",
-        type: "text",
+        type: "tel",
         placeholder: "xx/yy",
         errorMessage: "Datum kartice neispravan!",
         label: "Datum isteka",
