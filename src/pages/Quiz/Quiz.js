@@ -16,7 +16,7 @@ function Quiz() {
     }
 
     const clickChange = () => {
-        setHidden(!hidden)
+        setHidden(true)
         setShown(false)
         setQuiz(!quiz)
         setStart(true)
