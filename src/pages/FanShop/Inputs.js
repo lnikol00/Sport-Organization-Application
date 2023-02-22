@@ -66,7 +66,7 @@ export const inputs = [
         id: 7,
         name: "dateNumber",
         type: "tel",
-        placeholder: "xx/yy",
+        placeholder: "mm/yy",
         errorMessage: "Datum kartice neispravan!",
         label: "Datum isteka",
         pattern: "^(0[1-9]|1[0-2])\/?([0-9]{2})$",
