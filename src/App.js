@@ -14,8 +14,7 @@ import Quiz from './pages/Quiz/Quiz';
 
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import ScrollToTop from './components/Scroll/ScrollToTop';
-
-
+import NotFound from './pages/NotFound/NotFound';
 
 
 function App() {
@@ -35,6 +34,7 @@ function App() {
             <Route exact path='quiz' element={<Quiz />} />
             <Route exact path="news/:id" element={<News />} />
             <Route exact path="fan-shop/product/:id" element={<Product />} />
+            <Route exact path="*" element={<NotFound />} />
           </Routes>
         </div>
         <Footer />
