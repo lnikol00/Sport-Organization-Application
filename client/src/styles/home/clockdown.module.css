@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-.container {
+.mainContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +68,10 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+
     .clock div {
         display: flex;
         margin: 0;
@@ -86,7 +90,7 @@
     }
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 800px) {
 
     .clock div {
         display: block;
@@ -110,10 +114,6 @@
 
 
 @media screen and (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
-
     .title {
         margin: 0 30px;
         text-align: center;

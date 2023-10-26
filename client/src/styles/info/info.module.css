@@ -1,5 +1,5 @@
 .infoContainer {
-    margin: 10px 50px 0px;
+    margin: 20px 50px 0px;
 }
 
 .infoContainer h2 {
@@ -7,7 +7,6 @@
     padding: 10px 0px;
     font-size: 30px;
 }
-
 
 .infoContainer h2::after {
     content: "";
@@ -310,7 +309,7 @@
     padding: 5px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     .infoContainer h2::after {
         width: 92vw;
     }
@@ -328,29 +327,29 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .infoContainer {
-        margin: 0px auto;
+        margin: 20px auto;
     }
 
-    .infoContainer h2::after {
-        width: 85vw;
+    .infoContainer h2 {
+        text-align: center;
     }
 
     .populationDesc h3::after {
-        width: 85vw;
+        width: 92vw;
     }
 
     .object h3::after {
-        width: 85vw;
+        width: 92vw;
     }
 
     .association h3::after {
-        width: 85vw;
+        width: 92vw;
     }
 
     .populationDesc img {
-        width: 85vw;
+        width: 92vw;
     }
 
     .desc {
@@ -405,5 +404,24 @@
 
     .image3 img {
         width: 87vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .populationDesc h3::after {
+        width: 90vw;
+    }
+
+    .object h3::after {
+        width: 90vw;
+    }
+
+    .association h3::after {
+        width: 90vw;
+    }
+
+    .church p {
+        padding: 0px 10px 0px 15px;
     }
 }
