@@ -1,46 +1,37 @@
 import './App.css';
 
-import Header from './components/header/Header';
+import { Routes, Route, useLocation } from "react-router-dom";
+
 import Home from './pages/home/Home';
-import FanShop from './pages/FanShop/FanShop';
 import Info from './pages/info/Info';
-import Gallery from './pages/Galery/Gallery';
-import News from './pages/home/News/News';
-import Footer from './components/footer/Footer';
-import Cart from './pages/FanShop/Cart';
-import Product from './pages/FanShop/Product';
-import Quiz from './pages/Quiz/Quiz';
-
-
-import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
-import ScrollToTop from './components/Scroll/ScrollToTop';
-import NotFound from './pages/NotFound/NotFound';
-
+import Gallery from './pages/gallery/Gallery';
+import News from './pages/home/news/News';
+import Cart from './pages/fan-shop/Cart';
+import NotFound from './pages/not-found/NotFound';
+import SingleProduct from './pages/fan-shop/SingleProduct';
+import Shop from './pages/fan-shop/Shop';
+import Layout from './components/context/Layout';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
-  return (
-    <div className="App">
-      <Router >
-        <Header />
-        <div className='main-container'>
-          <ScrollToTop />
-          <Routes>
-            <Route index element={<Home />} />
-            <Route exact path='info' element={<Info />} />
-            <Route exact path="fan-shop/cart" element={<Cart />} />
-            <Route exact path='fan-shop' element={<FanShop />} />
-            <Route exact path='gallery' element={<Gallery />} />
-            <Route exact path='quiz' element={<Quiz />} />
-            <Route exact path="news/:id" element={<News />} />
-            <Route exact path="fan-shop/product/:id" element={<Product />} />
-            <Route exact path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
-    </div>
+  const location = useLocation()
 
+  return (
+    <AnimatePresence mode='wait'>
+      <Routes key={location.pathname} location={location}>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route exact path='info' element={<Info />} />
+          <Route exact path="cart" element={<Cart />} />
+          <Route exact path='products' element={<Shop />} />
+          <Route exact path='gallery' element={<Gallery />} />
+          <Route exact path="news/:id" element={<News />} />
+          <Route exact path="products/:id" element={<SingleProduct />} />
+          <Route exact path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </AnimatePresence>
   );
 }
 
