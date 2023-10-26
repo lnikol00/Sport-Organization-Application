@@ -2,14 +2,7 @@ import Product from "../models/ProductModel.js";
 
 //GET ALL PRODUCTS
 export const getAllProducts = async (req, res) => {
-    const keyword = req.query.keyword ? {
-        name: {
-            $regex: req.query.keyword,
-            $options: "i"
-        },
-    }
-        : {}
-    const products = await Product.find({ ...keyword })
+    const products = await Product.find({})
     res.json(products);
 }
 
