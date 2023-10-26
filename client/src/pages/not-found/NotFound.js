@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./notfound.module.css"
+import styles from "../../styles/not-found/notfound.module.css"
 import * as HiIcons from "react-icons/hi"
 import { Link } from 'react-router-dom'
 

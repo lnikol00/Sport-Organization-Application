@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import * as AiIcons from "react-icons/ai"
 import { sliderData } from './SliderData'
-import "./Slider.scss"
+import styles from "../../../styles/home/slider.module.css"
 
 function Slider() {
 
@@ -36,21 +36,21 @@ function Slider() {
 
 
     return (
-        <div className='slider'>
-            <AiIcons.AiOutlineArrowLeft className='arrow prev' onClick={prevSlide} />
-            <AiIcons.AiOutlineArrowRight className='arrow next' onClick={nextSlide} />
+        <div className={styles.sliderContainer}>
+            <AiIcons.AiOutlineArrowLeft className={`${styles.arrow} ${styles.prev}`} onClick={prevSlide} />
+            <AiIcons.AiOutlineArrowRight className={`${styles.arrow} ${styles.next}`} onClick={nextSlide} />
 
             {sliderData.map((slide, index) => {
                 return (
-                    <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
+                    <div className={index === currentSlide ? `${styles.slide} ${styles.current}` : `${styles.slide}`} key={index}>
                         {index === currentSlide && (
                             <div>
                                 <img src={slide.image} alt='slide' />
-                                <div className='content'>
+                                <div className={styles.content}>
                                     <h2>{slide.heading}</h2>
                                     <p>{slide.desc}</p>
                                     <hr />
-                                    <button className='--btn --btn primary'>Saznaj više</button>
+                                    <button className={styles.primary}>Saznaj više</button>
                                 </div>
                             </div>
                         )}

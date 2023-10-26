@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 
-import styles from "./clockdown.module.css"
+import styles from "../../../styles/home/clockdown.module.css"
 
 function ClockDown(props) {
 
     const { timerDays, timerHours, timerMinutes, timerSeconds } = props;
     return (
         <Fragment>
-            <div className={styles.container}>
+            <div className={styles.mainContainer}>
                 <div className={styles.title}>
                     <h1>26. Maraton lađa </h1>
                     <p>Metković - Opuzen - Ploče</p>

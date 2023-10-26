@@ -1,6 +1,6 @@
-import slika1 from "./img/image11.jpg"
-import slika2 from "./img/image7.jpg"
-import slika3 from "./img/image9.jpeg"
+import slika1 from "../../../images/slider/image11.jpg"
+import slika2 from "../../../images/slider/image7.jpg"
+import slika3 from "../../../images/slider/image9.jpeg"
 
 
 export const sliderData = [

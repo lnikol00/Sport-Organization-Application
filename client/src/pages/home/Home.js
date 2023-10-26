@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from 'react'
-import { NewsData } from './News/NewsData'
-import { Link } from 'react-router-dom'
-
-
-import ClockDown from './ClockDown/ClockDown'
+import ClockDown from './clock-down/ClockDown'
 import Slider from './slider/Slider'
-
-import styles from "./News/news.module.css"
+import { Link } from 'react-router-dom'
+import styles from "../../styles/home/home.module.css"
+import AnimatedPage from '../../components/context/AnimatedPage'
+import { useDispatch, useSelector } from "react-redux"
+import Loading from '../../components/messages/Loading'
+import Error from '../../components/messages/Error'
+import { listNews } from '../../Redux/Actions/NewsAction'
+import moment from "moment"
 
 function Home() {
 
-    const { news } = NewsData
+    const dispatch = useDispatch()
+
+    const newsList = useSelector((state) => state.newsList);
+    const { loading, error, news } = newsList;
+
+    useEffect(() => {
+        dispatch(listNews());
+    }, [dispatch])
 
     const [timerDays, setTimerDays] = useState()
     const [timerHours, setTimerHours] = useState()
@@ -20,7 +29,7 @@ function Home() {
     let interval;
 
     const startTimer = () => {
-        const countDownDate = new Date("August 12, 2023 17:00:00").getTime();
+        const countDownDate = new Date("August 12, 2024 17:00:00").getTime();
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -48,39 +57,48 @@ function Home() {
     }, [])
 
     return (
-        <div className='main-container'>
-            <Slider />
-            <ClockDown
-                timerDays={timerDays}
-                timerHours={timerHours}
-                timerMinutes={timerMinutes}
-                timerSeconds={timerSeconds}
-            />
-            <section className={styles.newsContainer}>
+        <AnimatedPage>
+            <div className={styles.mainContainer}>
+                {/* <Slider /> */}
+                <ClockDown
+                    timerDays={timerDays}
+                    timerHours={timerHours}
+                    timerMinutes={timerMinutes}
+                    timerSeconds={timerSeconds}
+                />
                 <h2>Novosti</h2>
-                <div className={styles.articles}>
-                    {news.map((item) => {
-                        return (
-                            <article key={item.id}>
-                                <Link to={`news/${item.id}`} className={styles.links}>
-                                    <img src={item.image} />
-                                    <h5>
-                                        {item.name}
-                                    </h5>
-                                    <span>
-                                        {item.date}
-                                    </span>
-                                    <p>
-                                        {item.desc}
-                                    </p>
-                                </Link>
-                            </article>
-                        )
-                    })}
-                </div>
-            </section >
+                <div className={styles.newsContainer}>
+                    {
+                        loading ? (<Loading />) : error ? (<Error>Something went wrong</Error>)
+                            :
+                            (
+                                <>
+                                    {news.map((item) => {
+                                        return (
+                                            <div key={item.id} className={styles.articles}>
+                                                <Link to={`news/${item.id}`}>
+                                                    <img src={item.image} />
+                                                    <h5>
+                                                        {item.title}
+                                                    </h5>
+                                                    <span>
+                                                        {moment(item.createdAt).calendar()}
+                                                    </span>
+                                                    <p>
+                                                        {item.description}
+                                                    </p>
+                                                </Link>
+                                            </div>
+                                        )
+                                    })}
+                                </>
+                            )
+                    }
 
-        </div >
+                </div >
+
+            </div >
+        </AnimatedPage>
     )
 }
 
