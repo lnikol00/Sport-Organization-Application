@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 
-import styles from "./footer.module.css"
+import styles from "../../styles/footer/footer.module.css"
 
 import * as ImIcons from "react-icons/im"
 import * as FiIcons from "react-icons/fi"
@@ -9,7 +9,6 @@ import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
 import * as BsIcons from "react-icons/bs"
 import * as CiIcons from "react-icons/ci"
-import PopUp from './PopUp';
 
 function Footer() {
     const form = useRef();
@@ -17,77 +16,24 @@ function Footer() {
     const [userame, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-    const [disable, setDisable] = useState(true)
-
-    const handleusername = (e) => {
-        if (e.target.value === "") {
-            setDisable(true)
-        }
-        else {
-            setDisable(false)
-        }
-        setUsername(e.target.value);
-    }
-    const handleemail = (e) => {
-        if (e.target.value === "") {
-            setDisable(true)
-        }
-        else {
-            setDisable(false)
-        }
-        setEmail(e.target.value);
-    }
-    const handlemessage = (e) => {
-        if (e.target.value === "") {
-            setDisable(true)
-        }
-        else {
-            setDisable(false)
-        }
-        setMessage(e.target.value);
-    }
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
-    //     setShowPopUp(true)
-
-    // }
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_0v2naub', 'template_yj8y0w4', form.current, 'e14dHShsfZvGSBG8B')
-            .then((result) => {
-                console.log(result.text);
-                console.log("upit poslan");
-                console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
+        // emailjs.sendForm('service_0v2naub', 'template_yj8y0w4', form.current, 'e14dHShsfZvGSBG8B')
+        //     .then((result) => {
+        //         console.log(result.text);
+        //         console.log("upit poslan");
+        //         console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
 
-            }, (error) => {
-                console.log(error.text);
-                setShowPopUp(false)
-            });
-
-        setShowPopUp(true)
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     });
         form.current.reset();
     };
 
-    const [showPopup, setShowPopUp] = useState(false)
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowPopUp(false);
-        }, 3000)
-
-        return () => { clearTimeout(timer) }
-    }, [showPopup])
-
-    let popup = null
-    if (showPopup) {
-        popup = <PopUp />
-    }
-
     return (
-        <div className={styles.container}>
+        <div className={styles.mainContainer}>
             <div className={styles.footerContainer}>
                 <div>
                     <div className={styles.linksContainer}>
@@ -143,20 +89,27 @@ function Footer() {
 
                 <div className={styles.queryContainer}>
                     <h1>Pošaljite upit</h1>
-                    <div className={styles.popUp}>
-                        {popup}
-                    </div>
                     <form className={styles.input} ref={form} onSubmit={sendEmail}>
                         <div>
-                            <input type="ime" name='user_name' id='ime' placeholder='VAŠE IME' onChange={(e) => handleusername(e)}></input>
+                            <input
+                                type="ime"
+                                placeholder='VAŠE IME'
+                                onChange={(e) => setUsername(e.target.value)}></input>
                         </div>
                         <div>
-                            <input type="email" name='user_email' id='email' placeholder='VAŠA E-MAIL ADRESA' onChange={(e) => handleemail(e)}></input>
+                            <input type="email"
+                                placeholder='VAŠA E-MAIL ADRESA'
+                                onChange={(e) => setEmail(e.target.value)}></input>
                         </div>
                         <div>
-                            <textarea name='message' id='poruka' cols="10" rows="5" placeholder='VAŠA PORUKA' onChange={(e) => handlemessage(e)}></textarea>
+                            <textarea
+                                name='message'
+                                cols="10"
+                                rows="5"
+                                placeholder='VAŠA PORUKA'
+                                onChange={(e) => setMessage(e.target.value)}></textarea>
                         </div>
-                        <button disabled={disable}>Pošalji poruku</button>
+                        <button>Pošalji poruku</button>
                     </form>
                 </div>
             </div>

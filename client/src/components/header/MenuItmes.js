@@ -6,7 +6,7 @@ export const MenuItems = [
     },
     {
         title: 'Fan-Shop',
-        url: '/fan-shop',
+        url: '/products',
     },
     {
         title: 'O nama',
@@ -16,13 +16,5 @@ export const MenuItems = [
         title: 'Galerija',
         url: '/gallery',
     },
-    {
-        title: 'Kviz',
-        url: '/quiz',
-    },
-    // {
-    //     title: 'Kontakt',
-    //     url: '/',
-    // },
 ]
 
