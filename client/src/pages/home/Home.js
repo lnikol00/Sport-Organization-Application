@@ -76,7 +76,7 @@ function Home() {
                                     {news.map((item) => {
                                         return (
                                             <div key={item.id} className={styles.articles}>
-                                                <Link to={`news/${item.id}`}>
+                                                <Link to={`news/${item._id}`}>
                                                     <img src={item.image} />
                                                     <h5>
                                                         {item.title}
