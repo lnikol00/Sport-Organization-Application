@@ -6,4 +6,6 @@ const newsRoute = express.Router();
 
 newsRoute.get("/", asyncHandler(newsController.getAllNews));
 
+newsRoute.get("/:id", asyncHandler(newsController.getSingleNews));
+
 export default newsRoute;
