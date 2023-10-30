@@ -1,0 +1,114 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer hr {
+    margin: 0;
+    padding: 0;
+}
+
+.wraper {
+    flex: 1;
+    text-align: center;
+}
+
+.wraper h1 {
+    padding: 20px 0 10px;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.itemContainer {
+    display: flex;
+    padding: 40px;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.description {
+    flex: 1;
+    padding: 0em 2em;
+}
+
+.description h1 {
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+.description p {
+    font-size: 1.3em;
+    padding: 5px 0px;
+}
+
+.description b {
+    font-size: 1.3em;
+}
+
+.selectContainer {
+    margin: 10px 0px;
+}
+
+.selectContainer b {
+    font-size: 22px;
+}
+
+.selectContainer select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 22px;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+}
+
+.buttonContainer button {
+    padding: 10px;
+    border: none;
+    color: black;
+    font-weight: 600;
+    background-color: yellow;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 0px 10px #ccc;
+}
+
+@media screen and (max-width: 1200px) {
+    .itemContainer {
+        flex-direction: column;
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image img {
+        width: 75%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .description {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .image img {
+        width: 100%;
+        height: 150%;
+    }
+}

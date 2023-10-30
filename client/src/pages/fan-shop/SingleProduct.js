@@ -1,55 +1,91 @@
-import React from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import styles from "../../styles/fan-shop/product.module.css"
+import { useNavigate, useParams } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { listProductDetails } from '../../Redux/Actions/ProductActions'
+import AnimatedPage from '../../components/context/AnimatedPage'
 
 function SingleProduct() {
-    // const navigate = useNavigate()
-    // const { id } = useParams()
+    let navigate = useNavigate();
+    const params = useParams();
+    const [qty, setQty] = useState(1);
+    const productId = params.id;
+    const dispatch = useDispatch();
 
-    // return (
-    //     <div className={styles.item}>
-    //         <div className={styles.wraper}>
-    //             <div className={styles.center}>
-    //                 <h2>Službeni Web Shop</h2>
-    //             </div>
-    //         </div>
-    //         <hr />
+    const productDetails = useSelector((state) => state.productDetails)
+    const { loading, error, product } = productDetails;
 
-    //         <div className={styles.wrapperContainer}>
-    //             <div className={styles.image}>
-    //                 <img src={img} alt='slika' />
-    //             </div>
+    useEffect(() => {
+        dispatch(listProductDetails(productId))
+    }, [dispatch, productId])
 
-    //             <div className={styles.information}>
-    //                 <h1>
-    //                     {title}
-    //                 </h1>
-    //                 <p>
-    //                     {desc}
-    //                 </p>
-    //                 <b>{price} €</b>
-    //                 <form>
-    //                     <label>
-    //                         Veličina:
-    //                         <select>
-    //                             <option>XXS</option>
-    //                             <option>XS</option>
-    //                             <option>S</option>
-    //                             <option>M</option>
-    //                             <option>L</option>
-    //                             <option>XL</option>
-    //                             <option>XXL</option>
-    //                         </select>
-    //                     </label>
-    //                 </form>
-    //                 <div className={styles.add}>
-    //                     <Link to>
-    //                         <button onClick={handleClick} className={styles.basket}>Dodaj u košaricu</button>
-    //                     </Link>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // )
+    const AddToCartHandle = (e) => {
+        e.preventDefault();
+        navigate(`/cart/${productId}?qty=${qty}`)
+    }
+
+    return (
+        < AnimatedPage >
+            <div className={styles.mainContainer}>
+                <div className={styles.wraper}>
+                    <div className={styles.center}>
+                        <h1>Web Shop</h1>
+                    </div>
+                </div>
+                <hr />
+                {
+                    loading ? (<p>Loading...</p>) : error ? (<p>Something went wrong!</p>)
+                        :
+                        (
+                            <div className={styles.itemContainer}>
+                                <div className={styles.image}>
+                                    <img src={product.image} alt={product.title} />
+                                </div>
+                                <div className={styles.description}>
+                                    <h1>{product.title}</h1>
+                                    <p>{product.description}</p>
+                                    <b>€ {product.price}</b>
+                                    <div className={styles.selectContainer}>
+                                        <b>Quantity: </b>
+                                        <select
+                                            onChange={(e) => setQty(e.target.value)}
+                                        >
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select>
+                                    </div>
+                                    <div className={styles.selectContainer}>
+                                        <b>Veličina: </b>
+                                        <select
+
+                                        >
+                                            <option>XXS</option>
+                                            <option>XS</option>
+                                            <option>S</option>
+                                            <option>M</option>
+                                            <option>L</option>
+                                            <option>XL</option>
+                                            <option>XXL</option>
+                                        </select>
+                                    </div>
+                                    <div className={styles.buttonContainer}>
+                                        <button onClick={AddToCartHandle}>Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                }
+            </div>
+        </AnimatedPage >
+    )
 }
 
 export default SingleProduct
