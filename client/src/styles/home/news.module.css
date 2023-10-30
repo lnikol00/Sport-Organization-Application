@@ -1,0 +1,42 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.imageContainer {
+    width: 95%;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+}
+
+.titleContainer {
+    width: 95%;
+    padding: 15px 0 0;
+}
+
+.dateContainer {
+    padding: 0 0 15px;
+    width: 95%;
+}
+
+.bodyContainer {
+    width: 95%;
+}
+
+.bodyContainer p {
+    font-size: 18px;
+    line-height: 35px;
+}
+
+@media screen and (max-width: 850px) {
+    .imageContainer img {
+        height: 400px;
+    }
+}
