@@ -22,12 +22,12 @@ function App() {
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route exact path='info' element={<Info />} />
-          <Route exact path="cart" element={<Cart />} />
-          <Route exact path='products' element={<Shop />} />
-          <Route exact path='gallery' element={<Gallery />} />
           <Route exact path="news/:id" element={<News />} />
+          <Route exact path='info' element={<Info />} />
+          <Route exact path='gallery' element={<Gallery />} />
+          <Route exact path='products' element={<Shop />} />
           <Route exact path="products/:id" element={<SingleProduct />} />
+          <Route exact path="cart" element={<Cart />} />
           <Route exact path="*" element={<NotFound />} />
         </Route>
       </Routes>
