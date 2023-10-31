@@ -66,7 +66,7 @@ const products = [
         description: "Paket od tri para žutih čarapa sa logom ULŠS.",
     },
     {
-        image: "/images/products/Žuta-winner-min.png",
+        image: "/images/products/trenerka.png",
         title: "Trenerka (gornji i donji dio)",
         price: 66.67,
         description: "Gornji i donji dio žuto crne trenerke sa logom udruge lađara ŠS. Također se posebno tiskaju inicijali pa je cijena malo povišena.",
