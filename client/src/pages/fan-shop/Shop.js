@@ -37,7 +37,7 @@ function Shop() {
                         <h1>Web Shop</h1>
                     </div>
                     <div className={styles.right}>
-                        <Link to="cart">
+                        <Link to="/cart">
                             <AiIcons.AiOutlineShoppingCart className={styles.cart} />
                         </Link>
 
@@ -61,7 +61,7 @@ function Shop() {
                                         }).map((item) => {
                                             return (
                                                 <div className={styles.itemsContainer} key={item._id}>
-                                                    <img src={item.img} alt={item.title} />
+                                                    <img src={item.image} alt={item.title} />
                                                     <div className={styles.info}>
                                                         <div className={styles.icon}>
                                                             <AiIcons.AiOutlineShoppingCart />
