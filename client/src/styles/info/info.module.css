@@ -5,64 +5,180 @@
 .infoContainer h2 {
     margin: 0px 20px;
     padding: 10px 0px;
-    font-size: 30px;
 }
 
 .infoContainer h2::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 1400px;
+    width: 100%;
     display: block;
     padding-top: 8px;
     margin: 0px auto;
 }
 
-.desc {
+.assideContainer {
+    float: right;
+    margin: 10px 20px 0px;
+    border: 2px solid black;
+}
+
+.heading h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    margin: 5px;
+    padding: 5px;
+}
+
+.imageLocation {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5px;
+    border: 1px solid black;
+}
+
+.imageLocation img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.imageLocation span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 5px;
+}
+
+.dataContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.dataContainer tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dataContainer tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+}
+
+.dataContainer img {
+    max-width: 25px;
+    min-width: 10px;
+    margin-right: 10px;
+}
+
+.populationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.populationContainer tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.populationContainer tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+}
+
+.year {
+    display: flex;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.imageCounty {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5px;
+    border: 1px solid black;
+}
+
+.imageCounty img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.imageCounty span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px 5px;
+}
+
+.imageLocal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.imageLocal img {
+    width: 90%;
+}
+
+.descriptionContainer {
     font-size: 18px;
+    padding: 10px 20px;
 }
 
-
-.desc p {
-    padding-top: 14px;
-    padding-left: 20px;
-    line-height: 25px;
+.descriptionContainer p {
+    line-height: 30px;
 }
 
-.populationDesc h3 {
+.populationDescription h3 {
     margin: 0px 20px;
-    padding: 20px 0px 10px;
     font-size: 30px;
 }
 
-.populationDesc h3::after {
+.populationDescription h3::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 900px;
+    width: 65%;
     display: block;
     padding-top: 8px;
 }
 
-.populationDesc p {
-    padding-top: 14px;
-    margin: 0px 20px;
+.populationDescription p {
+    padding: 10px 20px;
+    margin: 0;
     font-size: 18px;
 }
 
-.populationDesc img {
-    padding: 14px 20px;
-    width: 800px;
+.populationDescription img {
+    padding: 10px 0;
+    width: 50%;
 }
 
-.object h3 {
+.objectContainer h3 {
     margin: 0px 20px;
     padding: 10px 0px;
     font-size: 30px;
 }
 
-.object h3::after {
+.objectContainer h3::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 900px;
+    width: 65%;
     display: block;
     padding-top: 8px;
 }
@@ -75,353 +191,185 @@
     float: left;
 }
 
-.objectImage1 {
+.churchImage {
     display: flex;
     flex-direction: column;
 }
 
-.objectImage1 span {
+.churchImage span {
     padding: 5px 0px 0px;
 }
 
-.objectImage1 img {
+.churchImage img {
     width: 150px;
     height: 150px;
 }
 
-.objectImage2 {
+.chapelImage {
     display: flex;
     flex-direction: column;
 }
 
-.objectImage2 span {
+.chapelImage span {
     padding: 5px 0px 0px;
 }
 
-.objectImage2 img {
+.chapelImage img {
     width: 150px;
     height: 150px;
 }
 
-.church {
-    padding: 10px 0px;
+.churchContainer {
+    padding: 5px 0;
 }
 
-.church h4 {
+.churchContainer h4 {
     font-size: 20px;
-    padding: 5px 0px 10px 20px;
 }
 
-.church p {
+.churchContainer p {
     font-size: 18px;
-    line-height: 25px;
-    padding: 5px 0px 10px 20px;
+    line-height: 30px;
+    padding: 0px 20px;
 }
 
-.cemetery {
-    padding: 10px 0px;
+.chapelContainer {
+    padding: 5px 0px;
 }
 
-.cemetery h4 {
+.chapelContainer h4 {
     font-size: 20px;
-    padding: 5px 0px 10px 20px;
 }
 
-.cemetery p {
+.chapelContainer p {
     font-size: 18px;
-    line-height: 25px;
-    padding: 5px 0px 10px 20px;
+    line-height: 30px;
+    padding: 0px 20px;
 }
 
-.association h3 {
-    margin: 0px 20px;
-    padding: 10px 0px;
+.associationContainer {
+    padding: 10px 20px;
+}
+
+.associationContainer h3 {
     font-size: 30px;
+    padding-bottom: 10px;
 }
 
 
-.association h3::after {
+.associationContainer h3::after {
     content: "";
     border-bottom: 1px solid black;
-    width: 900px;
+    width: 65%;
     display: block;
     padding-top: 8px;
 }
 
-.associationImage {
+.logoImage {
     display: flex;
     flex-direction: column;
-    margin: 5px 20px 5px;
     padding: 5px;
+    margin-right: 20px;
     border: 1px solid black;
     float: left;
 }
 
-.associationImage span {
+.logoImage span {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 0px 0px;
 }
 
-.associationDesc p {
-    padding: 14px 0px 0px 20px;
-    line-height: 25px;
+.associationDescription p {
+    line-height: 30px;
     font-size: 18px;
 }
 
-.anthem {
+.anthemContainer {
     display: flex;
     flex-direction: column;
-
-    margin: 10px 20px;
 }
 
-.anthem iframe {
+.anthemContainer iframe {
     height: 315px;
     width: 450px;
     margin-bottom: 100px;
 }
 
-.anthem span {
+.anthemContainer span {
     font-size: 18px;
     padding-bottom: 14px;
 }
 
-/* ASSIDE */
-.assideContainer {
-    float: right;
-    margin: 10px 20px 0px;
-    border: 2px solid black;
-}
+@media screen and (max-width: 1500px) {
+    .populationDescription h3::after {
+        width: 55%;
+    }
 
-.heading h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: yellow;
-    margin: 5px 5px 8px;
-    padding: 5px;
-}
+    .objectContainer h3::after {
+        width: 55%;
+    }
 
-.heading .image {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 3px 5px;
-    border: 1px solid black;
-}
-
-.image img {
-    margin: 5px 5px 8px;
-    padding: 5px;
-    border: 1px solid black;
-}
-
-.image span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 0px 5px;
-}
-
-.data {
-    margin: 5px 5px 8px;
-}
-
-.data th {
-    display: inline-flex;
-    justify-content: flex-start;
-}
-
-.data td {
-    padding-left: 100px;
-}
-
-.data img {
-    max-width: 25px;
-    min-width: 10px;
-    margin-right: 10px;
-}
-
-.population {
-    margin: 5px 5px 8px;
-}
-
-
-.population .year {
-    display: flex;
-    gap: 50px;
-}
-
-.population h5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    padding: 0px 0px 5px;
-}
-
-.population th {
-    display: inline-flex;
-    justify-content: flex-start;
-    padding-left: 130px;
-}
-
-.population td {
-    padding-left: 70px;
-}
-
-.year {
-    padding: 10px 0px;
-}
-
-.year h5 {
-    font-size: 16px;
-}
-
-
-.image2 {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 3px 5px;
-    border: 1px solid black;
-}
-
-.image2 img {
-    margin: 5px 5px 8px;
-    padding: 5px;
-    border: 1px solid black;
-}
-
-.image2 span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 0px 5px;
-}
-
-.image3 {
-    margin: 0px 3px 5px;
-}
-
-.image3 img {
-    margin: 5px 5px 8px;
-    padding: 5px;
+    .associationContainer h3::after {
+        width: 55%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-    .infoContainer h2::after {
-        width: 92vw;
+    .populationDescription h3::after {
+        width: 50%;
     }
 
-    .populationDesc h3::after {
-        width: 32vw;
+    .objectContainer h3::after {
+        width: 50%;
     }
 
-    .object h3::after {
-        width: 92vw;
+    .associationContainer h3::after {
+        width: 50%;
     }
 
-    .association h3::after {
-        width: 92vw;
+    .populationDescription img {
+        width: 40%;
+    }
+
+    .churchContainer h4 {
+        margin-left: 20px;
+    }
+
+    .chapelContainer h4 {
+        margin-left: 20px;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     .infoContainer {
         margin: 20px auto;
     }
 
-    .infoContainer h2 {
-        text-align: center;
-    }
-
-    .populationDesc h3::after {
-        width: 92vw;
-    }
-
-    .object h3::after {
-        width: 92vw;
-    }
-
-    .association h3::after {
-        width: 92vw;
-    }
-
-    .populationDesc img {
-        width: 92vw;
-    }
-
-    .desc {
-        padding-right: 14px;
-    }
-
-    .associationDesc {
-        padding-right: 14px;
-    }
-
-    .church h4 {
-        padding-left: 14px;
-        margin-top: 10px;
-    }
-
-    .slike {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .cemetery h4 {
-        padding-left: 14px;
-    }
-
-    .church h4 {
-        padding-left: 14px;
-    }
-
-
-    .image2 span {
-        padding: 0px 8px 5px;
-    }
-
-    .assideContainer {
-        margin: 10px 20px 10px;
-    }
-
-    .anthem iframe {
-        width: 85vw;
-    }
-
     .assideContainer {
         float: none;
-        margin: 0px auto;
-        width: 90vw;
     }
 
-    .image3 {
-        margin: 0px auto;
+    .populationDescription h3::after {
+        width: 100%;
     }
 
-    .image3 img {
-        width: 87vw;
+    .objectContainer h3::after {
+        width: 100%;
+    }
+
+    .associationContainer h3::after {
+        width: 100%;
+    }
+
+    .populationDescription img {
+        width: 100%;
     }
 }
 
-@media only screen and (max-width: 600px) {
-
-    .populationDesc h3::after {
-        width: 90vw;
-    }
-
-    .object h3::after {
-        width: 90vw;
-    }
-
-    .association h3::after {
-        width: 90vw;
-    }
-
-    .church p {
-        padding: 0px 10px 0px 15px;
+@media screen and (max-width: 600px) {
+    .anthemContainer iframe {
+        width: 350px;
     }
 }
