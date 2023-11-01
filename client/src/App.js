@@ -27,7 +27,7 @@ function App() {
           <Route exact path='gallery' element={<Gallery />} />
           <Route exact path='products' element={<Shop />} />
           <Route exact path="products/:id" element={<SingleProduct />} />
-          <Route exact path="cart" element={<Cart />} />
+          <Route exact path="cart/:id?" element={<Cart />} />
           <Route exact path="*" element={<NotFound />} />
         </Route>
       </Routes>

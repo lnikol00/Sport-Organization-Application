@@ -9,6 +9,7 @@ function SingleProduct() {
     let navigate = useNavigate();
     const params = useParams();
     const [qty, setQty] = useState(1);
+    const [size, setSize] = useState("XXS");
     const productId = params.id;
     const dispatch = useDispatch();
 
@@ -21,7 +22,7 @@ function SingleProduct() {
 
     const AddToCartHandle = (e) => {
         e.preventDefault();
-        navigate(`/cart/${productId}?qty=${qty}`)
+        navigate(`/cart/${productId}?qty=${qty}?size=${size}`)
     }
 
     return (
@@ -65,7 +66,7 @@ function SingleProduct() {
                                     <div className={styles.selectContainer}>
                                         <b>Veličina: </b>
                                         <select
-
+                                            onChange={(e) => setSize(e.target.value)}
                                         >
                                             <option>XXS</option>
                                             <option>XS</option>
