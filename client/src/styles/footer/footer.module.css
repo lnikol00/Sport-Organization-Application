@@ -2,18 +2,18 @@
     background-color: #222222;
     top: 0;
     color: white;
-    padding: 20px 0px;
 }
 
 .footerContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px;
+    margin: 2em 10em;
 }
 
 .footerContainer h2 {
     font-size: 30px;
-    padding: 20px 0px 20px 160px;
-    font-weight: 100;
+    padding: 30px 0px;
 }
 
 .footerContainer h2::after {
@@ -25,31 +25,32 @@
 }
 
 .linksContainer ul {
-    display: inline-flex;
-    padding: 20px 0px 20px 170px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     list-style: none;
 }
 
 .linksContainer a {
-    display: flex;
-    text-decoration: none;
-    box-sizing: border-box;
     color: white;
 }
 
 .info {
-    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .info div {
     display: flex;
-    gap: 40px;
-    padding: 0px 0px 40px 170px;
+    gap: 30px;
     font-size: 20px;
 }
 
 .queryContainer {
-    padding: 10px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .queryContainer h1 {
@@ -84,6 +85,8 @@
     padding: 16px;
     font-size: 16px;
     cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 .input button:disabled {
@@ -92,123 +95,40 @@
     color: black;
 }
 
-.name h5 {
-    padding: 10px 0px 0px 160px;
+.namContainer h5 {
+    padding: 0.5em 8em;
     font-size: 20px;
     background-color: #515151;
     box-shadow: 0 50vh 0 50vh #515151;
 }
 
-.containerPopUp {
-    display: flex;
-    right: 50px;
-    bottom: -1440px;
-    position: absolute;
-    padding: 20px;
-    border-radius: 4px;
-    border: none;
-    background-color: white;
-    color: black;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerPopUp p {
-    font-size: 20px;
-}
-
-.check {
-    font-size: 26px;
-    margin-right: 10px;
-}
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     .footerContainer {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: 2em;
+        margin: 2em auto;
     }
 
-    .queryContainer h1 {
-        font-size: 40px;
-    }
-
-    .queryContainer {
-        padding: 10px 0px 0px 170px;
-    }
-
-    .containerPopUp {
-        right: 350px;
-        bottom: -2200px;
-
+    .aboutContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-@media screen and (max-width: 750px) {
-    .containerPopUp {
-        right: 50px;
-        bottom: -2550px;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .containerPopUp {
-        right: 50px;
-        bottom: -2650px;
-    }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
     .footerContainer h2 {
-        padding: 10px 54px;
-        font-size: 5vw;
-    }
-
-    .linksContainer ul {
-        margin: 0px auto;
-        padding: 40px 0px 40px 60px;
-        font-size: 20px;
-    }
-
-    .info div {
-        padding: 0px 54px 40px;
+        text-align: center;
     }
 
     .input input {
-        width: 70vw;
+        width: 350px;
     }
 
     .input textarea {
-        width: 70vw;
-    }
-
-    .queryContainer h1 {
-        font-size: 7vw;
-    }
-
-    .queryContainer {
-        padding: 10px 0px 0px 50px;
-    }
-
-    .input button {
-        padding: 8px 8px;
-        margin-bottom: 15px;
-    }
-
-    .name h5 {
-        padding: 10px 50px 0px;
-    }
-
-    .containerPopUp {
-        right: 50px;
-        bottom: -3300px;
-        padding: 15px;
-    }
-
-    .containerPopUp p {
-        font-size: 18px;
-    }
-
-    .check {
-        font-size: 22px;
-        margin-right: 10px;
+        width: 350px;
     }
 }

@@ -35,7 +35,7 @@ function Footer() {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.footerContainer}>
-                <div>
+                <div className={styles.aboutContainer}>
                     <div className={styles.linksContainer}>
                         <h2>Potražite nas na društvenim mrežama</h2>
                         <ul>
@@ -44,22 +44,16 @@ function Footer() {
                                     <ImIcons.ImFacebook />
                                 </a>
                             </li>
-                        </ul>
-                        <ul>
                             <li>
                                 <a href="https://www.instagram.com/">
                                     <AiIcons.AiOutlineInstagram />
                                 </a>
                             </li>
-                        </ul>
-                        <ul>
                             <li>
                                 <a href="https://twitter.com/">
                                     <FiIcons.FiTwitter />
                                 </a>
                             </li>
-                        </ul>
-                        <ul>
                             <li>
                                 <a href="https://www.youtube.com/">
                                     <CiIcons.CiYoutube />
@@ -92,18 +86,19 @@ function Footer() {
                     <form className={styles.input} ref={form} onSubmit={sendEmail}>
                         <div>
                             <input
-                                type="ime"
+                                type="text"
                                 placeholder='VAŠE IME'
                                 onChange={(e) => setUsername(e.target.value)}></input>
                         </div>
                         <div>
-                            <input type="email"
+                            <input
+                                type="email"
                                 placeholder='VAŠA E-MAIL ADRESA'
                                 onChange={(e) => setEmail(e.target.value)}></input>
                         </div>
                         <div>
                             <textarea
-                                name='message'
+                                type="text"
                                 cols="10"
                                 rows="5"
                                 placeholder='VAŠA PORUKA'
@@ -113,7 +108,7 @@ function Footer() {
                     </form>
                 </div>
             </div>
-            <div className={styles.name}>
+            <div className={styles.namContainer}>
                 <h5>Udruga lađara Šarić Struga</h5>
             </div>
         </div>
