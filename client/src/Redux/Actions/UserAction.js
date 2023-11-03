@@ -18,7 +18,6 @@ import {
 
 import axios from "axios"
 
-
 // LOGIN
 export const login = (email, password) => async (dispatch) => {
     try {
@@ -76,7 +75,6 @@ export const register = (name, email, password) => async (dispatch) => {
         );
 
         dispatch({ type: USER_REGISTER_SUCCESS, payload: data })
-        dispatch({ type: USER_LOGIN_SUCCESS, payload: data })
 
         localStorage.setItem("userInfo", JSON.stringify(data));
 
