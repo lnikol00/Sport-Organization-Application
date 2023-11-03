@@ -40,7 +40,7 @@ function Cart() {
     return (
         <AnimatedPage>
             <div className={styles.mainContainer}>
-                <h3><BsIcons.BsBag /> My Cart</h3>
+                <h3><BsIcons.BsBag /> Moja Košarica</h3>
                 {
                     cartItems.length === 0 ?
                         (
