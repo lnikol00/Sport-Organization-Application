@@ -11,7 +11,9 @@ import NotFound from './pages/not-found/NotFound';
 import SingleProduct from './pages/fan-shop/SingleProduct';
 import Shop from './pages/fan-shop/Shop';
 import Layout from './components/context/Layout';
+import Login from './pages/login/Login';
 import { AnimatePresence } from 'framer-motion';
+
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
           <Route exact path='products' element={<Shop />} />
           <Route exact path="products/:id" element={<SingleProduct />} />
           <Route exact path="cart/:id?" element={<Cart />} />
+          <Route exact path="login" element={<Login />} />
           <Route exact path="*" element={<NotFound />} />
         </Route>
       </Routes>
