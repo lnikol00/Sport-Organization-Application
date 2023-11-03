@@ -57,11 +57,11 @@ function Header() {
                             userInfo ?
                                 <li>
                                     <Dropdown>
-                                        <Dropdown.Toggle variant="secondary" id="dropdown-basic" className='bg-secondary'>
+                                        <Dropdown.Toggle variant="warning" id="dropdown-basic" className='bg-warning'>
                                             Hi, {userInfo.name}
                                         </Dropdown.Toggle>
 
-                                        <Dropdown.Menu className='bg-secondary'>
+                                        <Dropdown.Menu className='bg-warning'>
                                             <Dropdown.Item href="/user">Profile</Dropdown.Item>
                                             <Dropdown.Item href="#" onClick={logoutHandler}>Logout</Dropdown.Item>
                                         </Dropdown.Menu>
