@@ -47,7 +47,7 @@ function Cart() {
                             <div className={styles.emptyCartContainer}>
                                 <h1>Vaša košarica je prazna</h1>
                                 <p>Za kupnju putem Web Shopa potreban vam je korisnički račun. Ukoliko želite kreirati račun kliknite:</p>
-                                <button><Link to="/register">REGISTRIRAJ ME</Link></button>
+                                <button><Link to="/login">REGISTRIRAJ ME</Link></button>
                                 <p>Ukoliko imate kreiran račun kliknite:</p>
                                 <button><Link to="/products">NASTAVI KUPNJU</Link></button>
                             </div>
