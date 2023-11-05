@@ -1,17 +1,29 @@
-import React, { useState } from 'react'
-import { Data } from './GalleryData'
+import React, { useState, useEffect } from 'react'
 import * as AiIcons from "react-icons/ai"
 import AnimatedPage from "../../components/context/AnimatedPage"
+import { useDispatch, useSelector } from "react-redux"
+import Loading from '../../components/messages/Loading'
+import Error from '../../components/messages/Error'
+import { listPhotos } from '../../Redux/Actions/PhotosAction'
 
 import styles from "../../styles/gallery/gallery.module.css"
 
 function Gallery() {
 
+    const dispatch = useDispatch()
+
+    const photosList = useSelector((state) => state.photosList);
+    const { loading, error, photos } = photosList;
+
+    useEffect(() => {
+        dispatch(listPhotos());
+    }, [dispatch])
+
     const [model, setModel] = useState(false);
     const [tempimgSrc, setTempImgSrc] = useState("");
 
-    const getImg = (imgSrc) => {
-        setTempImgSrc(imgSrc);
+    const getImg = (image) => {
+        setTempImgSrc(image);
         setModel(true)
     }
 
@@ -26,13 +38,23 @@ function Gallery() {
                     <AiIcons.AiOutlineClose onClick={() => setModel(false)} />
                 </div>
                 <div className={styles.gallery}>
-                    {Data.map((slika, index) => {
-                        return (
-                            <div className={styles.pics} key={index} onClick={() => getImg(slika.imgSrc)}>
-                                <img src={slika.imgSrc} style={{ width: '100%' }} />
-                            </div>
-                        )
-                    })}
+                    {
+                        loading ? (<Loading />) : error ? (<Error>Something went wrong</Error>)
+                            :
+                            (
+                                <>
+                                    {
+                                        photos.map((item, index) => {
+                                            return (
+                                                <div className={styles.pics} key={index} onClick={() => getImg(item.image)}>
+                                                    <img src={item.image} style={{ width: '100%' }} />
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </>
+                            )
+                    }
                 </div>
             </div >
         </AnimatedPage>
