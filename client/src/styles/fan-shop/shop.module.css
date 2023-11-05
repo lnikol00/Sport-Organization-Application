@@ -67,7 +67,7 @@ label input {
     position: absolute;
     font-size: 16px;
     padding-bottom: 20px;
-    right: 10px;
+    right: 20px;
 }
 
 .mainContainer {
@@ -120,11 +120,11 @@ label input {
     justify-content: center;
     transition: all 0.5s ease;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .info:hover {
     opacity: 1;
-    border-radius: 8px;
 }
 
 .icon {

@@ -22,6 +22,9 @@ function Shop() {
         dispatch(listProduct());
     }, [dispatch])
 
+    const cart = useSelector((state) => state.cart)
+    const { cartItems } = cart;
+
     return (
         <AnimatedPage>
             <div className={styles.shopContainer}>
@@ -41,7 +44,7 @@ function Shop() {
                             <AiIcons.AiOutlineShoppingCart className={styles.cart} />
                         </Link>
 
-                        <span></span>
+                        <span>{cartItems.length}</span>
                     </div>
                 </div>
                 <hr />
