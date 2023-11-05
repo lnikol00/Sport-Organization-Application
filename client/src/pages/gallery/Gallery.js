@@ -34,7 +34,7 @@ function Gallery() {
                     <h3>Galerija <span>Slika</span></h3>
                 </div>
                 <div className={model ? `${styles.model} ${styles.modelOpen}` : `${styles.model}`}>
-                    <img src={tempimgSrc} />
+                    <img src={tempimgSrc} alt='close-up' />
                     <AiIcons.AiOutlineClose onClick={() => setModel(false)} />
                 </div>
                 <div className={styles.gallery}>
@@ -47,7 +47,7 @@ function Gallery() {
                                         photos.map((item, index) => {
                                             return (
                                                 <div className={styles.pics} key={index} onClick={() => getImg(item.image)}>
-                                                    <img src={item.image} style={{ width: '100%' }} />
+                                                    <img src={item.image} alt="gallery-images" style={{ width: '100%' }} />
                                                 </div>
                                             )
                                         })

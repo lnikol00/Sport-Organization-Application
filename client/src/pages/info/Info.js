@@ -22,7 +22,7 @@ function Info() {
                     <div className={styles.heading}>
                         <h3>Šarić Struga</h3>
                         <div className={styles.imageLocation}>
-                            <img src={Croatia_location_map} alt='image-location' />
+                            <img src={Croatia_location_map} alt='location' />
                             <span>Šarić Struga na zemljovidu Hrvatske</span>
                         </div>
                     </div>
@@ -72,12 +72,12 @@ function Info() {
                     </div>
                     <hr />
                     <div className={styles.imageCounty}>
-                        <img src={Dubrovnik_Neretva_County} alt='county-image' />
+                        <img src={Dubrovnik_Neretva_County} alt='county' />
                         <span>Šarić Struga na zemljovidu Dubrovačko-neretvanske županije</span>
                     </div>
                     <hr />
                     <div className={styles.imageLocal}>
-                        <img src={Local_Image} alt='local-image' />
+                        <img src={Local_Image} alt='local' />
                     </div>
                 </div>
 

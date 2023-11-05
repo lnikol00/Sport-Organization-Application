@@ -54,7 +54,7 @@ function Home() {
 
     useEffect(() => {
         startTimer();
-    }, [])
+    })
 
     return (
         <AnimatedPage>
@@ -77,7 +77,7 @@ function Home() {
                                         return (
                                             <div key={item._id} className={styles.articles}>
                                                 <Link to={`news/${item._id}`}>
-                                                    <img src={item.image} />
+                                                    <img src={item.image} alt={item.title} />
                                                     <h5>
                                                         {item.title}
                                                     </h5>
