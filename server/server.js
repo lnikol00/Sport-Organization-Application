@@ -6,6 +6,7 @@ import productRoute from "./routes/products.js";
 import newsRoute from "./routes/news.js";
 import userRoute from "./routes/users.js";
 import orderRoute from "./routes/orders.js";
+import photosRoute from "./routes/photos.js";
 import { errorHandler, notFound } from "./middleware/Error.js";
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.use("/api/products", productRoute);
 app.use("/api/news", newsRoute);
 app.use("/api/users", userRoute);
 app.use("/api/orders", orderRoute);
+app.use("/api/photos", photosRoute);
 
 //ERROR HANDLER
 app.use(notFound);
