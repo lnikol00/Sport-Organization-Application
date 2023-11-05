@@ -13,6 +13,11 @@ import Shop from './pages/fan-shop/Shop';
 import Layout from './components/context/Layout';
 import Login from './pages/login/Login';
 import { AnimatePresence } from 'framer-motion';
+import Shipping from './pages/fan-shop/shipping/Shipping';
+import Payment from './pages/fan-shop/shipping/Payment'
+import PlaceOrderScreen from './pages/fan-shop/shipping/PlaceOrderScreen'
+import OrderScreen from './pages/fan-shop/shipping/OrderScreen';
+import RequireAuth from './components/context/RequireAuth';
 
 
 function App() {
@@ -24,14 +29,20 @@ function App() {
       <Routes key={location.pathname} location={location}>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route exact path="news/:id" element={<News />} />
-          <Route exact path='info' element={<Info />} />
-          <Route exact path='gallery' element={<Gallery />} />
-          <Route exact path='products' element={<Shop />} />
-          <Route exact path="products/:id" element={<SingleProduct />} />
-          <Route exact path="cart/:id?" element={<Cart />} />
-          <Route exact path="login" element={<Login />} />
-          <Route exact path="*" element={<NotFound />} />
+          <Route path="news/:id" element={<News />} />
+          <Route path='info' element={<Info />} />
+          <Route path='gallery' element={<Gallery />} />
+          <Route path='products' element={<Shop />} />
+          <Route path="products/:id" element={<SingleProduct />} />
+          <Route path="cart/:id?" element={<Cart />} />
+          <Route element={<RequireAuth />}>
+            <Route path='shipping' element={<Shipping />} />
+            <Route path='payment' element={<Payment />} />
+            <Route path='placeorder' element={<PlaceOrderScreen />} />
+            <Route path='order/:id' element={<OrderScreen />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </AnimatePresence>
