@@ -1,0 +1,58 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6em;
+}
+
+.mainContainer form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 1px 2px 5px black;
+    border-radius: 4px;
+}
+
+.mainContainer form h5 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mainContainer label {
+    background-color: lightgray;
+    padding: 10px;
+    width: 100%;
+}
+
+.mainContainer svg {
+    color: rgb(82, 80, 80);
+}
+
+.mainContainer input::placeholder {
+    color: rgb(82, 80, 80);
+}
+
+.mainContainer input {
+    background-color: lightgray;
+    padding-left: 10px;
+    width: 90%;
+}
+
+.mainContainer form button {
+    outline: none;
+    border: none;
+    background-color: yellow;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .mainContainer {
+        padding: 4em 2em;
+    }
+}
