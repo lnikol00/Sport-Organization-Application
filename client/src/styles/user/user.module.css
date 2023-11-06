@@ -1,0 +1,193 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.mainContainer h1 {
+    font-size: 2.5em;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.chategories {
+    margin-right: 2em;
+    width: 300px;
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px black;
+}
+
+.Target {
+    background-color: black;
+    color: white;
+}
+
+.chategoriesInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chategoriesInfo svg {
+    font-size: 13em;
+}
+
+.chategoriesInfo span {
+    font-size: 1.2em;
+}
+
+.chategoriesOptions div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    padding: 20px 10px;
+    margin-right: 2em;
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px black;
+}
+
+.data h1 {
+    font-size: 1.5em;
+}
+
+.data form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.data h1 {
+    text-align: center;
+}
+
+.data label {
+    margin: 10px;
+    background-color: lightgray;
+    padding: 10px;
+    width: 250px;
+}
+
+.data svg {
+    color: rgb(82, 80, 80);
+}
+
+.data input::placeholder {
+    color: rgb(82, 80, 80);
+}
+
+.data input {
+    background-color: lightgray;
+    padding-left: 10px;
+    width: 200px;
+}
+
+.data .modes button {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.data form button {
+    width: 150px;
+    height: 50px;
+    background-color: yellow;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 32px;
+    cursor: pointer;
+    margin-top: 10px;
+    grid-column: span 2;
+}
+
+.data .modes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 5em;
+}
+
+.modes div {
+    font-size: 18px;
+}
+
+.clicked::after {
+    content: "";
+    border-bottom: 2px solid black;
+    width: 80%;
+    display: block;
+    padding-top: 4px;
+    margin: 0px auto;
+}
+
+@media screen and (max-width:1200px) {
+    .infoContainer {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .mainContainer {
+        padding-bottom: 50px;
+    }
+
+    .mainContainer h1 {
+        padding-top: 20px;
+    }
+
+    .chategories {
+        margin: 0;
+    }
+
+    .data {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .data {
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        margin-right: 0;
+    }
+
+    .data form {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .data .modes {
+        gap: 2em;
+    }
+
+    .data form button {
+        grid-column: span 1;
+    }
+}

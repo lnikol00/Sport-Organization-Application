@@ -18,6 +18,7 @@ import Payment from './pages/fan-shop/shipping/Payment'
 import PlaceOrderScreen from './pages/fan-shop/shipping/PlaceOrderScreen'
 import OrderScreen from './pages/fan-shop/shipping/OrderScreen';
 import RequireAuth from './components/context/RequireAuth';
+import User from './pages/login/user/User';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path='payment' element={<Payment />} />
             <Route path='placeorder' element={<PlaceOrderScreen />} />
             <Route path='order/:id' element={<OrderScreen />} />
+            <Route path='user' element={<User />} />
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
