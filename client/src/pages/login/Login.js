@@ -179,12 +179,12 @@ function Login() {
                             <div
                                 onClick={() => setChange(true)}
                                 className={change ? `${styles.clicked}` : `${styles.notClicked}`}>
-                                Login
+                                <button>Login</button>
                             </div>
                             <div
                                 onClick={() => setChange(false)}
                                 className={change ? `${styles.notClicked}` : `${styles.clicked}`}>
-                                Register
+                                <button>Register</button>
                             </div>
                         </div>
                         <div className={styles.center}>

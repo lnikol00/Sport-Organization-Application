@@ -186,6 +186,14 @@
 
     }
 
+    .modes button {
+        outline: none;
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+    }
+
     .formContainer label {
         background-color: lightgray;
         padding: 10px;
