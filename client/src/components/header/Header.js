@@ -58,7 +58,7 @@ function Header() {
                                 <li>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="warning" id="dropdown-basic" className='bg-warning'>
-                                            Hi, {userInfo.name}
+                                            Bok, {userInfo.name}
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu className='bg-warning'>
