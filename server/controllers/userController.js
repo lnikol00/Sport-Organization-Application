@@ -11,6 +11,7 @@ export const handleLogin = async (req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
+            image: user.image,
             isAdmin: user.isAdmin,
             token: generateToken(user._id),
             createdAt: user.createdAt
@@ -43,6 +44,7 @@ export const handleRegister = async (req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
+            image: user.image,
             isAdmin: user.isAdmin,
             token: generateToken(user._id),
         });
@@ -62,6 +64,7 @@ export const handleProfile = async (req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
+            image: user.image,
             isAdmin: user.isAdmin,
             createdAt: user.createdAt
         })
@@ -86,6 +89,7 @@ export const handleProfileUpdate = async (req, res) => {
             _id: updateUser._id,
             name: updateUser.name,
             email: updateUser.email,
+            image: updateUser.image,
             isAdmin: updateUser.isAdmin,
             createdAt: updateUser.createdAt,
             token: generateToken(updateUser._id),
