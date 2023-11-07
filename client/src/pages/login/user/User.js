@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from "../../../styles/user/user.module.css"
-import * as BiIcons from "react-icons/bi"
 import { useDispatch, useSelector } from "react-redux"
 import { getUserDetails } from '../../../Redux/Actions/UserAction'
 import AccountDetails from './AccountDetails'
@@ -10,6 +9,8 @@ import { listMyOrders } from '../../../Redux/Actions/OrderAction'
 function User() {
 
     const [change, setChange] = useState(false)
+    const [image, setImage] = useState("")
+    const inputRef = useRef();
 
     const dispatch = useDispatch();
 
@@ -23,14 +24,26 @@ function User() {
         dispatch(getUserDetails("profile"))
     }, [dispatch])
 
+    const handleImageClick = () => {
+        inputRef.current.click();
+    }
+    const handleImageChange = () => {
+    }
+
     return (
         <div className={styles.mainContainer}>
             <h1>My Account</h1>
             <div className={styles.infoContainer}>
                 <div className={styles.chategories}>
                     <div className={styles.chategoriesInfo}>
-                        <div>
-                            <BiIcons.BiSolidUserCircle />
+                        <div onClick={handleImageClick}>
+                            <img alt={userInfo.name} src={userInfo.image} />
+                            <input
+                                type='file'
+                                ref={inputRef}
+                                onChange={handleImageChange}
+                                style={{ display: "none" }}
+                            />
                         </div>
                         <span><b>User: </b>{userInfo.name}</span>
                     </div>

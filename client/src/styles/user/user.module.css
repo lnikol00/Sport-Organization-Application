@@ -37,11 +37,16 @@
     flex-direction: column;
 }
 
-.chategoriesInfo svg {
-    font-size: 13em;
+.chategoriesInfo img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 15px;
 }
 
 .chategoriesInfo span {
+    padding-top: 15px;
     font-size: 1.2em;
 }
 

@@ -17,6 +17,7 @@ const userSchema = mongoose.Schema({
     },
     image: {
         type: String,
+        default: "https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg",
     },
     isAdmin: {
         type: Boolean,
