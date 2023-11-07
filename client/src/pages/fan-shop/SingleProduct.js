@@ -9,7 +9,6 @@ function SingleProduct() {
     let navigate = useNavigate();
     const params = useParams();
     const [qty, setQty] = useState(1);
-    const [size, setSize] = useState("XXS");
     const productId = params.id;
     const dispatch = useDispatch();
 
@@ -22,7 +21,7 @@ function SingleProduct() {
 
     const AddToCartHandle = (e) => {
         e.preventDefault();
-        navigate(`/cart/${productId}?qty=${qty}?size=${size}`)
+        navigate(`/cart/${productId}?qty=${qty}`)
     }
 
     return (
@@ -61,20 +60,6 @@ function SingleProduct() {
                                             <option>8</option>
                                             <option>9</option>
                                             <option>10</option>
-                                        </select>
-                                    </div>
-                                    <div className={styles.selectContainer}>
-                                        <b>Veličina: </b>
-                                        <select
-                                            onChange={(e) => setSize(e.target.value)}
-                                        >
-                                            <option>XXS</option>
-                                            <option>XS</option>
-                                            <option>S</option>
-                                            <option>M</option>
-                                            <option>L</option>
-                                            <option>XL</option>
-                                            <option>XXL</option>
                                         </select>
                                     </div>
                                     <div className={styles.buttonContainer}>

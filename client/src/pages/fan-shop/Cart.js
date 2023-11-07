@@ -93,23 +93,6 @@ function Cart() {
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <b>Veličina: </b>
-                                                    <div className={styles.size}>
-                                                        <select
-                                                            value={item.size}
-                                                            onChange={(e) => dispatch(addToCart(item.product, String(e.target.value)))}
-                                                        >
-                                                            <option>XXS</option>
-                                                            <option>XS</option>
-                                                            <option>S</option>
-                                                            <option>M</option>
-                                                            <option>L</option>
-                                                            <option>XL</option>
-                                                            <option>XXL</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div>
                                                     <b>Ukupno: </b>
                                                     <b>€ {Number(item.price * item.qty).toFixed(2)}</b>
                                                 </div>
@@ -123,7 +106,7 @@ function Cart() {
                                     <hr />
                                     <div className={styles.buttons}>
                                         <div className={styles.continueShopping}>
-                                            <button><Link to="/products">NASTAVI KUPNJU</Link></button>
+                                            <Link to="/products"><button>NASTAVI KUPNJU</button></Link>
                                         </div>
                                         <div className={styles.checkoutButton}>
                                             <button onClick={checkoutHandler}>
