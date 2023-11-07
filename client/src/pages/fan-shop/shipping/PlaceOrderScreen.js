@@ -20,11 +20,7 @@ function PlaceOrderScreen() {
     const { userInfo } = userLogin;
 
     // Calculate price
-    const total = cart.cartItems.reduce((a, i) => a + i.qty * i.price, 0).toFixed(2)
-
-    const shippingPrice = total > 30 ? 0 : 15.00;
-
-    const estimatedTotal = (Number(total) + Number(shippingPrice)).toFixed(2);
+    const estimatedTotal = cart.cartItems.reduce((a, i) => a + i.qty * i.price, 0).toFixed(2)
 
     const orderCreate = useSelector((state) => state.orderCreate)
     const { order, success, error } = orderCreate;
