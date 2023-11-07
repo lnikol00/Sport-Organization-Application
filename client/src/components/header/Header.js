@@ -57,12 +57,22 @@ function Header() {
                             userInfo ?
                                 <li>
                                     <Dropdown>
-                                        <Dropdown.Toggle variant="warning" id="dropdown-basic" className='bg-warning'>
-                                            Bok, {userInfo.name}
-
+                                        <Dropdown.Toggle
+                                            style={{
+                                                backgroundColor: "transparent",
+                                                border: "none",
+                                                color: "black",
+                                                fontSize: "1.1em",
+                                                padding: "0"
+                                            }}>
+                                            {userInfo.name}
                                         </Dropdown.Toggle>
                                         <img src={userInfo.image} />
-                                        <Dropdown.Menu className='bg-warning'>
+                                        <Dropdown.Menu
+                                            style={{
+                                                backgroundColor: "yellow",
+                                                border: "1px solid black"
+                                            }}>
                                             <Dropdown.Item href="/user">Profile</Dropdown.Item>
                                             <Dropdown.Item href="#" onClick={logoutHandler}>Logout</Dropdown.Item>
                                         </Dropdown.Menu>
