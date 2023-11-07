@@ -8,7 +8,8 @@ import { toast } from 'react-toastify';
 import * as AiIcons from "react-icons/ai"
 import * as BiIcons from "react-icons/bi"
 
-function AccountDetails() {
+function AccountDetails({ image }) {
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -47,12 +48,13 @@ function AccountDetails() {
             }
         } else {
             //UPDATE PROFILE
-            dispatch(updateProfile({ id: user._id, name, email, password }))
+            dispatch(updateProfile({ id: user._id, name, email, image, password }))
             if (!toast.isActive(toastId.current)) {
                 toastId.current = toast.success("Profile Updated", Toastobject)
             }
         }
     }
+
     return (
         <>
             <Toast />

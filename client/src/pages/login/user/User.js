@@ -27,8 +27,7 @@ function User() {
     const handleImageClick = () => {
         inputRef.current.click();
     }
-    const handleImageChange = () => {
-    }
+
 
     return (
         <div className={styles.mainContainer}>
@@ -37,11 +36,11 @@ function User() {
                 <div className={styles.chategories}>
                     <div className={styles.chategoriesInfo}>
                         <div onClick={handleImageClick}>
-                            <img alt={userInfo.name} src={userInfo.image} />
+                            {image ? <img src={URL.createObjectURL(image)} /> : <img alt={userInfo.name} src={userInfo.image} />}
                             <input
                                 type='file'
                                 ref={inputRef}
-                                onChange={handleImageChange}
+                                onChange={(e) => setImage(e.target.value)}
                                 style={{ display: "none" }}
                             />
                         </div>
@@ -70,7 +69,7 @@ function User() {
                             </div>
                             :
                             <div className={styles.details}>
-                                <AccountDetails />
+                                <AccountDetails image={image} />
                             </div>
                         }
                     </div>

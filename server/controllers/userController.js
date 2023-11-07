@@ -84,6 +84,9 @@ export const handleProfileUpdate = async (req, res) => {
         if (req.body.password) {
             user.password = req.body.password;
         }
+        if (req.body.image) {
+            user.image = req.body.image || user.image;
+        }
         const updateUser = await user.save();
         res.json({
             _id: updateUser._id,
