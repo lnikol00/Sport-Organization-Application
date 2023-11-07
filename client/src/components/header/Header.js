@@ -59,8 +59,9 @@ function Header() {
                                     <Dropdown>
                                         <Dropdown.Toggle variant="warning" id="dropdown-basic" className='bg-warning'>
                                             Bok, {userInfo.name}
-                                        </Dropdown.Toggle>
 
+                                        </Dropdown.Toggle>
+                                        <img src={userInfo.image} />
                                         <Dropdown.Menu className='bg-warning'>
                                             <Dropdown.Item href="/user">Profile</Dropdown.Item>
                                             <Dropdown.Item href="#" onClick={logoutHandler}>Logout</Dropdown.Item>
