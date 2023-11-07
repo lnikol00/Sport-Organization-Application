@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import ClockDown from './clock-down/ClockDown'
-import Slider from './slider/Slider'
 import { Link } from 'react-router-dom'
 import styles from "../../styles/home/home.module.css"
 import AnimatedPage from '../../components/context/AnimatedPage'
@@ -9,6 +8,7 @@ import Loading from '../../components/messages/Loading'
 import Error from '../../components/messages/Error'
 import { listNews } from '../../Redux/Actions/NewsAction'
 import moment from "moment"
+import Slider from './slider/Slider'
 
 function Home() {
 
@@ -59,7 +59,7 @@ function Home() {
     return (
         <AnimatedPage>
             <div className={styles.mainContainer}>
-                {/* <Slider /> */}
+                <Slider />
                 <ClockDown
                     timerDays={timerDays}
                     timerHours={timerHours}
