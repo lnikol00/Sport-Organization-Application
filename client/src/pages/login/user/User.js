@@ -9,6 +9,8 @@ import { listMyOrders } from '../../../Redux/Actions/OrderAction'
 function User() {
 
     const [change, setChange] = useState(false)
+
+    const [empty, setEmpty] = useState(true);
     const [image, setImage] = useState("")
     const inputRef = useRef();
 
@@ -36,6 +38,7 @@ function User() {
                 <div className={styles.chategories}>
                     <div className={styles.chategoriesInfo}>
                         <div onClick={handleImageClick}>
+                            {empty ? <h3>Upload Image</h3> : null}
                             {image ? <img src={URL.createObjectURL(image)} /> : <img alt={userInfo.name} src={userInfo.image} />}
                             <input
                                 type='file'
