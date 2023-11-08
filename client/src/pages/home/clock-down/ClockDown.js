@@ -9,7 +9,7 @@ function ClockDown(props) {
         <Fragment>
             <div className={styles.mainContainer}>
                 <div className={styles.title}>
-                    <h1>26. Maraton lađa </h1>
+                    <h1>27. Maraton lađa </h1>
                     <p>Metković - Opuzen - Ploče</p>
                 </div>
                 <section className={styles.timerContainer}>
