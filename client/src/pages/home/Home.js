@@ -8,7 +8,6 @@ import Loading from '../../components/messages/Loading'
 import Error from '../../components/messages/Error'
 import { listNews } from '../../Redux/Actions/NewsAction'
 import moment from "moment"
-import Slider from './slider/Slider'
 
 function Home() {
 
@@ -59,7 +58,6 @@ function Home() {
     return (
         <AnimatedPage>
             <div className={styles.mainContainer}>
-                <Slider />
                 <ClockDown
                     timerDays={timerDays}
                     timerHours={timerHours}
