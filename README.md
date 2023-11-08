@@ -78,7 +78,7 @@ You will also see any lint errors in the console.
 
 **Client page** is built using CSS Module.
 
-# Frontend - client 
+# Frontend - dashboard 
 
 ### `npm install` or `npm i`
 
