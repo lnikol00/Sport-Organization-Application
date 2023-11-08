@@ -1,10 +1,12 @@
 # Sports-Associtation-Website
 
+This is repository is for Web Application built using React. <br/>
+
 Clone the repository into your projects directory:
 
 ### `git@github.com:lnikol00/Sports-Association-Website.git`
 
-This is repository is for Web Application built using React. If you want to check out Mobile Application for same sports organization built using React Native clone this repository:
+If you want to check out Mobile Application for same sports organization built using React Native clone this repository:
 
 ### `` 
 
