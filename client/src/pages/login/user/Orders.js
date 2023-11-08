@@ -20,9 +20,9 @@ function Orders(props) {
                     {
                         orders.length === 0 ? (
                             <div className={styles.emptyContainer}>
-                                No Orders
+                                Nema Narudžbi
                                 <Link to="">
-                                    START SHOPPING
+                                    ZAPOČNITE KUPOVINU
                                 </Link>
                             </div>
                         ) : (
@@ -32,8 +32,8 @@ function Orders(props) {
                                         <tr>
                                             <th width="25%">ID:</th>
                                             <th width="10%">STATUS:</th>
-                                            <th>DATE:</th>
-                                            <th>TOTAL:</th>
+                                            <th>DATUM:</th>
+                                            <th>UKUPNO:</th>
                                         </tr>
                                     </thead>
                                     <tbody>

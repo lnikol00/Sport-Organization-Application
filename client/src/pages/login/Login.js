@@ -215,7 +215,7 @@ function Login() {
                                                 <label>
                                                     <AiIcons.AiOutlineLock />
                                                     <input
-                                                        placeholder='Password'
+                                                        placeholder='Lozinka'
                                                         type='password'
                                                         value={password}
                                                         onChange={(e) => setPassword(e.target.value)}
@@ -240,7 +240,7 @@ function Login() {
                                                 <label>
                                                     <BiIcons.BiUser />
                                                     <input
-                                                        placeholder='Name'
+                                                        placeholder='Ime'
                                                         type='text'
                                                         value={name}
                                                         onChange={(e) => setName(e.target.value)}
@@ -260,7 +260,7 @@ function Login() {
                                                 <label>
                                                     <AiIcons.AiOutlineLock />
                                                     <input
-                                                        placeholder='Password'
+                                                        placeholder='Lozinka'
                                                         type='password'
                                                         value={password}
                                                         onChange={(e) => setPassword(e.target.value)}

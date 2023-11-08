@@ -66,7 +66,7 @@ function AccountDetails({ image }) {
                     <BiIcons.BiUser />
                     <input
                         type='text'
-                        placeholder='Name'
+                        placeholder='Ime'
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -86,7 +86,7 @@ function AccountDetails({ image }) {
                     <AiIcons.AiOutlineLock />
                     <input
                         type='password'
-                        placeholder='New Password'
+                        placeholder='Nova Lozinka'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -95,7 +95,7 @@ function AccountDetails({ image }) {
                     <AiIcons.AiOutlineLock />
                     <input
                         type='password'
-                        placeholder='Confirm Password'
+                        placeholder='Potvrdite Lozinku'
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />

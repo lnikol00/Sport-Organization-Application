@@ -31,25 +31,25 @@ function Payment() {
 
             <div className={styles.mainContainer}>
                 <form onSubmit={handleSubmit}>
-                    <h5>Select Payment Method</h5>
+                    <h5>Metoda plaćanja</h5>
                     <div className={styles.radioContainer}>
                         <div>
                             <input type='radio'
                                 value={paymentMethod}
                                 onChange={(e) => setPaymentMethod("PayPal")}
                             />
-                            <label>PayPal or Credit Card</label>
+                            <label>PayPal ili Kreditna Kartica</label>
                         </div>
                         <div>
                             <input type='radio'
                                 value={paymentMethod}
                                 onChange={(e) => setPaymentMethod("Cash")}
                             />
-                            <label>Cash</label>
+                            <label>Gotovina</label>
                         </div>
 
                     </div>
-                    <button>Continue</button>
+                    <button>Nastavi</button>
                 </form>
             </div>
 

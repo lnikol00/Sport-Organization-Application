@@ -56,7 +56,7 @@ function PlaceOrderScreen() {
                             <BiIcons.BiSolidUser />
                         </div>
                         <div className={styles.customer}>
-                            <h6>Customer</h6>
+                            <h6>Kupac</h6>
                             <span>{userInfo.name}<br />{userInfo.email}</span>
                         </div>
                     </div>
@@ -65,8 +65,8 @@ function PlaceOrderScreen() {
                             <BiIcons.BiSolidTruck />
                         </div>
                         <div className={styles.orderInfo}>
-                            <h6>Order info</h6>
-                            <span>Shipping: Croatia <br />Pyment method: {cart.paymentMethod}</span>
+                            <h6>Informacije</h6>
+                            <span>Dostava: Croatia <br />Metoda plaćanja: {cart.paymentMethod}</span>
                         </div>
                     </div>
                     <div >
@@ -74,8 +74,8 @@ function PlaceOrderScreen() {
                             <ImIcons.ImLocation />
                         </div>
                         <div className={styles.delivery}>
-                            <h6>Deliver to</h6>
-                            <span>Address: {cart.shippingAddress.address}<br />{cart.shippingAddress.city}, {cart.shippingAddress.postalCode}</span>
+                            <h6>Dostava na</h6>
+                            <span>Adresa: {cart.shippingAddress.address}<br />{cart.shippingAddress.city}, {cart.shippingAddress.postalCode}</span>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ function PlaceOrderScreen() {
                                     <h5>{item.title}</h5>
                                 </div>
                                 <div className={styles.quantity}>
-                                    <span>Quantity</span>
+                                    <span>Količina</span>
                                     <div>
                                         {item.qty}
                                     </div>
@@ -98,10 +98,10 @@ function PlaceOrderScreen() {
                     </div>
                     <div className={styles.price}>
                         <div className={styles.table}>
-                            <b>Total Price:</b>
+                            <b>Ukupna Cijena:</b>
                             <span>€ {estimatedTotal}</span>
                         </div>
-                        <button onClick={placeOrderHandler}>PLACE ORDER</button>
+                        <button onClick={placeOrderHandler}>NARUČI</button>
                         {error && (
                             <Error>
                                 {error}

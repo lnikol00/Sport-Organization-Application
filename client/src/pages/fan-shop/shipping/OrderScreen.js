@@ -40,7 +40,7 @@ function OrderScreen() {
                                         <BiIcons.BiSolidUser />
                                     </div>
                                     <div className={styles.customer}>
-                                        <h6>Customer</h6>
+                                        <h6>Kupac</h6>
                                         <span>{order.user.name}<br />{order.user.email}</span>
                                     </div>
                                 </div>
@@ -49,15 +49,15 @@ function OrderScreen() {
                                         <BiIcons.BiSolidTruck />
                                     </div>
                                     <div className={styles.orderInfo}>
-                                        <h6>Order info</h6>
-                                        <span>Shipping: Croatia <br />Pyment method: {order.paymentMethod}</span>
+                                        <h6>Informacije</h6>
+                                        <span>Dostava: Croatia <br />Metoda plaćanja: {order.paymentMethod}</span>
                                         {order.isPaid ? (
                                             <div className={styles.messageContainer}>
-                                                <p>Paid on {moment(order.paidAt).calendar()}</p>
+                                                <p>PLaćeno {moment(order.paidAt).calendar()}</p>
                                             </div>
                                         ) : (
                                             <div className={`${styles.messageContainer} ${styles.danger}`}>
-                                                <p>Not Paid</p>
+                                                <p>Nije Plaćeno</p>
                                             </div>
                                         )}
                                     </div>
@@ -67,15 +67,15 @@ function OrderScreen() {
                                         <ImIcons.ImLocation />
                                     </div>
                                     <div className={styles.delivery}>
-                                        <h6>Deliver to</h6>
-                                        <span>Address: {order.shippingAddress.address}<br />{order.shippingAddress.city}, {order.shippingAddress.postalCode}</span>
+                                        <h6>Dostava na</h6>
+                                        <span>Adresa: {order.shippingAddress.address}<br />{order.shippingAddress.city}, {order.shippingAddress.postalCode}</span>
                                         {order.isDelivered ? (
                                             <div className={styles.messageContainer}>
-                                                <p>Delivered on {moment(order.deliveredAt).calendar()}</p>
+                                                <p>Dostavljeno {moment(order.deliveredAt).calendar()}</p>
                                             </div>
                                         ) : (
                                             <div className={`${styles.messageContainer} ${styles.danger}`}>
-                                                <p>Not Delivered</p>
+                                                <p>Nije Dostavljeno</p>
                                             </div>
                                         )}
                                     </div>
@@ -90,7 +90,7 @@ function OrderScreen() {
                                                 <h5>{item.title}</h5>
                                             </div>
                                             <div className={styles.quantity}>
-                                                <span>Quantity</span>
+                                                <span>Količina</span>
                                                 <div>
                                                     {item.qty}
                                                 </div>
@@ -100,7 +100,7 @@ function OrderScreen() {
                                 </div>
                                 <div className={styles.price}>
                                     <div className={styles.table}>
-                                        <b>Total Price:</b>
+                                        <b>Ukupna Cijena:</b>
                                         <span>€ {order.estimatedTotal}</span>
                                     </div>
                                     {/* <PayPalScriptProvider options={{ clientId: "test" }}>

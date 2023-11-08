@@ -63,7 +63,7 @@ function SingleProduct() {
                                         </select>
                                     </div>
                                     <div className={styles.buttonContainer}>
-                                        <button onClick={AddToCartHandle}>Add to Cart</button>
+                                        <button onClick={AddToCartHandle}>Dodaj u košaricu</button>
                                     </div>
                                 </div>
                             </div>

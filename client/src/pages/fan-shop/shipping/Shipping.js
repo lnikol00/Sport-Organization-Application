@@ -32,7 +32,7 @@ function Shipping() {
 
             <div className={styles.mainContainer}>
                 <form onSubmit={handleSubmit}>
-                    <h5>Delivery Address</h5>
+                    <h5>Adresa dostave</h5>
                     <label>
                         <ImIcons.ImLocation />
                         <input
@@ -64,7 +64,7 @@ function Shipping() {
                         />
                     </label>
                     <button>
-                        Continue
+                        Nastavi
                     </button>
                 </form>
             </div>

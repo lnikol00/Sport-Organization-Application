@@ -38,7 +38,7 @@ function User() {
                 <div className={styles.chategories}>
                     <div className={styles.chategoriesInfo}>
                         <div onClick={handleImageClick}>
-                            {empty ? <h3>Upload Image</h3> : null}
+                            {empty ? <h3>Učitajte sliku</h3> : null}
                             {image ? <img src={URL.createObjectURL(image)} /> : <img alt={userInfo.name} src={userInfo.image} />}
                             <input
                                 type='file'
@@ -56,13 +56,13 @@ function User() {
                         <div
                             onClick={() => setChange(true)}
                             className={change ? `${styles.clicked}` : `${styles.notClicked}`}>
-                            <button>Orders</button>
+                            <button>Narudžbe</button>
 
                         </div>
                         <div
                             onClick={() => setChange(false)}
                             className={change ? `${styles.notClicked}` : `${styles.clicked}`}>
-                            <button>Account Details</button>
+                            <button>Postavke računa</button>
                         </div>
                     </div>
                     <div>
