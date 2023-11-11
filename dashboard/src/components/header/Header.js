@@ -1,10 +1,12 @@
 import React from 'react'
+import { HeaderContainer } from "../../styles/header/Header.styled"
 
 function Header() {
     return (
-        <div>
+        <HeaderContainer>
 
-        </div>
+
+        </HeaderContainer>
     )
 }
 
