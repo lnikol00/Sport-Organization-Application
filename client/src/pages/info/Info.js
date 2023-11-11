@@ -1,17 +1,17 @@
 import React from 'react'
 
-import Croatia_location_map from "../../images/info/Croatia_location_map.jpg"
-import Flag_of_Croatia from "../../images/info/Flag_of_Croatia.svg.png"
-import Dubrovnik_Neretva_County from "../../images/info/Dubrovnik-Neretva_County_OpenStreetMap.jpg"
-import Local_Image from "../../images/info/Saric_Struga.jpg"
-import Population_Image from "../../images/info/Izrezak.PNG"
-import Church_Image from "../../images/info/Crkva_Saric_Struga.jpg"
-import Chapel_Image from "../../images/info/Groblje_Saric_Struga.jpg"
-import Logo_Image from "../../images/info/grb.jpg"
+import Croatia_location_map from "../../utils/images/info/Croatia_location_map.jpg"
+import Flag_of_Croatia from "../../utils/images/info/Flag_of_Croatia.svg.png"
+import Dubrovnik_Neretva_County from "../../utils/images/info/Dubrovnik-Neretva_County_OpenStreetMap.jpg"
+import Local_Image from "../../utils/images/info/Saric_Struga.jpg"
+import Population_Image from "../../utils/images/info/Izrezak.PNG"
+import Church_Image from "../../utils/images/info/Crkva_Saric_Struga.jpg"
+import Chapel_Image from "../../utils/images/info/Groblje_Saric_Struga.jpg"
+import Logo_Image from "../../utils/images/info/grb.jpg"
 
 import styles from "../../styles/info/info.module.css"
 
-import AnimatedPage from '../../components/context/AnimatedPage'
+import AnimatedPage from '../../context/AnimatedPage'
 
 function Info() {
     return (

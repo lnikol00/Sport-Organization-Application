@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import logoImage from '../../images/header/grb2.png'
-import "../../App.css"
+import logoImage from '../utils/images/header/grb2.png'
+import "../assets/global.css"
 
 function AnimatedPage({ children }) {
     return (

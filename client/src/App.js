@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/global.css';
 
 import { Routes, Route, useLocation } from "react-router-dom";
 
@@ -10,14 +10,14 @@ import Cart from './pages/fan-shop/Cart';
 import NotFound from './pages/not-found/NotFound';
 import SingleProduct from './pages/fan-shop/SingleProduct';
 import Shop from './pages/fan-shop/Shop';
-import Layout from './components/context/Layout';
+import Layout from './context/Layout';
 import Login from './pages/login/Login';
 import { AnimatePresence } from 'framer-motion';
 import Shipping from './pages/fan-shop/shipping/Shipping';
 import Payment from './pages/fan-shop/shipping/Payment'
 import PlaceOrderScreen from './pages/fan-shop/shipping/PlaceOrderScreen'
 import OrderScreen from './pages/fan-shop/shipping/OrderScreen';
-import RequireAuth from './components/context/RequireAuth';
+import RequireAuth from './context/RequireAuth';
 import User from './pages/login/user/User';
 
 

@@ -3,7 +3,7 @@ import styles from "../../styles/fan-shop/product.module.css"
 import { useNavigate, useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { listProductDetails } from '../../Redux/Actions/ProductActions'
-import AnimatedPage from '../../components/context/AnimatedPage'
+import AnimatedPage from '../../context/AnimatedPage'
 
 function SingleProduct() {
     let navigate = useNavigate();

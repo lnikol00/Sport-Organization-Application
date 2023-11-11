@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from "../../../styles/home/member.module.css"
 import { motion } from "framer-motion"
 import { useDispatch, useSelector } from "react-redux"
-import Loading from '../../../components/messages/Loading'
-import Error from '../../../components/messages/Error'
+import Loading from '../../../utils/messages/Loading'
+import Error from '../../../utils/messages/Error'
 import { listMembers } from "../../../Redux/Actions/MemberAction"
 
 function Members() {

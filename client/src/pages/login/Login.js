@@ -3,13 +3,13 @@ import styles from "../../styles/login/login.module.css"
 import { motion } from "framer-motion"
 import * as AiIcons from "react-icons/ai"
 import * as BiIcons from "react-icons/bi"
-import logoImage from "../../images/header/grb2.png"
-import AnimatedPage from '../../components/context/AnimatedPage'
+import logoImage from "../../utils/images/header/grb2.png"
+import AnimatedPage from '../../context/AnimatedPage'
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { login, register } from "../../Redux/Actions/UserAction"
-import Loading from '../../components/messages/Loading'
-import Error from '../../components/messages/Error'
+import Loading from '../../utils/messages/Loading'
+import Error from '../../utils/messages/Error'
 
 function Login() {
 

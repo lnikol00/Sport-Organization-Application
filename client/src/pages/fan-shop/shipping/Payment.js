@@ -3,7 +3,7 @@ import styles from "../../../styles/fan-shop/shipping/payment.module.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { savePaymentMethod } from '../../../Redux/Actions/CartAction'
 import { useNavigate } from 'react-router-dom'
-import AnimatedPage from '../../../components/context/AnimatedPage'
+import AnimatedPage from '../../../context/AnimatedPage'
 
 function Payment() {
 

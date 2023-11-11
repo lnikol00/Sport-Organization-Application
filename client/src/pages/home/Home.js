@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import ClockDown from './clock-down/ClockDown'
 import { Link } from 'react-router-dom'
 import styles from "../../styles/home/home.module.css"
-import AnimatedPage from '../../components/context/AnimatedPage'
+import AnimatedPage from '../../context/AnimatedPage'
 import { useDispatch, useSelector } from "react-redux"
-import Loading from '../../components/messages/Loading'
-import Error from '../../components/messages/Error'
+import Loading from '../../utils/messages/Loading'
+import Error from '../../utils/messages/Error'
 import { listNews } from '../../Redux/Actions/NewsAction'
 import moment from "moment"
 import Members from './members/Members'

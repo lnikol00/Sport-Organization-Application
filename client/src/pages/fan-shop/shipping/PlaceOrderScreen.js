@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom'
 import { ORDER_CREATE_RESET } from "../../../Redux/Constants/OrderContants";
 import { createOrder } from '../../../Redux/Actions/OrderAction'
-import Error from '../../../components/messages/Error'
-import AnimatedPage from '../../../components/context/AnimatedPage'
+import Error from '../../../utils/messages/Error'
+import AnimatedPage from '../../../context/AnimatedPage'
 
 
 function PlaceOrderScreen() {

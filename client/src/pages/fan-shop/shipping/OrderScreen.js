@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import styles from "../../../styles/fan-shop/shipping/placeorder.module.css"
-import AnimatedPage from '../../../components/context/AnimatedPage'
+import AnimatedPage from '../../../context/AnimatedPage'
 import * as BiIcons from "react-icons/bi"
 import * as ImIcons from "react-icons/im"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from 'react-router-dom'
 import { getOrderDetails } from '../../../Redux/Actions/OrderAction'
-import Error from '../../../components/messages/Error'
-import Loading from '../../../components/messages/Loading'
+import Error from '../../../utils/messages/Error'
+import Loading from '../../../utils/messages/Loading'
 import moment from "moment"
 // import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 

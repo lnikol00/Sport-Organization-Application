@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
 import * as ImIcons from "react-icons/im"
-import AnimatedPage from '../../../components/context/AnimatedPage'
+import AnimatedPage from '../../../context/AnimatedPage'
 
 function Shipping() {
 

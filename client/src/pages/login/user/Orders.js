@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from "../../../styles/user/order.module.css"
-import Loading from '../../../components/messages/Loading';
-import Error from '../../../components/messages/Error';
+import styles from "../../../styles/login/user/order.module.css"
+import Loading from '../../../utils/messages/Loading';
+import Error from '../../../utils/messages/Error';
 import { Link } from 'react-router-dom';
 import moment from "moment"
 

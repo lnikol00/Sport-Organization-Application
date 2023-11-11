@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from '../../styles/fan-shop/cart.module.css'
-import AnimatedPage from '../../components/context/AnimatedPage'
+import AnimatedPage from '../../context/AnimatedPage'
 import * as AiIcons from 'react-icons/ai'
 import * as BsIcons from 'react-icons/bs'
 import * as GiIcons from 'react-icons/gi'

@@ -5,9 +5,9 @@ import * as AiIcons from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux"
 import { listProduct } from '../../Redux/Actions/ProductActions'
 import styles from "../../styles/fan-shop/shop.module.css"
-import Loading from '../../components/messages/Loading'
-import Error from '../../components/messages/Error'
-import AnimatedPage from '../../components/context/AnimatedPage'
+import Loading from '../../utils/messages/Loading'
+import Error from '../../utils/messages/Error'
+import AnimatedPage from '../../context/AnimatedPage'
 
 function Shop() {
 

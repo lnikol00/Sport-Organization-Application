@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import styles from "../../../styles/home/news.module.css"
-import AnimatedPage from "../../../components/context/AnimatedPage"
+import AnimatedPage from "../../../context/AnimatedPage"
 import { listNewsDetails } from '../../../Redux/Actions/NewsAction';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux"
-import Loading from '../../../components/messages/Loading';
-import Error from '../../../components/messages/Error';
+import Loading from '../../../utils/messages/Loading';
+import Error from '../../../utils/messages/Error';
 import moment from 'moment';
 
 function News() {

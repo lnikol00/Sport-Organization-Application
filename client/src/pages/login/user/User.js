@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import styles from "../../../styles/user/user.module.css"
+import styles from "../../../styles/login/user/user.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { getUserDetails } from '../../../Redux/Actions/UserAction'
 import AccountDetails from './AccountDetails'

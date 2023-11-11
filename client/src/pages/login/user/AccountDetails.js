@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import Loading from '../../../components/messages/Loading';
-import Error from '../../../components/messages/Error';
+import Loading from '../../../utils/messages/Loading';
+import Error from '../../../utils/messages/Error';
 import { updateProfile } from '../../../Redux/Actions/UserAction';
-import Toast from '../../../components/messages/Toast';
+import Toast from '../../../utils/messages/Toast';
 import { toast } from 'react-toastify';
 import * as AiIcons from "react-icons/ai"
 import * as BiIcons from "react-icons/bi"

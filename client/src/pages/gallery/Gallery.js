@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import * as AiIcons from "react-icons/ai"
-import AnimatedPage from "../../components/context/AnimatedPage"
+import AnimatedPage from "../../context/AnimatedPage"
 import { useDispatch, useSelector } from "react-redux"
-import Loading from '../../components/messages/Loading'
-import Error from '../../components/messages/Error'
+import Loading from '../../utils/messages/Loading'
+import Error from '../../utils/messages/Error'
 import { listPhotos } from '../../Redux/Actions/PhotosAction'
 
 import styles from "../../styles/gallery/gallery.module.css"

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../styles/header/header.module.css'
 import { Link } from 'react-router-dom';
-import logoImage from "../../images/header/grb2.png"
+import logoImage from "../../utils/images/header/grb2.png"
 import { MenuItems } from './MenuItmes'
 import { useDispatch, useSelector } from "react-redux"
 import { logout } from "../../Redux/Actions/UserAction"
