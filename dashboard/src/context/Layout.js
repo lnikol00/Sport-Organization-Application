@@ -1,14 +1,13 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/header/Header";
+import { GlobalStyles } from "../assets/Global.styled";
 
 const Layout = () => {
     return (
-        <main className="App" >
+        <GlobalStyles>
             <Header />
-            <div className='main-container'>
-                <Outlet />
-            </div>
-        </main>
+            <Outlet />
+        </GlobalStyles>
     )
 }
 
