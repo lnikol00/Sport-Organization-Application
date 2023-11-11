@@ -1,5 +1,3 @@
-import './assets/global.css';
-
 import { Route, Routes } from 'react-router-dom';
 import Layout from './context/Layout';
 
