@@ -1,6 +1,7 @@
+import './assets/global.css';
+
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Layout from './components/context/Layout';
+import Layout from './context/Layout';
 
 function App() {
   return (
