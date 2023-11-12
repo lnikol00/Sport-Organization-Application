@@ -18,7 +18,7 @@ export const menu = [
     {
         title: 'Članovi',
         icon: <FiIcons.FiUsers />,
-        url: '/membmers',
+        url: '/members',
     },
     {
         title: 'Fan-Shop',
