@@ -1,8 +1,6 @@
-import styled from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = styled.main`
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
+export const GlobalStyles = createGlobalStyle`
     * {
         box-sizing: border-box;
         margin: 0;
