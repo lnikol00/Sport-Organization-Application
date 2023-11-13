@@ -5,7 +5,7 @@ import Dashobard from './pages/dashboard/Dashobard';
 import Product from './pages/products/Product';
 import Members from './pages/members/Members';
 import Users from './pages/users/Users';
-import News from './pages/News/News'
+import News from './pages/news/News'
 import Gallery from './pages/gallery/Gallery';
 
 
