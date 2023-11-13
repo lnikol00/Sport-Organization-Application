@@ -1,10 +1,11 @@
 import React from 'react'
+import { DashboardContainer } from '../../styles/pages/Dashobard.styled'
 
 function Dashobard() {
     return (
-        <div>
+        <DashboardContainer>
             Dashobard
-        </div>
+        </DashboardContainer>
     )
 }
 
