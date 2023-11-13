@@ -15,25 +15,41 @@ import { menu } from './MenuItems'
 import { Link } from 'react-router-dom'
 import logoImage from "../../utils/images/grb2.png"
 
-function Sidebar({ children }) {
+function Sidebar({ children, open }) {
+
     return (
         <SidebarContainer>
-            <Container>
-                <Logo>
+            <Container $openNavbar={open}>
+                <Logo $openNavbar={open} $resposniveJustifyContent="center" $responsiveMarginLeft="0">
+                    <Title
+                        fontSize="20px"
+                        $openNavbar={open}
+                    >
+                        ULŠS
+                    </Title>
                     <img src={logoImage} alt='logo' />
-                    <Title fontSize="20px">ULŠS</Title>
                 </Logo>
-                <Profile>
+                <Profile $openNavbar={open} $resposniveJustifyContent="center" $responsiveMarginLeft="0">
                     <img src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg' />
-                    <Title fontSize="18px">Ime Prezime</Title>
+                    <Title
+                        fontSize="18px"
+                        $openNavbar={open}
+                    >
+                        Ime Prezime
+                    </Title>
                 </Profile>
                 {
-                    menu.map((item) => {
+                    menu.map((item, index) => {
                         return (
-                            <NavLink>
-                                <Link to={item.url} key={item.title}>
-                                    <Span fontSize="20px" padding="5px 0px 0px">{item.icon}</Span>
-                                    <Title fontSize="20px">{item.title}</Title>
+                            <NavLink $openNavbar={open}>
+                                <Link to={item.url} key={index}>
+                                    <Span fontSize="20px">{item.icon}</Span>
+                                    <Title
+                                        fontSize="20px"
+                                        $openNavbar={open}
+                                    >
+                                        {item.title}
+                                    </Title>
                                 </Link>
                             </NavLink>
 

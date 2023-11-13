@@ -5,9 +5,16 @@ export const SidebarContainer = styled.div`
 `
 
 export const Container = styled.div`
-    width:350px;
-    border-right:2px solid #ccc;
+    width:${(props) => (props.$openNavbar ? "350px" : "80px")};
+    border-right:1px solid ${(props) => (props.theme.color)};
     height:100vh;
+    transition: all 0.5s;
+    background-color: ${(props) => (props.theme.backgroundColor)};
+    color: ${(props) => (props.theme.color)};
+
+    @media screen and (max-width:768px){
+        width:${(props) => (props.$openNavbar ? "80px" : "0")};
+    }
 `
 
 export const MainContainer = styled.div`
@@ -16,19 +23,27 @@ export const MainContainer = styled.div`
 
 export const Logo = styled.div`
     display:flex;
-    justify-content:space-between;
+    justify-content:${(props) => (props.$openNavbar ? "space-between" : "center")};
     align-items:center;
-    margin: 0 20px 10px 0;
+    margin-left: ${(props) => (props.$openNavbar ? "20px" : "0")};
+    margin-top: 5px;
 
     img{
-        width:100px;
-        height: 70px;
+        width:90px;
+        height: 60px;
+    }
+
+    @media screen and (max-width:768px){
+        display:${(props) => (props.$openNavbar ? "flex" : "none")};
+        justify-content:${(props) => (props.$resposniveJustifyContent)};
+        margin: ${(props) => (props.$responsiveMarginLeft)};
+
     }
 `
 
 export const Profile = styled.div`
     display: flex;
-    justify-content:flex-start;
+    justify-content:${(props) => (props.$openNavbar ? "flex-start" : "center")};
     align-items: center;
     gap: 15px;
     padding:15px;
@@ -37,23 +52,32 @@ export const Profile = styled.div`
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border:1px solid black;
-        margin-left: 10px;
+        border:1px solid ${(props) => (props.theme.color)};
+        margin-left: ${(props) => (props.$openNavbar ? "10px" : "0")};
+        
+        @media screen and (max-width:768px){
+            margin-left: ${(props) => (props.$responsiveMarginLeft)};
+        }
+    }
+
+    @media screen and (max-width:768px){
+        display:${(props) => (props.$openNavbar ? "flex" : "none")};
+        justify-content:${(props) => (props.$resposniveJustifyContent)};
     }
 `
 
 export const NavLink = styled.li`
     list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: flex;  
+    justify-content:center;
+    align-items: ${(props) => (props.$openNavbar ? "flex-start" : "center")};
     flex-direction: column;
-    margin:5px 20px;
+    margin:${(props) => (props.$openNavbar ? "5px 20px" : "5px 10px")};
     padding:10px;
     cursor: pointer;
 
     &:hover{
-        background-color:lightgray;
+        background-color: ${(props) => (props.theme.hover)};
     }
 
     a{
@@ -63,5 +87,11 @@ export const NavLink = styled.li`
         gap: 10px;
         color:black;
         text-decoration:none;
+    }
+
+    @media screen and (max-width:768px){
+        display:${(props) => (props.$openNavbar ? "flex" : "none")};
+        margin:${(props) => (props.$openNavbar ? "5px 10px" : "0")};
+        align-items: ${(props) => (props.$openNavbar ? "center" : "none")};
     }
 `
