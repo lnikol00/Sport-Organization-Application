@@ -17,8 +17,8 @@ export const darkTheme = {
 }
 
 export const lightTheme = {
-    backgroundColor: "white",
+    backgroundColor: "lightgray",
     color: "black",
-    hover: "lightgray",
+    hover: "gray",
     body: "white"
 }
