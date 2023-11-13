@@ -4,7 +4,8 @@ import {
     HeaderContainer,
     Profile,
     Navbar,
-    Theme
+    Theme,
+    Line
 } from "../../styles/header/Header.styled"
 import { Image } from '../../styles/global/Image.styled'
 import * as BsIcons from "react-icons/bs"
@@ -23,9 +24,9 @@ function Header({ handleChange, toggleTheme, isDarkTheme }) {
         <HeaderContainer>
             <Navbar>
                 <Bars onClick={handleChange}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <Line />
+                    <Line />
+                    <Line />
                 </Bars>
                 <Profile>
                     <Theme onClick={onToggle}>
@@ -39,7 +40,7 @@ function Header({ handleChange, toggleTheme, isDarkTheme }) {
                     />
                 </Profile>
             </Navbar>
-        </HeaderContainer>
+        </HeaderContainer >
     )
 }
 

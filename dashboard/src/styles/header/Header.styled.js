@@ -41,11 +41,11 @@ export const Bars = styled.div`
     height: 2.5em;
     width: 3em;
     cursor: pointer;
+`
 
-    div{
-        background-color: ${(props) => (props.theme.color)};
-        width: 1.5rem;
-        height: 0.15em;
-        border-radius:8px;
-    }
+export const Line = styled.div`
+    background-color: ${(props) => (props.theme.color)};
+    width: 1.5rem; 
+    height: 0.15em;
+    border-radius:8px;
 `
