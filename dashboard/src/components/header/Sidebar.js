@@ -11,6 +11,7 @@ import {
     Span,
     Title
 } from '../../styles/global/Text.styled'
+import { Image } from '../../styles/global/Image.styled'
 import { menu } from './MenuItems'
 import { Link } from 'react-router-dom'
 import logoImage from "../../utils/images/grb2.png"
@@ -27,10 +28,22 @@ function Sidebar({ children, open }) {
                     >
                         ULŠS
                     </Title>
-                    <img src={logoImage} alt='logo' />
+                    <Image
+                        width="90px"
+                        height="60px"
+                        src={logoImage}
+                        alt='logo'
+                    />
                 </Logo>
-                <Profile $openNavbar={open} $resposniveJustifyContent="center" $responsiveMarginLeft="0">
-                    <img src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg' />
+                <Profile $openNavbar={open} $resposniveJustifyContent="center">
+                    <Image
+                        width="40px"
+                        height="40px"
+                        $responsiveMarginLeft="0"
+                        $borderRadius="50%"
+                        $openNavbar={open}
+                        src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg'
+                    />
                     <Title
                         fontSize="18px"
                         $openNavbar={open}

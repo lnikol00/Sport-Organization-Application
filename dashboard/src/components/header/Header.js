@@ -6,6 +6,7 @@ import {
     Navbar,
     Theme
 } from "../../styles/header/Header.styled"
+import { Image } from '../../styles/global/Image.styled'
 import * as BsIcons from "react-icons/bs"
 
 
@@ -28,9 +29,14 @@ function Header({ handleChange, toggleTheme, isDarkTheme }) {
                 </Bars>
                 <Profile>
                     <Theme onClick={onToggle}>
-                        {isDarkTheme ? <BsIcons.BsMoon /> : <BsIcons.BsSun />}
+                        {!isDarkTheme ? <BsIcons.BsMoon /> : <BsIcons.BsSun />}
                     </Theme>
-                    <img src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg' />
+                    <Image
+                        width="40px"
+                        height="40px"
+                        $borderRadius="50%"
+                        src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg'
+                    />
                 </Profile>
             </Navbar>
         </HeaderContainer>

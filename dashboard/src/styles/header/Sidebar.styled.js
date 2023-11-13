@@ -28,11 +28,6 @@ export const Logo = styled.div`
     margin-left: ${(props) => (props.$openNavbar ? "20px" : "0")};
     margin-top: 5px;
 
-    img{
-        width:90px;
-        height: 60px;
-    }
-
     @media screen and (max-width:768px){
         display:${(props) => (props.$openNavbar ? "flex" : "none")};
         justify-content:${(props) => (props.$resposniveJustifyContent)};
@@ -47,18 +42,6 @@ export const Profile = styled.div`
     align-items: center;
     gap: 15px;
     padding:15px;
-
-    img{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border:1px solid ${(props) => (props.theme.color)};
-        margin-left: ${(props) => (props.$openNavbar ? "10px" : "0")};
-        
-        @media screen and (max-width:768px){
-            margin-left: ${(props) => (props.$responsiveMarginLeft)};
-        }
-    }
 
     @media screen and (max-width:768px){
         display:${(props) => (props.$openNavbar ? "flex" : "none")};

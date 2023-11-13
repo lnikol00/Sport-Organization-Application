@@ -22,15 +22,7 @@ export const Profile = styled.div`
     display: flex;
     justify-content:center;
     align-items: center;
-    gap: 10px;
-
-    img{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border:1px solid ${(props) => (props.theme.color)};
-        margin-left: 10px;
-    }
+    gap: 20px;
 `
 
 export const Theme = styled.div`
