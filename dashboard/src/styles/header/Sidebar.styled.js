@@ -11,6 +11,9 @@ export const Container = styled.div`
     transition: all 0.5s;
     background-color: ${(props) => (props.theme.backgroundColor)};
     color: ${(props) => (props.theme.color)};
+    position: sticky;
+    top: 0;
+    z-index: 999;
 
     @media screen and (max-width:768px){
         width:${(props) => (props.$openNavbar ? "80px" : "0")};
