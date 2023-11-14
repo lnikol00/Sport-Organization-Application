@@ -19,6 +19,7 @@ export const Container = styled.div`
 
 export const MainContainer = styled.div`
     width:100%;
+    background-color:${(props) => (props.theme.body)};
 `
 
 export const Logo = styled.div`
