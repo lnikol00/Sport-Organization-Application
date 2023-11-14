@@ -33,8 +33,8 @@ function Header({ handleChange, toggleTheme, isDarkTheme }) {
                         {!isDarkTheme ? <BsIcons.BsMoon /> : <BsIcons.BsSun />}
                     </Theme>
                     <Image
-                        width="40px"
-                        height="40px"
+                        $width="40px"
+                        $height="40px"
                         $borderRadius="50%"
                         src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg'
                     />
