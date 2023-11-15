@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 
 export const darkTheme = {
     backgroundColor: "rgb(48, 48, 48)",
+    buttonColor: "black",
     color: "lightgray",
     hover: "black",
     body: "rgb(95, 95, 95)"
@@ -18,6 +19,7 @@ export const darkTheme = {
 
 export const lightTheme = {
     backgroundColor: "yellow",
+    buttonColor: "lightgray",
     color: "black",
     hover: "lightgray",
     body: "white"
