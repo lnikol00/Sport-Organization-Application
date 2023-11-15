@@ -4,6 +4,7 @@ import * as photosController from "../controllers/photosController.js";
 
 const photosRoute = express.Router();
 
+//ALL PHOTOS
 photosRoute.get("/", asyncHandler(photosController.getAllPhotos));
 
 export default photosRoute;
