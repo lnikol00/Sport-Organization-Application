@@ -7,6 +7,8 @@ import Members from './pages/members/Members';
 import Users from './pages/users/Users';
 import News from './pages/news/News'
 import Gallery from './pages/gallery/Gallery';
+import Login from './pages/login/Login';
+import RequireAuth from './context/RequiredAuth';
 
 
 function App() {
@@ -15,12 +17,15 @@ function App() {
       <GlobalStyles />
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Dashobard />} />
-          <Route path='news' element={<News />} />
-          <Route path='products' element={<Product />} />
-          <Route path='members' element={<Members />} />
-          <Route path='gallery' element={<Gallery />} />
-          <Route path='users' element={<Users />} />
+          <Route element={<RequireAuth />}>
+            <Route index element={<Dashobard />} />
+            <Route path='news' element={<News />} />
+            <Route path='products' element={<Product />} />
+            <Route path='members' element={<Members />} />
+            <Route path='gallery' element={<Gallery />} />
+            <Route path='users' element={<Users />} />
+          </Route>
+          <Route path='login' element={<Login />} />
         </Route>
       </Routes>
     </>
