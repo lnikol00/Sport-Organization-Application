@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from '../../styles/header/header.module.css'
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logoImage from "../../utils/images/header/grb2.png"
 import { MenuItems } from './MenuItmes'
 import { useDispatch, useSelector } from "react-redux"
@@ -49,7 +49,7 @@ function Header() {
                         {
                             navbar.map((items, index) => {
                                 return (
-                                    <li key={index} onClick={handleChange}><Link to={`${items.url}`}>{items.title}</Link></li>
+                                    <li key={index} onClick={handleChange}><NavLink to={`${items.url}`}>{items.title}</NavLink></li>
                                 )
                             })
                         }
