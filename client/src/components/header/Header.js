@@ -49,7 +49,19 @@ function Header() {
                         {
                             navbar.map((items, index) => {
                                 return (
-                                    <li key={index} onClick={handleChange}><NavLink to={`${items.url}`}>{items.title}</NavLink></li>
+                                    <li key={index} onClick={handleChange}>
+                                        <NavLink
+                                            to={`${items.url}`}
+                                            className={({ isActive }) => {
+                                                console.log(items.url + ' ' + isActive);
+                                                return (
+                                                    (isActive ? `${styles.active}` : null)
+                                                )
+                                            }}
+                                        >
+                                            {items.title}
+                                        </NavLink>
+                                    </li>
                                 )
                             })
                         }
