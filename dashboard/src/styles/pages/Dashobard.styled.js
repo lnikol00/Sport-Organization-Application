@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const DashboardContainer = styled.div`
     padding: 30px 50px;
+
+    h1{
+        display:block
+    }
 `
 
 export const Stats = styled.div`

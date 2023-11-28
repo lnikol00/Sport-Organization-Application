@@ -12,6 +12,7 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.p`
     font-size: ${(props) => (props.$fontSize)};
+    color: ${(props) => (props.theme.color)};
 `
 
 export const Icon = styled.span`
@@ -25,4 +26,9 @@ export const Icon = styled.span`
 export const Quantity = styled.span`
     font-size: ${(props) => (props.$fontSize)};
     color: ${(props) => (props.theme.color)};
+`
+
+export const Text = styled.span`
+    color: #fff;
+    font-size: ${(props) => (props.$fontSize)}
 `

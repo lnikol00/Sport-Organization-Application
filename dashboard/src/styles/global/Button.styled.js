@@ -11,4 +11,5 @@ export const Button = styled.button`
     font-size:${(props) => (props.$fontSize)};
     cursor: pointer;
     box-shadow:${(props) => (props.$boxShadow)};
+    transition: all 0.5s;
 `

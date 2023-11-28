@@ -14,7 +14,8 @@ export const darkTheme = {
     buttonColor: "black",
     color: "lightgray",
     hover: "black",
-    body: "rgb(95, 95, 95)"
+    body: "rgb(95, 95, 95)",
+    link: "white"
 }
 
 export const lightTheme = {
@@ -22,5 +23,6 @@ export const lightTheme = {
     buttonColor: "lightgray",
     color: "black",
     hover: "lightgray",
-    body: "white"
+    body: "white",
+    link: "blue",
 }
