@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import {
+    FormBox,
     LoginContainer,
+    Form,
+    Title,
+    InputBox,
+    Input,
+    Label,
+    Button
 } from '../../styles/pages/Login.styled'
-import { Form, Input } from '../../styles/global/Form.styled'
-import { Title } from "../../styles/global/Text.styled"
-import { Button } from '../../styles/global/Button.styled'
 import { useDispatch, useSelector } from 'react-redux'
 import { login } from "../../Redux/Actions/UserAction"
 import { useNavigate, useLocation } from 'react-router-dom'
 import Loading from '../../utils/messages/Loading'
 import Error from '../../utils/messages/Error'
+import * as AiIcons from "react-icons/ai"
+import Toast from '../../utils/messages/Toast'
 
 function Login() {
 
@@ -38,40 +44,30 @@ function Login() {
 
     return (
         <LoginContainer>
-            {
-                error && <Error>Something went wrong</Error>
-            }
-            {
-                loading && <Loading />
-            }
-            <Form $width="450px" $padding="30px" $boxShadow="1px 2px 5px black" onSubmit={handleLoginSubmit}>
-                <Title $openNavbar="block" $fontSize="25px">Prijavi se</Title>
-                <Input
-                    $width="100%"
-                    $height="40px"
-                    type='email'
-                    placeholder='Email'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+            <Toast />
+            <FormBox>
 
-                />
-                <Input
-                    $width="100%"
-                    $height="40px"
-                    type='password'
-                    placeholder='Lozinka'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <Button
-                    $width="100%"
-                    $height="40px"
-                    $fontSize="16px"
-                    $boxShadow="1px 2px 5px black"
-                >
-                    Prijavi se
-                </Button>
-            </Form>
+                <Form onSubmit={handleLoginSubmit}>
+                    <Title>Login</Title>
+                    {
+                        error && <Error>{error}</Error>
+                    }
+                    {
+                        loading && <Loading />
+                    }
+                    <InputBox>
+                        <AiIcons.AiOutlineMail />
+                        <Input type='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+                        <Label>Email</Label>
+                    </InputBox>
+                    <InputBox>
+                        <AiIcons.AiOutlineLock />
+                        <Input type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
+                        <Label>Password</Label>
+                    </InputBox>
+                    <Button>Prijavi se</Button>
+                </Form>
+            </FormBox>
         </LoginContainer >
     )
 }

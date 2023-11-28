@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import * as FaIcons from "react-icons/fa"
 import {
     DashboardContainer,
@@ -19,7 +19,6 @@ function Dashobard() {
         <DashboardContainer>
             <Title
                 fontSize="1.7em"
-                $openNavbar="block"
             >
                 Dashboard
             </Title>
@@ -31,7 +30,6 @@ function Dashobard() {
                     <Wrapper>
                         <Title
                             $fontSize="15px"
-                            $openNavbar="block"
                         >
                             Ukupna zarada
                         </Title>
@@ -50,7 +48,6 @@ function Dashobard() {
                     <Wrapper>
                         <Title
                             $fontSize="15px"
-                            $openNavbar="block"
                         >
                             Ukupno narudžbi
                         </Title>
@@ -69,7 +66,6 @@ function Dashobard() {
                     <Wrapper>
                         <Title
                             $fontSize="15px"
-                            $openNavbar="block"
                         >
                             Ukupno proizvoda
                         </Title>
@@ -86,7 +82,6 @@ function Dashobard() {
                 <Container $width="50%" $flexDirection="column" $alignItems="flex-start">
                     <Title
                         $fontSize="20px"
-                        $openNavbar="block"
                     >
                         Sale statistics
                     </Title>
@@ -94,7 +89,6 @@ function Dashobard() {
                 <Container $width="50%" $flexDirection="column" $alignItems="flex-start">
                     <Title
                         $fontSize="20px"
-                        $openNavbar="block"
                     >
                         Product statistic
                     </Title>
@@ -104,7 +98,6 @@ function Dashobard() {
             <Orders>
                 <Title
                     $fontSize="20px"
-                    $openNavbar="block"
                 >
                     Latest Orders
                 </Title>

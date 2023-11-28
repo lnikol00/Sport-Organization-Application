@@ -15,8 +15,12 @@ import { Image } from '../../styles/global/Image.styled'
 import { menu } from './MenuItems'
 import { Link } from 'react-router-dom'
 import logoImage from "../../utils/images/grb2.png"
+import { useSelector } from 'react-redux'
 
 function Sidebar({ children, open }) {
+
+    const userLogin = useSelector((state) => state.userLogin)
+    const { userInfo } = userLogin;
 
     return (
         <SidebarContainer>
@@ -43,14 +47,14 @@ function Sidebar({ children, open }) {
                         $responsiveMarginLeft="0"
                         $borderRadius="50%"
                         $openNavbar={open}
-                        src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg'
+                        src={userInfo.image}
                     />
                     <Title
                         $fontSize="18px"
                         $openNavbar={open}
                         $responsiveTitle="none"
                     >
-                        Ime Prezime
+                        {userInfo.name}
                     </Title>
                 </Profile>
                 {

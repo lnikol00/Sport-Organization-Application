@@ -1,10 +1,12 @@
 import React from 'react'
+import { MainContainer } from '../../styles/messages/Loading.styled'
+import { Text } from '../../styles/global/Text.styled'
 
-function Loading() {
+const Loading = () => {
     return (
-        <div>
-
-        </div>
+        <MainContainer>
+            <Text $fontSize="18px">Loading...</Text>
+        </MainContainer>
     )
 }
 

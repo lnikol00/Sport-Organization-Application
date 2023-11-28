@@ -1,10 +1,11 @@
 import React from 'react'
+import { MainContainer } from '../../styles/messages/Error.styled'
 
-function Error() {
+const Error = ({ children }) => {
     return (
-        <div>
-
-        </div>
+        <MainContainer>
+            {children}
+        </MainContainer>
     )
 }
 

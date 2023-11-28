@@ -7,9 +7,10 @@ import {
     Theme,
     Line
 } from "../../styles/header/Header.styled"
-import { Image } from '../../styles/global/Image.styled'
+import { Button } from '../../styles/global/Button.styled'
 import * as BsIcons from "react-icons/bs"
-
+import { useDispatch } from "react-redux";
+import { logout } from "../../Redux/Actions/UserAction"
 
 function Header({ handleChange, toggleTheme, isDarkTheme }) {
 
@@ -18,6 +19,12 @@ function Header({ handleChange, toggleTheme, isDarkTheme }) {
     const onToggle = () => {
         setIsToggled(!isToggled)
         toggleTheme();
+    }
+
+    const dispatch = useDispatch();
+
+    const logoutHandler = () => {
+        dispatch(logout());
     }
 
     return (
@@ -32,12 +39,11 @@ function Header({ handleChange, toggleTheme, isDarkTheme }) {
                     <Theme onClick={onToggle}>
                         {!isDarkTheme ? <BsIcons.BsMoon /> : <BsIcons.BsSun />}
                     </Theme>
-                    <Image
-                        $width="40px"
-                        $height="40px"
-                        $borderRadius="50%"
-                        src='https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg'
-                    />
+                    <Button
+                        $width="85px"
+                        $height="35px"
+                        $fontSize="16px"
+                        onClick={logoutHandler}>Logout</Button>
                 </Profile>
             </Navbar>
         </HeaderContainer >
