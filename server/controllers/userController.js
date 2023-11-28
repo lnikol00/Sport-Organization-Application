@@ -103,3 +103,9 @@ export const handleProfileUpdate = async (req, res) => {
         throw new Error("User not found");
     }
 }
+
+//GET ALL USER ADMIN
+export const getAllUsers = async (req, res) => {
+    const users = await User.find({});
+    res.json(users);
+}
