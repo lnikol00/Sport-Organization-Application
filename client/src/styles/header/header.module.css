@@ -67,7 +67,6 @@
     border-bottom: 2px solid black;
     width: 100%;
     display: block;
-    margin: 0px auto;
 }
 
 .menu a::before {
