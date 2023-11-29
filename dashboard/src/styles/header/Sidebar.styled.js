@@ -48,6 +48,14 @@ export const Profile = styled.div`
     gap: 15px;
     padding:15px;
 
+    img{
+        margin-left: ${(props) => (props.$openNavbar ? "10px" : "0")};
+
+        @media screen and (max-width:768px){
+            margin-left: ${(props) => (props.$responsiveMarginLeft)};   
+        }
+    }
+
     @media screen and (max-width:768px){
         display:${(props) => (props.$openNavbar ? "flex" : "none")};
         justify-content:${(props) => (props.$resposniveJustifyContent)};

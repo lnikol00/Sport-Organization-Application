@@ -9,6 +9,25 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     align-items:center;
     gap:${(props) => (props.$gap)};
+
+    @media screen and (max-width: 800px) {
+        flex-direction: ${(props) => (props.$flexDirection)};
+        gap: 20px;
+
+        input{
+            margin: 10px 0 0;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+        flex-direction: column;
+        gap: 10px;
+
+        input{
+            width: 200px;
+        }
+    }
 `
 
 export const Container = styled.div`
@@ -24,6 +43,14 @@ export const Grid = styled.div`
     align-items: center;
     padding-top: 30px;
     gap: 20px;
+
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(1,1fr);
+    }
 `
 
 export const GridBox = styled.div`

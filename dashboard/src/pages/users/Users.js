@@ -11,7 +11,6 @@ import { Paragraph, Title } from '../../styles/global/Text.styled'
 import { Button } from '../../styles/global/Button.styled'
 import { Input, Select, Option } from '../../styles/global/Form.styled'
 import { Image } from '../../styles/global/Image.styled'
-import logoImage from "../../utils/images/grb2.png"
 import { useDispatch, useSelector } from "react-redux"
 import { listUser } from '../../Redux/Actions/UserAction'
 import Loading from "../../utils/messages/Loading"
@@ -43,7 +42,7 @@ function Users() {
                 >Kreairaj novog korisnika</Button>
             </Wrapper>
             <Container>
-                <Wrapper>
+                <Wrapper $flexDirection="column" $responsiveGap="20px">
                     <Input
                         $width="350px"
                         $height="35px"

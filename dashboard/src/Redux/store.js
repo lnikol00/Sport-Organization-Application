@@ -2,12 +2,19 @@ import { createStore, combineReducers, applyMiddleware } from "redux"
 import thunk from "redux-thunk"
 import { composeWithDevTools } from "redux-devtools-extension"
 import { userListReducer, userLoginReducer } from "./Reducers/UserReducers";
+import { productListReducer } from "./Reducers/ProductReducers";
+import { newsListReducer } from "./Reducers//NewsReducers";
+import { photosListReducer } from "./Reducers/PhotosReducers";
+import { membersListReducer } from "./Reducers/MemberReducers";
 
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
     userList: userListReducer,
-
+    productList: productListReducer,
+    newsList: newsListReducer,
+    photosList: photosListReducer,
+    membersList: membersListReducer,
 });
 
 // Login

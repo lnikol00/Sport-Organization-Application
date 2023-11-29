@@ -48,6 +48,7 @@ function Sidebar({ children, open }) {
                         $borderRadius="50%"
                         $openNavbar={open}
                         src={userInfo.image}
+                        alt={userInfo.name}
                     />
                     <Title
                         $fontSize="18px"
