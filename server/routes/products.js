@@ -1,13 +1,17 @@
 import express from "express"
 import asyncHandler from "express-async-handler"
 import * as productController from "../controllers/productController.js";
+import { protect, admin } from "../middleware/AuthMiddleware.js"
 
 const productRoute = express.Router();
 
-//ALL PRODUCTS
-productRoute.get("/", asyncHandler(productController.getAllProducts));
+productRoute.route("/")
+    .get(asyncHandler(productController.getAllProducts))
+    .post(protect, admin, asyncHandler(productController.createProduct));
 
-//UNIQUE PRODUCT
-productRoute.get("/:id", asyncHandler(productController.getSingleProduct));
+productRoute.route("/:id")
+    .get(asyncHandler(productController.getSingleProduct))
+    .put(protect, admin, asyncHandler(productController.editProduct))
+    .delete(protect, admin, asyncHandler(productController.deleteProduct));
 
 export default productRoute;
