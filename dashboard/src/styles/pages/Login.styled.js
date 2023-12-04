@@ -23,6 +23,10 @@ export const FormBox = styled.div`
     display: flex;
     justify-content: center;
     align-items:center;
+
+    @media screen and (max-width: 600px){
+        width: 350px;
+    }
 `
 
 export const Form = styled.form`
@@ -47,6 +51,10 @@ export const InputBox = styled.div`
         color: #fff;
         font-size: 1.2em;
         top: 20px;
+    }
+
+    @media screen and (max-width: 600px){
+        width: 300px;
     }
     
 `

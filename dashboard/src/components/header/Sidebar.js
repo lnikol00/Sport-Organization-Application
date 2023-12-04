@@ -47,15 +47,15 @@ function Sidebar({ children, open }) {
                         $responsiveMarginLeft="0"
                         $borderRadius="50%"
                         $openNavbar={open}
-                        src={userInfo.image}
-                        alt={userInfo.name}
+                        src={userInfo ? userInfo.image : "https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg"}
+                        alt={userInfo ? userInfo.name : "user-name"}
                     />
                     <Title
                         $fontSize="18px"
                         $openNavbar={open}
                         $responsiveTitle="none"
                     >
-                        {userInfo.name}
+                        {userInfo ? userInfo.name : "Ime i Prezime"}
                     </Title>
                 </Profile>
                 {
