@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductContainer = styled.div`
+export const MainContainer = styled.div`
     padding: 30px 50px;
 `
 
@@ -59,11 +59,11 @@ export const GridBox = styled.div`
     border: 1px solid black;
     background-color: ${(props) => (props.theme.body)};
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
     gap: 10px; 
-    padding-top: 10px;
+    padding-top: ${(props) => (props.$paddingTop)};
 
     img{
         background-color: ${(props) => (props.theme.body)};

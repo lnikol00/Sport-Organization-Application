@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const UserContainer = styled.div`
+export const MainContainer = styled.div`
     padding: 30px 50px;
 `
 
@@ -63,7 +63,7 @@ export const GridBox = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 10px; 
-    padding:20px 0 5px;
+    padding:${(props) => (props.$padding)};
 
     img{
         background-color: ${(props) => (props.theme.body)};

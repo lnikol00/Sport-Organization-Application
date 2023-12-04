@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
-    UserContainer,
+    MainContainer,
     Wrapper,
     Container,
     Grid,
@@ -27,7 +27,7 @@ function Users() {
     }, [dispatch])
 
     return (
-        <UserContainer>
+        <MainContainer>
             <Wrapper>
                 <Title
                     fontSize="1.7em"
@@ -69,7 +69,7 @@ function Users() {
                         loading ? (<Loading />) : error ? (<Error>{error}</Error>) :
                             (
                                 users.map((user) => (
-                                    <GridBox key={user._id}>
+                                    <GridBox key={user._id} $padding="20px 0 5px">
                                         <Image
                                             $width="90px"
                                             $height="90px"
@@ -98,7 +98,7 @@ function Users() {
                 </Grid>
             </Container>
 
-        </UserContainer>
+        </MainContainer>
     )
 }
 

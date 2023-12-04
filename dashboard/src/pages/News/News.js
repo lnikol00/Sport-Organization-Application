@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import {
-    NewsContainer,
+    MainContainer,
     Wrapper,
     Container,
     Grid,
     GridBox,
     ButtonContainer
-} from '../../styles/pages/News.styled'
+} from '../../styles/pages/Product.styled'
 import { Paragraph, Title } from '../../styles/global/Text.styled'
 import { Button } from '../../styles/global/Button.styled'
 import { Input, Select, Option } from '../../styles/global/Form.styled'
@@ -30,7 +30,7 @@ function News() {
     }, [dispatch])
 
     return (
-        <NewsContainer>
+        <MainContainer>
             <Wrapper>
                 <Title
                     fontSize="1.7em"
@@ -98,7 +98,7 @@ function News() {
                     }
                 </Grid>
             </Container>
-        </NewsContainer>
+        </MainContainer>
     )
 }
 

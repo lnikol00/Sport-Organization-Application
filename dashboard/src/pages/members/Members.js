@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
-    MemberContainer,
+    MainContainer,
     Wrapper,
     Container,
     Grid,
     GridBox,
-} from '../../styles/pages/Members.styled'
+} from '../../styles/pages/User.styled'
 import { Paragraph, Title } from '../../styles/global/Text.styled'
 import { Button } from '../../styles/global/Button.styled'
 import { Input, Select, Option } from '../../styles/global/Form.styled'
@@ -27,7 +27,7 @@ function Members() {
     }, [dispatch])
 
     return (
-        <MemberContainer>
+        <MainContainer>
             <Wrapper>
                 <Title
                     fontSize="1.7em"
@@ -89,7 +89,7 @@ function Members() {
                 </Grid>
             </Container>
 
-        </MemberContainer>
+        </MainContainer>
     )
 }
 

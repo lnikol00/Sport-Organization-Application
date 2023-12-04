@@ -83,7 +83,7 @@ function Gallery() {
                                             alt="images"
                                         />
                                         <ButtonContainer>
-                                            <Button $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
+                                            <Button $color="red" $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
                                         </ButtonContainer>
                                     </GridBox>
                                 ))

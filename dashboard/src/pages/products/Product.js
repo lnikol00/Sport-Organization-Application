@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import {
-    ProductContainer,
+    MainContainer,
     Wrapper,
     Container,
     Grid,
@@ -13,7 +13,7 @@ import { Input, Select, Option } from '../../styles/global/Form.styled'
 import { Image } from '../../styles/global/Image.styled'
 import * as FaIcons from "react-icons/fa"
 import { useDispatch, useSelector } from 'react-redux'
-import { listProducts } from '../../Redux/Actions/ProductActions'
+import { listProducts, deleteProduct } from '../../Redux/Actions/ProductActions'
 import Loading from "../../utils/messages/Loading"
 import Error from "../../utils/messages/Error"
 
@@ -24,12 +24,21 @@ function Product() {
     const productList = useSelector((state) => state.productList);
     const { loading, error, products } = productList;
 
+    const productDelete = useSelector((state) => state.productDelete)
+    const { error: errorDelete, success: successDelete } = productDelete;
+
     useEffect(() => {
         dispatch(listProducts());
-    }, [dispatch])
+    }, [dispatch, successDelete])
+
+    const deleteHandler = (id) => {
+        if (window.confirm("Are you sure you want to delete this product?")) {
+            dispatch(deleteProduct())
+        }
+    }
 
     return (
-        <ProductContainer>
+        <MainContainer>
             <Wrapper>
                 <Title
                     fontSize="1.7em"
@@ -71,10 +80,13 @@ function Product() {
                 </Wrapper>
                 <Grid>
                     {
+                        errorDelete && (<Error>{errorDelete}</Error>)
+                    }
+                    {
                         loading ? (<Loading />) : error ? (<Error>{error}</Error>) :
                             (
                                 products.map((product) => (
-                                    <GridBox key={product._id}>
+                                    <GridBox key={product._id} $paddingTop="10px">
                                         <Image
                                             $width="100%"
                                             $height="100%"
@@ -89,7 +101,7 @@ function Product() {
                                         </Paragraph>
                                         <ButtonContainer>
                                             <Button $width="100%" $height="40px"><FaIcons.FaPen /></Button>
-                                            <Button $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
+                                            <Button onClick={() => deleteHandler(product._id)} $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
                                         </ButtonContainer>
                                     </GridBox>
                                 ))
@@ -97,7 +109,7 @@ function Product() {
                     }
                 </Grid>
             </Container>
-        </ProductContainer>
+        </MainContainer>
     )
 }
 
