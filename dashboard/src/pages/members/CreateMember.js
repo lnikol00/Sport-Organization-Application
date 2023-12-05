@@ -12,10 +12,11 @@ import {
     Form,
     Input,
     Label,
-    Textarea
+    Select,
+    Option
 } from '../../styles/global/Form.styled'
 
-function CreateProduct() {
+function CreateMember() {
 
     const handleSubmit = () => {
 
@@ -24,13 +25,13 @@ function CreateProduct() {
     return (
         <MainContainer>
             <Wrapper>
-                <Link to="/products">
+                <Link to="/members">
                     <Button
                         $width="170px"
                         $height="35px"
-                        $fontSize="16px">Nazad na prodaju</Button>
+                        $fontSize="16px">Pregledaj članove</Button>
                 </Link>
-                <Title $fontSize="1.7em">Dodaj novi proizvod</Title>
+                <Title $fontSize="1.7em">Dodaj novog člana</Title>
                 <Button
                     $width="100px"
                     $height="35px"
@@ -40,7 +41,7 @@ function CreateProduct() {
             <FormContainer>
                 <Form onSubmit={handleSubmit}>
                     <Container>
-                        <Label>Ime proizvoda: </Label>
+                        <Label>Ime korisnika: </Label>
                         <Input
                             $width="100%"
                             $height="40px"
@@ -49,7 +50,7 @@ function CreateProduct() {
                         />
                     </Container>
                     <Container>
-                        <Label>Cijena proizvoda: </Label>
+                        <Label>Email korisnika: </Label>
                         <Input
                             $width="100%"
                             $height="40px"
@@ -58,26 +59,19 @@ function CreateProduct() {
                         />
                     </Container>
                     <Container>
-                        <Label>Opis: </Label>
-                        <Textarea
-                            $width="100%"
-                            $height="200px"
-                            placeholder='Pišite ovdje'
-                        />
-                    </Container>
-                    <Container>
-                        <Label>Slika: </Label>
-                        <Input
+                        <Label>Role korisnika: </Label>
+                        <Select
                             $width="100%"
                             $height="40px"
                             type='text'
                             placeholder='Uneiste URL slike'
-                        />
-                        <Input
-                            $width="100%"
-                            $height="40px"
-                            type='file'
-                        />
+                        >
+                            <Option>Predsjednik</Option>
+                            <Option>Potpredsjednik</Option>
+                            <Option>Veslač</Option>
+                            <Option>Bubnjar</Option>
+                            <Option>Kormilar</Option>
+                        </Select>
                     </Container>
                 </Form>
             </FormContainer>
@@ -85,4 +79,4 @@ function CreateProduct() {
     )
 }
 
-export default CreateProduct
+export default CreateMember

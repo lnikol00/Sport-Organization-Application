@@ -12,10 +12,9 @@ import {
     Form,
     Input,
     Label,
-    Textarea
 } from '../../styles/global/Form.styled'
 
-function CreateProduct() {
+function CreatePhoto() {
 
     const handleSubmit = () => {
 
@@ -24,13 +23,13 @@ function CreateProduct() {
     return (
         <MainContainer>
             <Wrapper>
-                <Link to="/products">
+                <Link to="/gallery">
                     <Button
                         $width="170px"
                         $height="35px"
-                        $fontSize="16px">Nazad na prodaju</Button>
+                        $fontSize="16px">Nazad u galeriju</Button>
                 </Link>
-                <Title $fontSize="1.7em">Dodaj novi proizvod</Title>
+                <Title $fontSize="1.7em">Dodaj novu sliku</Title>
                 <Button
                     $width="100px"
                     $height="35px"
@@ -40,33 +39,35 @@ function CreateProduct() {
             <FormContainer>
                 <Form onSubmit={handleSubmit}>
                     <Container>
-                        <Label>Ime proizvoda: </Label>
+                        <Label>Slika 1: </Label>
                         <Input
                             $width="100%"
                             $height="40px"
                             type='text'
-                            placeholder='Pišite ovdje'
+                            placeholder='Uneiste URL slike'
+                        />
+                        <Input
+                            $width="100%"
+                            $height="40px"
+                            type='file'
                         />
                     </Container>
                     <Container>
-                        <Label>Cijena proizvoda: </Label>
+                        <Label>Slika 2: </Label>
                         <Input
                             $width="100%"
                             $height="40px"
                             type='text'
-                            placeholder='Pišite ovdje'
+                            placeholder='Uneiste URL slike'
                         />
-                    </Container>
-                    <Container>
-                        <Label>Opis: </Label>
-                        <Textarea
+                        <Input
                             $width="100%"
-                            $height="200px"
-                            placeholder='Pišite ovdje'
+                            $height="40px"
+                            type='file'
                         />
                     </Container>
                     <Container>
-                        <Label>Slika: </Label>
+                        <Label>Slika 3: </Label>
                         <Input
                             $width="100%"
                             $height="40px"
@@ -85,4 +86,4 @@ function CreateProduct() {
     )
 }
 
-export default CreateProduct
+export default CreatePhoto

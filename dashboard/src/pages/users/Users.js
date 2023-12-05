@@ -35,11 +35,13 @@ function Users() {
                 >
                     Korisnici
                 </Title>
-                <Button
-                    $width="220px"
-                    $height="35px"
-                    $fontSize="16px"
-                >Kreairaj novog korisnika</Button>
+                <Link to="create">
+                    <Button
+                        $width="220px"
+                        $height="35px"
+                        $fontSize="16px"
+                    >Kreairaj novog korisnika</Button>
+                </Link>
             </Wrapper>
             <Container>
                 <Wrapper $flexDirection="column" $responsiveGap="20px">

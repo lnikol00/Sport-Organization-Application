@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import {
     GalleryContainer,
     Wrapper,
@@ -38,11 +39,13 @@ function Gallery() {
                 >
                     Galerija
                 </Title>
-                <Button
-                    $width="220px"
-                    $height="35px"
-                    $fontSize="16px"
-                >Dodaj novu sliku</Button>
+                <Link to="create">
+                    <Button
+                        $width="220px"
+                        $height="35px"
+                        $fontSize="16px"
+                    >Dodaj novu sliku</Button>
+                </Link>
             </Wrapper>
             <Container>
                 <Wrapper $flexDirection="column" $responsiveGap="20px">

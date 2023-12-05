@@ -15,22 +15,23 @@ import {
     Textarea
 } from '../../styles/global/Form.styled'
 
-function CreateProduct() {
+function CreateNews() {
 
     const handleSubmit = () => {
 
     }
 
+
     return (
         <MainContainer>
             <Wrapper>
-                <Link to="/products">
+                <Link to="/news">
                     <Button
                         $width="170px"
                         $height="35px"
-                        $fontSize="16px">Nazad na prodaju</Button>
+                        $fontSize="16px">Nazad na novosti</Button>
                 </Link>
-                <Title $fontSize="1.7em">Dodaj novi proizvod</Title>
+                <Title $fontSize="1.7em">Dodaj novost</Title>
                 <Button
                     $width="100px"
                     $height="35px"
@@ -40,7 +41,21 @@ function CreateProduct() {
             <FormContainer>
                 <Form onSubmit={handleSubmit}>
                     <Container>
-                        <Label>Ime proizvoda: </Label>
+                        <Label>Slika: </Label>
+                        <Input
+                            $width="100%"
+                            $height="40px"
+                            type='text'
+                            placeholder='Uneiste URL slike'
+                        />
+                        <Input
+                            $width="100%"
+                            $height="40px"
+                            type='file'
+                        />
+                    </Container>
+                    <Container>
+                        <Label>Naslov: </Label>
                         <Input
                             $width="100%"
                             $height="40px"
@@ -49,7 +64,7 @@ function CreateProduct() {
                         />
                     </Container>
                     <Container>
-                        <Label>Cijena proizvoda: </Label>
+                        <Label>Kratki opis: </Label>
                         <Input
                             $width="100%"
                             $height="40px"
@@ -65,24 +80,10 @@ function CreateProduct() {
                             placeholder='Pišite ovdje'
                         />
                     </Container>
-                    <Container>
-                        <Label>Slika: </Label>
-                        <Input
-                            $width="100%"
-                            $height="40px"
-                            type='text'
-                            placeholder='Uneiste URL slike'
-                        />
-                        <Input
-                            $width="100%"
-                            $height="40px"
-                            type='file'
-                        />
-                    </Container>
                 </Form>
             </FormContainer>
         </MainContainer>
     )
 }
 
-export default CreateProduct
+export default CreateNews

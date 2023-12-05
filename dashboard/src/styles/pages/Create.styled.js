@@ -27,7 +27,18 @@ export const Wrapper = styled.div`
 `
 
 export const FormContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input[type="file"]{
+        padding-left:0;
+    }
+`
+
+export const Container = styled.div`
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:100%;
 `

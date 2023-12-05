@@ -5,14 +5,14 @@ export const Form = styled.form`
     justify-content:flex-start;
     align-items:flex-start;
     flex-direction:column;
-    gap: 10px;
+    gap: 25px;
     background-color:${(props) => (props.theme.body)};
     width:60%;
     border: 1px solid ${(props) => (props.theme.color)};
     border-radius:4px;
     padding: 15px;
     margin-top: 30px;
-    box-shadow:${(props) => (props.$boxShadow)};
+    box-shadow:2px 2px 5px black;
 
     @media screen and (max-width:600px) {
         width: 280px;
@@ -35,6 +35,10 @@ export const Input = styled.input`
     background-color: ${(props) => (props.theme.body)};
     color:${(props) => (props.theme.color)};
     transition: all 0.5s;
+
+    &::-webkit-file-upload-button{
+        height:100%;
+    }
 
     &::placeholder{
         color:${(props) => (props.theme.color)};

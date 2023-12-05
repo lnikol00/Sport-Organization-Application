@@ -35,11 +35,13 @@ function Members() {
                 >
                     Članovi
                 </Title>
-                <Button
-                    $width="220px"
-                    $height="35px"
-                    $fontSize="16px"
-                >Kreairaj novog člana</Button>
+                <Link to="create">
+                    <Button
+                        $width="220px"
+                        $height="35px"
+                        $fontSize="16px"
+                    >Kreairaj novog člana</Button>
+                </Link>
             </Wrapper>
             <Container>
                 <Wrapper $flexDirection="column" $responsiveGap="20px">
