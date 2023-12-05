@@ -21,7 +21,7 @@ export const menu = [
         url: '/members',
     },
     {
-        title: 'Fan-Shop',
+        title: 'Prodaja',
         icon: <BsIcons.BsShop />,
         url: '/products',
     },
