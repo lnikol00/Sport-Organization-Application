@@ -70,10 +70,10 @@ function News() {
                         </Select>
                     </Wrapper>
                 </Wrapper>
-                <Grid>
-                    {
-                        loading ? (<Loading />) : error ? (<Error>{error}</Error>) :
-                            (
+                {
+                    loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
+                        <Grid>
+                            {
                                 news.map((news) => (
                                     <GridBox key={news._id}>
                                         <Image
@@ -94,9 +94,10 @@ function News() {
                                         </ButtonContainer>
                                     </GridBox>
                                 ))
-                            )
-                    }
-                </Grid>
+                            }
+                        </Grid>
+                    )
+                }
             </Container>
         </MainContainer>
     )

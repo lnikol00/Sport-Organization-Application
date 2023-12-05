@@ -64,10 +64,10 @@ function Users() {
                         </Select>
                     </Wrapper>
                 </Wrapper>
-                <Grid>
-                    {
-                        loading ? (<Loading />) : error ? (<Error>{error}</Error>) :
-                            (
+                {
+                    loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
+                        <Grid>
+                            {
                                 users.map((user) => (
                                     <GridBox key={user._id} $padding="20px 0 5px">
                                         <Image
@@ -93,9 +93,10 @@ function Users() {
                                         <Link>{user.email}</Link>
                                     </GridBox>
                                 ))
-                            )
-                    }
-                </Grid>
+                            }
+                        </Grid>
+                    )
+                }
             </Container>
 
         </MainContainer>

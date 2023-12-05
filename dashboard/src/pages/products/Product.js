@@ -81,13 +81,13 @@ function Product() {
                         </Select>
                     </Wrapper>
                 </Wrapper>
-                <Grid>
-                    {
-                        errorDelete && (<Error>{errorDelete}</Error>)
-                    }
-                    {
-                        loading ? (<Loading />) : error ? (<Error>{error}</Error>) :
-                            (
+                {
+                    errorDelete && (<Error>{errorDelete}</Error>)
+                }
+                {
+                    loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
+                        <Grid>
+                            {
                                 products.map((product) => (
                                     <GridBox key={product._id} $paddingTop="10px">
                                         <Image
@@ -108,9 +108,11 @@ function Product() {
                                         </ButtonContainer>
                                     </GridBox>
                                 ))
-                            )
-                    }
-                </Grid>
+
+                            }
+                        </Grid>
+                    )
+                }
             </Container>
         </MainContainer>
     )

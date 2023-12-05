@@ -70,10 +70,10 @@ function Gallery() {
                         </Select>
                     </Wrapper>
                 </Wrapper>
-                <Grid>
-                    {
-                        loading ? (<Loading />) : error ? (<Error>{error}</Error>) :
-                            (
+                {
+                    loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
+                        <Grid>
+                            {
                                 photos.map((photos) => (
                                     <GridBox key={photos._id}>
                                         <Image
@@ -87,9 +87,10 @@ function Gallery() {
                                         </ButtonContainer>
                                     </GridBox>
                                 ))
-                            )
-                    }
-                </Grid>
+                            }
+                        </Grid>
+                    )
+                }
             </Container>
         </GalleryContainer>
     )

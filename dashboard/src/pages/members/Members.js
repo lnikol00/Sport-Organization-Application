@@ -64,10 +64,10 @@ function Members() {
                         </Select>
                     </Wrapper>
                 </Wrapper>
-                <Grid>
-                    {
-                        loading ? (<Loading />) : error ? (<Error>{error}</Error>) :
-                            (
+                {
+                    loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
+                        <Grid>
+                            {
                                 members.map((member) => (
                                     <GridBox key={member._id}>
                                         <Image
@@ -84,9 +84,10 @@ function Members() {
                                         </Paragraph>
                                     </GridBox>
                                 ))
-                            )
-                    }
-                </Grid>
+                            }
+                        </Grid>
+                    )
+                }
             </Container>
 
         </MainContainer>
