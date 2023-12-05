@@ -9,6 +9,7 @@ import News from './pages/news/News'
 import Gallery from './pages/gallery/Gallery';
 import Login from './pages/login/Login';
 import RequireAuth from './context/RequiredAuth';
+import CreateProduct from './pages/products/CreateProduct';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route index element={<Dashobard />} />
             <Route path='news' element={<News />} />
             <Route path='products' element={<Product />} />
+            <Route path='products/create' element={<CreateProduct />} />
             <Route path='members' element={<Members />} />
             <Route path='gallery' element={<Gallery />} />
             <Route path='users' element={<Users />} />

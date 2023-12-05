@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from "react-router-dom"
 import {
     MainContainer,
     Wrapper,
@@ -46,11 +47,13 @@ function Product() {
                 >
                     Proizvodi
                 </Title>
-                <Button
-                    $width="220px"
-                    $height="35px"
-                    $fontSize="16px"
-                >Kreairaj novi proizvod</Button>
+                <Link to="create">
+                    <Button
+                        $width="220px"
+                        $height="35px"
+                        $fontSize="16px"
+                    >Kreairaj novi proizvod</Button>
+                </Link>
             </Wrapper>
             <Container>
                 <Wrapper $flexDirection="column" $responsiveGap="20px">
