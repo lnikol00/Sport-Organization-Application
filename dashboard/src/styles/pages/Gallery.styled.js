@@ -93,7 +93,7 @@ export const ButtonContainer = styled.div`
         background-color: transparent;
         border: 1px solid black;
         border-radius: 4px;
-        color: red;
+        color: ${(props) => (props.theme.decline)};
         
 
         &:hover{

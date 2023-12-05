@@ -96,11 +96,11 @@ export const ButtonContainer = styled.div`
         border-radius: 4px;
 
         &:nth-child(1){
-            color: green;
+            color: ${(props) => (props.theme.accept)};
         }
 
         &:nth-child(2){
-            color: red;
+            color: ${(props) => (props.theme.decline)};
         }
 
         &:hover{
