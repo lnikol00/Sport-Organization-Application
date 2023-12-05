@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import Product from "../models/ProductModel.js";
 
 //GET ALL PRODUCTS
@@ -46,8 +45,7 @@ export const createProduct = async (req, res) => {
 
 // DELETE PRODUCT
 export const deleteProduct = async (req, res) => {
-    const { id: id } = req.params;
-    const product = await Product.findById({ _id: id });
+    const product = await Product.findById(req.params.id);
 
     if (product) {
         await product.deleteOne();
