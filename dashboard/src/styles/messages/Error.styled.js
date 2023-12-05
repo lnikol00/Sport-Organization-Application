@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-    margin-bottom: 15px;
+    margin: 15px 0 0;
     background-color: lightpink;
     color: red;
     border-radius: 8px;
