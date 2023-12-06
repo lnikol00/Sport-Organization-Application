@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
     }
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.form`
     display: flex;
     justify-content: space-between;
     align-items: center;
