@@ -67,9 +67,9 @@ function CreateProduct() {
                     $fontSize="16px"
                 >Objavi</Button>
             </Wrapper>
+            {error && <Error>{error}</Error>}
+            {loading && <Loading />}
             <FormContainer>
-                {error && <Error>{error}</Error>}
-                {loading && <Loading />}
                 <Form>
                     <Container>
                         <Label>Ime proizvoda: </Label>
