@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import {
     MainContainer,
@@ -14,17 +14,47 @@ import {
     Label,
     Textarea
 } from '../../styles/global/Form.styled'
+import { useDispatch, useSelector } from "react-redux"
+import { toast } from 'react-toastify'
+import { NEWS_CREATE_RESET } from '../../Redux/Constants/NewsConstants'
+import { createNews } from '../../Redux/Actions/NewsAction'
+import Loading from "../../utils/messages/Loading"
+import Error from "../../utils/messages/Error"
+import Toast from '../../utils/messages/Toast'
 
 function CreateNews() {
 
-    const handleSubmit = () => {
+    const [title, setTitle] = useState("");
+    const [image, setImage] = useState("");
+    const [description, setDescription] = useState("");
+    const [body, setBody] = useState("");
 
+    const dispatch = useDispatch();
+
+    const newsCreate = useSelector((state) => (state.newsCreate));
+    const { error, loading, news } = newsCreate;
+
+    useEffect(() => {
+        if (news) {
+            toast.success("News Added!")
+            dispatch({ type: NEWS_CREATE_RESET });
+            setTitle("");
+            setImage("");
+            setDescription("");
+            setBody("");
+        }
+    }, [news, dispatch])
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(createNews(title, image, description, body));
     }
 
 
     return (
         <MainContainer>
-            <Wrapper>
+            <Toast />
+            <Wrapper onSubmit={handleSubmit}>
                 <Link to="/news">
                     <Button
                         $width="170px"
@@ -38,8 +68,10 @@ function CreateNews() {
                     $fontSize="16px"
                 >Objavi</Button>
             </Wrapper>
+            {error && <Error>{error}</Error>}
+            {loading && <Loading />}
             <FormContainer>
-                <Form onSubmit={handleSubmit}>
+                <Form>
                     <Container>
                         <Label>Slika: </Label>
                         <Input
@@ -47,6 +79,9 @@ function CreateNews() {
                             $height="40px"
                             type='text'
                             placeholder='Uneiste URL slike'
+                            value={image}
+                            onChange={(e) => setImage(e.target.value)}
+                            required
                         />
                         <Input
                             $width="100%"
@@ -61,6 +96,9 @@ function CreateNews() {
                             $height="40px"
                             type='text'
                             placeholder='Pišite ovdje'
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                            required
                         />
                     </Container>
                     <Container>
@@ -70,6 +108,9 @@ function CreateNews() {
                             $height="40px"
                             type='text'
                             placeholder='Pišite ovdje'
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                            required
                         />
                     </Container>
                     <Container>
@@ -78,6 +119,9 @@ function CreateNews() {
                             $width="100%"
                             $height="200px"
                             placeholder='Pišite ovdje'
+                            value={body}
+                            onChange={(e) => setBody(e.target.value)}
+                            required
                         />
                     </Container>
                 </Form>

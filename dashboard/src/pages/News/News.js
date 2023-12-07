@@ -14,7 +14,7 @@ import { Input, Select, Option } from '../../styles/global/Form.styled'
 import { Image } from '../../styles/global/Image.styled'
 import * as FaIcons from "react-icons/fa"
 import { useDispatch, useSelector } from 'react-redux'
-import { listNews } from '../../Redux/Actions/NewsAction'
+import { listNews, deleteNews } from '../../Redux/Actions/NewsAction'
 import Loading from "../../utils/messages/Loading"
 import Error from "../../utils/messages/Error"
 import moment from "moment"
@@ -26,9 +26,19 @@ function News() {
     const newsList = useSelector((state) => state.newsList);
     const { loading, error, news } = newsList;
 
+    const newsDelete = useSelector((state) => state.newsDelete)
+    const { error: errorDelete, success: successDelete } = newsDelete;
+
+
     useEffect(() => {
         dispatch(listNews());
-    }, [dispatch])
+    }, [dispatch, successDelete])
+
+    const deleteHandler = (id) => {
+        if (window.confirm("Are you sure you want to delete this news?")) {
+            dispatch(deleteNews(id))
+        }
+    }
 
     return (
         <MainContainer>
@@ -74,6 +84,9 @@ function News() {
                     </Wrapper>
                 </Wrapper>
                 {
+                    errorDelete && (<Error>{errorDelete}</Error>)
+                }
+                {
                     loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
                         <Grid>
                             {
@@ -93,7 +106,7 @@ function News() {
                                         </Paragraph>
                                         <ButtonContainer>
                                             <Button $width="100%" $height="40px"><FaIcons.FaPen /></Button>
-                                            <Button $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
+                                            <Button onClick={() => deleteHandler(news._id)} $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
                                         </ButtonContainer>
                                     </GridBox>
                                 ))

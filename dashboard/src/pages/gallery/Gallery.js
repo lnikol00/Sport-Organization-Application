@@ -14,7 +14,7 @@ import { Input, Select, Option } from '../../styles/global/Form.styled'
 import { Image } from '../../styles/global/Image.styled'
 import * as FaIcons from "react-icons/fa"
 import { useDispatch, useSelector } from 'react-redux'
-import { listPhotos } from '../../Redux/Actions/PhotosAction'
+import { listPhotos, deletePhoto } from '../../Redux/Actions/PhotosAction'
 import Loading from "../../utils/messages/Loading"
 import Error from "../../utils/messages/Error"
 
@@ -26,9 +26,19 @@ function Gallery() {
     const photosList = useSelector((state) => state.photosList);
     const { loading, error, photos } = photosList;
 
+
+    const photosDelete = useSelector((state) => state.photosDelete)
+    const { error: errorDelete, success: successDelete } = photosDelete;
+
     useEffect(() => {
         dispatch(listPhotos());
-    }, [dispatch])
+    }, [dispatch, successDelete])
+
+    const deleteHandler = (id) => {
+        if (window.confirm("Are you sure you want to delete this photo?")) {
+            dispatch(deletePhoto(id))
+        }
+    }
 
     return (
         <GalleryContainer>
@@ -74,6 +84,9 @@ function Gallery() {
                     </Wrapper>
                 </Wrapper>
                 {
+                    errorDelete && (<Error>{errorDelete}</Error>)
+                }
+                {
                     loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
                         <Grid>
                             {
@@ -86,7 +99,7 @@ function Gallery() {
                                             alt="images"
                                         />
                                         <ButtonContainer>
-                                            <Button $color="red" $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
+                                            <Button onClick={() => deleteHandler(photos._id)} $color="red" $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
                                         </ButtonContainer>
                                     </GridBox>
                                 ))

@@ -3,8 +3,8 @@ import thunk from "redux-thunk"
 import { composeWithDevTools } from "redux-devtools-extension"
 import { userListReducer, userLoginReducer } from "./Reducers/UserReducers";
 import { productCreateReducer, productDeleteReducer, productListReducer } from "./Reducers/ProductReducers";
-import { newsListReducer } from "./Reducers//NewsReducers";
-import { photosListReducer } from "./Reducers/PhotosReducers";
+import { newsCreateReducer, newsDeleteReducer, newsListReducer } from "./Reducers//NewsReducers";
+import { photosDeleteReducer, photosCreateReducer, photosListReducer } from "./Reducers/PhotosReducers";
 import { membersListReducer } from "./Reducers/MemberReducers";
 
 
@@ -15,7 +15,11 @@ const reducer = combineReducers({
     productDelete: productDeleteReducer,
     productCreate: productCreateReducer,
     newsList: newsListReducer,
+    newsDelete: newsDeleteReducer,
+    newsCreate: newsCreateReducer,
     photosList: photosListReducer,
+    photosDelete: photosDeleteReducer,
+    photosCreate: photosCreateReducer,
     membersList: membersListReducer,
 });
 
