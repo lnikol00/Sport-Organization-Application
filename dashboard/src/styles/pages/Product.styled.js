@@ -96,7 +96,7 @@ export const ButtonContainer = styled.div`
         border-radius: 4px;
 
         &:nth-child(1){
-            color: ${(props) => (props.theme.accept)};
+                color: ${(props) => (props.theme.accept)};
         }
 
         &:nth-child(2){

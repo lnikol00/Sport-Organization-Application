@@ -56,13 +56,18 @@ function Members() {
                             $width="150px"
                             $height="35px"
                         >
-                            <Option>Prikaži 20</Option>
+                            <Option>Prikaži 8</Option>
                         </Select>
                         <Select
                             $width="150px"
                             $height="35px"
                         >
                             <Option>Status: SVI</Option>
+                            <Option>Status: Predsjednik</Option>
+                            <Option>Status: Potpredsjednik</Option>
+                            <Option>Status: Veslač</Option>
+                            <Option>Status: Bubnjar</Option>
+                            <Option>Status: Parićar</Option>
                         </Select>
                     </Wrapper>
                 </Wrapper>

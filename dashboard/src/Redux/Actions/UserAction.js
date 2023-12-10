@@ -1,4 +1,7 @@
 import {
+    USER_CREATE_FAIL,
+    USER_CREATE_REQUEST,
+    USER_CREATE_SUCCESS,
     USER_LIST_FAIL,
     USER_LIST_REQUEST,
     USER_LIST_RESET,
@@ -96,6 +99,42 @@ export const listUser = () => async (dispatch, getState) => {
 
         dispatch({
             type: USER_LIST_FAIL,
+            payload: message
+        });
+    }
+}
+
+// CREATE USER (ADMIN)
+export const createUser = (name, email, isAdmin, password) => async (dispatch, getState) => {
+    try {
+        dispatch({ type: USER_CREATE_REQUEST })
+
+        const {
+            userLogin: { userInfo },
+        } = getState();
+
+        const config = {
+            headers: {
+                Authorization: `Bearer ${userInfo.token}`,
+            }
+        }
+
+        const { data } = await axios.post(
+            `/api/users`,
+            { name, email, isAdmin, password },
+            config
+        );
+        dispatch({ type: USER_CREATE_SUCCESS, payload: data })
+
+    } catch (error) {
+        const message =
+            error.response && error.response.data.message ? error.response.data.message : error.message;
+        if (message === "Not authorized, token failed") {
+            dispatch(logout())
+        }
+
+        dispatch({
+            type: USER_CREATE_FAIL,
             payload: message
         });
     }

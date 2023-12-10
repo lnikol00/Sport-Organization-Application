@@ -56,13 +56,15 @@ function Users() {
                             $width="150px"
                             $height="35px"
                         >
-                            <Option>Prikaži 20</Option>
+                            <Option>Prikaži 8</Option>
                         </Select>
                         <Select
                             $width="150px"
                             $height="35px"
                         >
                             <Option>Status: SVI</Option>
+                            <Option>Status: Admin</Option>
+                            <Option>Status: Customer</Option>
                         </Select>
                     </Wrapper>
                 </Wrapper>

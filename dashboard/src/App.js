@@ -14,6 +14,7 @@ import CreateUser from './pages/users/CreateUser';
 import CreatePhoto from './pages/gallery/CreatePhoto';
 import CreateMember from './pages/members/CreateMember';
 import CreateNews from './pages/news/CreateNews';
+import EditProduct from './pages/products/EditProduct';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path='news/create' element={<CreateNews />} />
             <Route path='products' element={<Product />} />
             <Route path='products/create' element={<CreateProduct />} />
+            <Route path='products/:id/edit' element={<EditProduct />} />
             <Route path='members' element={<Members />} />
             <Route path='members/create' element={<CreateMember />} />
             <Route path='gallery' element={<Gallery />} />
