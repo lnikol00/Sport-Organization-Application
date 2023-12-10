@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import {
     MainContainer,
     Wrapper,
@@ -38,6 +38,12 @@ function Product() {
         }
     }
 
+    const navigate = useNavigate();
+
+    const editHandler = (id) => {
+        navigate(`${id}/edit`)
+    }
+
     return (
         <MainContainer>
             <Wrapper>
@@ -70,14 +76,7 @@ function Product() {
                             $width="150px"
                             $height="35px"
                         >
-                            <Option>Prikaži 20</Option>
-                        </Select>
-                        <Select
-                            id='select-all'
-                            $width="150px"
-                            $height="35px"
-                        >
-                            <Option>Status: SVI</Option>
+                            <Option>Prikaži 8</Option>
                         </Select>
                     </Wrapper>
                 </Wrapper>
@@ -103,7 +102,7 @@ function Product() {
                                             {product.price}€
                                         </Paragraph>
                                         <ButtonContainer>
-                                            <Button $width="100%" $height="40px"><FaIcons.FaPen /></Button>
+                                            <Button onClick={() => editHandler(product._id)} $width="100%" $height="40px"><FaIcons.FaPen /></Button>
                                             <Button onClick={() => deleteHandler(product._id)} $width="100%" $height="40px"><FaIcons.FaTrash /></Button>
                                         </ButtonContainer>
                                     </GridBox>

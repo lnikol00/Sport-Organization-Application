@@ -72,7 +72,7 @@ function Gallery() {
                             $width="150px"
                             $height="35px"
                         >
-                            <Option>Prikaži 20</Option>
+                            <Option>Prikaži 8</Option>
                         </Select>
                         <Select
                             id='select-all'

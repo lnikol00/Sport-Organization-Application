@@ -72,14 +72,7 @@ function News() {
                             $width="150px"
                             $height="35px"
                         >
-                            <Option>Prikaži 20</Option>
-                        </Select>
-                        <Select
-                            id='select-all'
-                            $width="150px"
-                            $height="35px"
-                        >
-                            <Option>Status: SVI</Option>
+                            <Option>Prikaži 8</Option>
                         </Select>
                     </Wrapper>
                 </Wrapper>
