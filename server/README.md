@@ -1,12 +1,21 @@
 # Backend - server
 
-### `npm install` or `npm i`
+```
+npm install 
+```
+or
+
+```
+npm i
+```
 
 The command npm install is used in Node.js and JavaScript development to install the dependencies listed in a project's package.json file.
 
 In the project directory, you can run:
 
-### `npm run dev`
+```
+npm run dev
+```
 
 The command npm run dev is typically used in a Node.js-based project to start a development server or perform other development-related tasks. Here's what this command does:
 
