@@ -19,7 +19,8 @@ export const darkTheme = {
     buttonHover: "rgba(255,255,255,0.3)",
     decline: "black",
     accept: "lightgray",
-    acceptText: "black"
+    acceptText: "black",
+    currentButton: "gray"
 }
 
 export const lightTheme = {
@@ -32,5 +33,6 @@ export const lightTheme = {
     buttonHover: "rgba(0,0,0,0.3)",
     decline: "red",
     accept: "green",
-    acceptText: "white"
+    acceptText: "white",
+    currentButton: "yellow"
 }

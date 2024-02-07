@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import {
     MainContainer,
@@ -17,8 +17,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import { listProducts, deleteProduct } from '../../Redux/Actions/ProductActions'
 import Loading from "../../utils/messages/Loading"
 import Error from "../../utils/messages/Error"
+import Pagination from "../../hooks/Pagination"
 
 function Product() {
+
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const [productsPerPage, setProductsPerPage] = useState(8);
+
+    const lastProductIndex = currentPage * productsPerPage;
+    const firstProductIndex = lastProductIndex - productsPerPage;
+
 
     const dispatch = useDispatch();
 
@@ -87,7 +96,7 @@ function Product() {
                     loading ? (<Loading />) : error ? (<Error>{error}</Error>) : (
                         <Grid>
                             {
-                                products.map((product) => (
+                                products.slice(firstProductIndex, lastProductIndex).map((product) => (
                                     <GridBox key={product._id} $paddingTop="10px">
                                         <Image
                                             $width="100%"
@@ -112,6 +121,13 @@ function Product() {
                         </Grid>
                     )
                 }
+
+                <Pagination
+                    totalItems={products.length}
+                    itemsPerPage={productsPerPage}
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
+                />
             </Container>
         </MainContainer>
     )
