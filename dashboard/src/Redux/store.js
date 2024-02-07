@@ -5,7 +5,6 @@ import { userCreateReducer, userListReducer, userLoginReducer } from "./Reducers
 import { productCreateReducer, productDeleteReducer, productEditReducer, productListReducer } from "./Reducers/ProductReducers";
 import { newsCreateReducer, newsDeleteReducer, newsListReducer } from "./Reducers//NewsReducers";
 import { photosDeleteReducer, photosCreateReducer, photosListReducer } from "./Reducers/PhotosReducers";
-import { memberCreateReducer, membersListReducer } from "./Reducers/MemberReducers";
 
 
 const reducer = combineReducers({
@@ -22,8 +21,6 @@ const reducer = combineReducers({
     photosList: photosListReducer,
     photosDelete: photosDeleteReducer,
     photosCreate: photosCreateReducer,
-    membersList: membersListReducer,
-    memberCreate: memberCreateReducer,
 });
 
 // Login

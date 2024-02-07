@@ -3,7 +3,6 @@ import { GlobalStyles } from "./assets/Global.styled";
 import Layout from './context/Layout';
 import Dashobard from './pages/dashboard/Dashobard';
 import Product from './pages/products/Product';
-import Members from './pages/members/Members';
 import Users from './pages/users/Users';
 import News from './pages/news/News'
 import Gallery from './pages/gallery/Gallery';
@@ -12,7 +11,6 @@ import RequireAuth from './context/RequiredAuth';
 import CreateProduct from './pages/products/CreateProduct';
 import CreateUser from './pages/users/CreateUser';
 import CreatePhoto from './pages/gallery/CreatePhoto';
-import CreateMember from './pages/members/CreateMember';
 import CreateNews from './pages/news/CreateNews';
 import EditProduct from './pages/products/EditProduct';
 
@@ -30,8 +28,6 @@ function App() {
             <Route path='products' element={<Product />} />
             <Route path='products/create' element={<CreateProduct />} />
             <Route path='products/:id/edit' element={<EditProduct />} />
-            <Route path='members' element={<Members />} />
-            <Route path='members/create' element={<CreateMember />} />
             <Route path='gallery' element={<Gallery />} />
             <Route path='gallery/create' element={<CreatePhoto />} />
             <Route path='users' element={<Users />} />

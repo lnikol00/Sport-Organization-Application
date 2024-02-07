@@ -8,7 +8,6 @@ import Loading from '../../utils/messages/Loading'
 import Error from '../../utils/messages/Error'
 import { listNews } from '../../Redux/Actions/NewsAction'
 import moment from "moment"
-import Members from './members/Members'
 
 function Home() {
 
@@ -94,9 +93,6 @@ function Home() {
                             )
                     }
                 </div >
-
-                <h2>Članovi udruge</h2>
-                <Members />
             </div >
         </AnimatedPage>
     )

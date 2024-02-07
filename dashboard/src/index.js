@@ -12,7 +12,6 @@ root.render(
   <BrowserRouter>
     <Provider store={store}>
       <React.StrictMode>
-
         <Routes>
           <Route path='/*' element={<App />} />
         </Routes>
