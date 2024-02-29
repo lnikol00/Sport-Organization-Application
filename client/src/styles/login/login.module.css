@@ -195,13 +195,14 @@
     }
 
     .formContainer label {
-        background-color: lightgray;
+        background-color: white;
         padding: 10px;
         width: 300px;
     }
 
     .formContainer input {
         width: 250px;
+        background-color: white;
     }
 
     .formContainer button {

@@ -131,4 +131,8 @@
     .input textarea {
         width: 350px;
     }
+
+    .namContainer h5 {
+        padding: 0.5em 4em;
+    }
 }

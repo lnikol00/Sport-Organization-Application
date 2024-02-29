@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser';
 
 import styles from "../../styles/footer/footer.module.css"
 
@@ -19,16 +18,6 @@ function Footer() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        // emailjs.sendForm('service_0v2naub', 'template_yj8y0w4', form.current, 'e14dHShsfZvGSBG8B')
-        //     .then((result) => {
-        //         console.log(result.text);
-        //         console.log("upit poslan");
-        //         console.log(`Get Username: ${userame}, Email: ${email} and Message: ${message}`)
-
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
         form.current.reset();
     };
 
