@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "../../components/api/axios";
 import { PHOTOS_LIST_FAIL, PHOTOS_LIST_REQUEST, PHOTOS_LIST_SUCCESS } from "../Constants/PhotosConstants"
 
 // PHOTOS LIST

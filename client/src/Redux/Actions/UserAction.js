@@ -16,7 +16,7 @@ import {
     USER_UPDATE_PROFILE_FAIL
 } from "../Constants/UserConstants";
 
-import axios from "axios"
+import axios from "../../components/api/axios"
 
 // LOGIN
 export const login = (email, password) => async (dispatch) => {

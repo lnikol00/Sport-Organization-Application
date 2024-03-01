@@ -15,7 +15,7 @@ import {
 } from "../Constants/OrderContants";
 
 import { logout } from "../Actions/UserAction"
-import axios from "axios";
+import axios from "../../components/api/axios";
 
 // CREATE ORDER
 export const createOrder = (order) => async (dispatch, getState) => {
