@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv"
+import cors from "cors"
 import connectDatabase from "./config/MongoDb.js";
 import ImportData from "./utils/DataImport.js";
 import productRoute from "./routes/products.js";
@@ -7,12 +8,22 @@ import newsRoute from "./routes/news.js";
 import userRoute from "./routes/users.js";
 import orderRoute from "./routes/orders.js";
 import photosRoute from "./routes/photos.js";
+import { corsOptions } from "./config/corsOptions.js";
 import { errorHandler, notFound } from "./middleware/Error.js";
+import { credentials } from "./middleware/Credentials.js";
 
 
 dotenv.config();
 connectDatabase();
 const app = express();
+
+// Handle options credentials check - before CORS!
+// and fetch cookies credentials requirement
+app.use(credentials)
+
+// Cross Origin Resource Sharing
+app.use(cors(corsOptions))
+
 app.use(express.json());
 
 //API
