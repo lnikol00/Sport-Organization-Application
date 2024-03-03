@@ -129,7 +129,37 @@ function Login() {
                                     required
                                 />
                             </label>
-                            <button>Prijavi se</button>
+                            <button>PRIJAVI SE</button>
+                        </form>
+                        <form onSubmit={handleLoginSubmit}>
+                            <h1>Prijavi se</h1>
+                            {
+                                error && <Error>{error}</Error>
+                            }
+                            {
+                                loading && <Loading />
+                            }
+                            <label>
+                                <AiIcons.AiOutlineMail />
+                                <input
+                                    placeholder='Email'
+                                    type='email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <label>
+                                <AiIcons.AiOutlineLock />
+                                <input
+                                    placeholder='Lozinka'
+                                    type='password'
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <button>PRIJAVI SE</button>
                         </form>
                     </div>
                     <div className={change ? `${styles.toggleContainer}` : `${styles.toggleContainer} ${styles.activeToggleContainer}`}>
@@ -145,6 +175,88 @@ function Login() {
                                 <button onClick={handleChange} className={styles.hidden}>Prijavi se</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+
+                {/* RESPONSIVE */}
+                <div className={styles.responsiveMainContainer}>
+                    <input type='checkbox' id={styles["chk"]} aria-hidden="true" />
+
+                    <div className={styles.responsiveSignUp}>
+                        <form onSubmit={handleRegisterSubmit}>
+                            <label className={styles.heading} htmlFor={styles["chk"]}> Kreiraj Račun</label>
+                            {
+                                error && <Error>{error}</Error>
+                            }
+                            {
+                                loading && <Loading />
+                            }
+                            <label>
+                                <BiIcons.BiUser />
+                                <input
+                                    placeholder='Ime'
+                                    type='text'
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <label>
+                                <AiIcons.AiOutlineMail />
+                                <input
+                                    placeholder='Email'
+                                    type='email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <label>
+                                <AiIcons.AiOutlineLock />
+                                <input
+                                    placeholder='Lozinka'
+                                    type='password'
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <button>REGISTRIRAJ SE</button>
+                        </form>
+                    </div>
+
+                    <div className={styles.responsiveSingIn}>
+                        <form onSubmit={handleLoginSubmit}>
+                            <label className={styles.heading} htmlFor={styles["chk"]}>Prijavi se</label>
+                            {
+                                error && <Error>{error}</Error>
+                            }
+                            {
+                                loading && <Loading />
+                            }
+                            <label>
+                                <AiIcons.AiOutlineMail />
+                                <input
+                                    placeholder='Email'
+                                    type='email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <label>
+                                <AiIcons.AiOutlineLock />
+                                <input
+                                    placeholder='Lozinka'
+                                    type='password'
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <button>PRIJAVI SE</button>
+                        </form>
                     </div>
                 </div>
             </div>
