@@ -28,7 +28,7 @@ function Home() {
     let interval;
 
     const startTimer = () => {
-        const countDownDate = new Date("August 12, 2024 17:00:00").getTime();
+        const countDownDate = new Date("August 10, 2024 17:00:00").getTime();
 
         interval = setInterval(() => {
             const now = new Date().getTime();

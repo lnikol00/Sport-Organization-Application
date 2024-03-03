@@ -1,42 +1,100 @@
 .mainContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin: 20px;
+    margin: 2rem 5rem;
+    gap: 20px;
 }
 
-.imageContainer {
-    width: 95%;
+.newsContainer {
+    width: 70%;
 }
 
 .imageContainer img {
     width: 100%;
-    height: 600px;
-    border-radius: 16px;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .titleContainer {
-    width: 95%;
     padding: 15px 0 0;
 }
 
 .dateContainer {
     padding: 0 0 15px;
-    width: 95%;
 }
 
-.bodyContainer {
-    width: 95%;
-}
 
 .bodyContainer p {
     font-size: 18px;
     line-height: 35px;
 }
 
-@media screen and (max-width: 850px) {
-    .imageContainer img {
-        height: 400px;
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.infoContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 4em;
+    width: 100%;
+}
+
+.infoContainer p {
+    font-size: 1.2em;
+    border: 4px solid yellow;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoContainer h3 {
+    font-size: 1.8em;
+}
+
+.infoContainer span {
+    font-size: 1em;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .mainContainer {
+        margin: 2rem 3rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .mainContainer {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .newsContainer {
+        width: 100%;
+    }
+
+    .imageContainer {
+        width: 100%;
+    }
+
+    .infoContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .mainContainer {
+        margin: 1.5em;
     }
 }
