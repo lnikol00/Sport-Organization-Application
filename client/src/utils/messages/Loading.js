@@ -1,10 +1,24 @@
 import React from 'react'
-import styles from "../../styles/messages/loading.module.css"
+import PulseLoader from "react-spinners/PulseLoader"
+
+const override = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "black",
+};
 
 const Loading = () => {
     return (
-        <div className={styles.mainContainer}>
-            <span>Loading...</span>
+        <div>
+            {/* <span>Loading...</span> */}
+
+            <PulseLoader
+                color={"#000000"}
+                cssOverride={override}
+                size={10}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+            />
         </div>
     )
 }
