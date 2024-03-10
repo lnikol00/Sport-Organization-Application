@@ -5,6 +5,7 @@ import { getUserDetails } from '../../../Redux/Actions/UserAction'
 import AccountDetails from './AccountDetails'
 import Orders from './Orders'
 import { listMyOrders } from '../../../Redux/Actions/OrderAction'
+import AnimatedPage from "../../../context/AnimatedPage"
 
 function User() {
 
@@ -32,53 +33,55 @@ function User() {
 
 
     return (
-        <div className={styles.mainContainer}>
-            <h1>My Account</h1>
-            <div className={styles.infoContainer}>
-                <div className={styles.chategories}>
-                    <div className={styles.chategoriesInfo}>
-                        <div onClick={handleImageClick}>
-                            {empty ? <h3>Učitajte sliku</h3> : null}
-                            {image ? <img src={URL.createObjectURL(image)} /> : <img alt={userInfo.name} src={userInfo.image} />}
-                            <input
-                                type='file'
-                                ref={inputRef}
-                                onChange={(e) => setImage(e.target.value)}
-                                style={{ display: "none" }}
-                            />
-                        </div>
-                        <span><b>User: </b>{userInfo.name}</span>
-                    </div>
-                </div>
-
-                <div className={styles.data}>
-                    <div className={styles.modes}>
-                        <div
-                            onClick={() => setChange(true)}
-                            className={change ? `${styles.clicked}` : `${styles.notClicked}`}>
-                            <button>Narudžbe</button>
-
-                        </div>
-                        <div
-                            onClick={() => setChange(false)}
-                            className={change ? `${styles.notClicked}` : `${styles.clicked}`}>
-                            <button>Postavke računa</button>
+        <AnimatedPage>
+            <div className={styles.mainContainer}>
+                <h1>My Account</h1>
+                <div className={styles.infoContainer}>
+                    <div className={styles.chategories}>
+                        <div className={styles.chategoriesInfo}>
+                            <div onClick={handleImageClick}>
+                                {empty ? <h3>Učitajte sliku</h3> : null}
+                                {image ? <img src={URL.createObjectURL(image)} /> : <img alt={userInfo.name} src={userInfo.image} />}
+                                <input
+                                    type='file'
+                                    ref={inputRef}
+                                    onChange={(e) => setImage(e.target.value)}
+                                    style={{ display: "none" }}
+                                />
+                            </div>
+                            <span><b>User: </b>{userInfo.name}</span>
                         </div>
                     </div>
-                    <div>
-                        {change ?
-                            <div className={styles.orders}>
-                                <Orders orders={orders} loading={loading} error={error} />
+
+                    <div className={styles.data}>
+                        <div className={styles.modes}>
+                            <div
+                                onClick={() => setChange(true)}
+                                className={change ? `${styles.clicked}` : `${styles.notClicked}`}>
+                                <button>Narudžbe</button>
+
                             </div>
-                            :
-                            <div className={styles.details}>
-                                <AccountDetails image={image} />
+                            <div
+                                onClick={() => setChange(false)}
+                                className={change ? `${styles.notClicked}` : `${styles.clicked}`}>
+                                <button>Postavke računa</button>
                             </div>
-                        }
+                        </div>
+                        <div>
+                            {change ?
+                                <div className={styles.orders}>
+                                    <Orders orders={orders} loading={loading} error={error} />
+                                </div>
+                                :
+                                <div className={styles.details}>
+                                    <AccountDetails image={image} />
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </AnimatedPage>
     )
 }
 
