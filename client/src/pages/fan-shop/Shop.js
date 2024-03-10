@@ -66,9 +66,6 @@ function Shop() {
                                                 <div className={styles.itemsContainer} key={item._id}>
                                                     <img src={item.image} alt={item.title} />
                                                     <div className={styles.info}>
-                                                        <div className={styles.icon}>
-                                                            <AiIcons.AiOutlineShoppingCart />
-                                                        </div>
                                                         <Link to={`/products/${item._id}`}>
                                                             <div className={styles.icon}>
                                                                 <AiIcons.AiOutlineSearch />

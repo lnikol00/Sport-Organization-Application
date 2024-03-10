@@ -37,6 +37,14 @@ function Cart() {
         dispatch(removeFromCart(id))
     }
 
+    const registerHandler = () => {
+        navigate("/login")
+    }
+
+    const continueShopping = () => {
+        navigate("/products")
+    }
+
     return (
         <AnimatedPage>
             <div className={styles.mainContainer}>
@@ -47,9 +55,9 @@ function Cart() {
                             <div className={styles.emptyCartContainer}>
                                 <h1>Vaša košarica je prazna</h1>
                                 <p>Za kupnju putem Web Shopa potreban vam je korisnički račun. Ukoliko želite kreirati račun kliknite:</p>
-                                <button><Link to="/login">REGISTRIRAJ ME</Link></button>
+                                <button onClick={registerHandler}>REGISTRIRAJ ME</button>
                                 <p>Ukoliko imate kreiran račun kliknite:</p>
-                                <button><Link to="/products">NASTAVI KUPNJU</Link></button>
+                                <button onClick={continueShopping}>NASTAVI KUPNJU</button>
                             </div>
                         ) :
                         (
@@ -106,7 +114,7 @@ function Cart() {
                                     <hr />
                                     <div className={styles.buttons}>
                                         <div className={styles.continueShopping}>
-                                            <Link to="/products"><button>NASTAVI KUPNJU</button></Link>
+                                            <button onClick={continueShopping}>NASTAVI KUPNJU</button>
                                         </div>
                                         <div className={styles.checkoutButton}>
                                             <button onClick={checkoutHandler}>
