@@ -83,21 +83,14 @@ function Header() {
                                         <Dropdown.Menu
                                             style={{
                                                 backgroundColor: "yellow",
+                                                display: "flex",
+                                                flexDirection: "column",
                                                 border: "1px solid black",
                                                 margin: "10px 0",
                                                 padding: "10px"
                                             }}>
-                                            <Dropdown.Item
-                                                style={{
-                                                    padding: "0",
-                                                }}
-                                                href="/user">Profile</Dropdown.Item>
-                                            <Dropdown.Item
-                                                style={{
-                                                    padding: "0",
-                                                    marginTop: "10px",
-                                                }}
-                                                href="#" onClick={logoutHandler}>Logout</Dropdown.Item>
+                                            <NavLink to="/user" style={{ marginBottom: "10px" }}>Profile</NavLink>
+                                            <NavLink to="#" onClick={logoutHandler}>Logout</NavLink>
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </li>
