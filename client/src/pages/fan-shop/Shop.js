@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import * as BsIcons from "react-icons/bs"
 import * as AiIcons from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux"
@@ -11,7 +11,23 @@ import AnimatedPage from '../../context/AnimatedPage'
 
 function Shop() {
 
-    const [query, setQuery] = useState("")
+    const [keyword, setKeyword] = useState("")
+
+    const params = useParams();
+    const query = params.keyword;
+
+    const [message, setMessage] = useState("");
+
+    useEffect(() => {
+        if (query) {
+            setMessage(`Rezultati pretrage za '${query}'`)
+        }
+        else {
+            setMessage("")
+        }
+    })
+
+    const navigate = useNavigate()
 
     const dispatch = useDispatch()
 
@@ -19,23 +35,33 @@ function Shop() {
     const { loading, error, products } = productList;
 
     useEffect(() => {
-        dispatch(listProduct());
-    }, [dispatch])
+        dispatch(listProduct(query));
+    }, [dispatch, query])
 
     const cart = useSelector((state) => state.cart)
     const { cartItems } = cart;
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (keyword.trim()) {
+            navigate(`/products/search/${keyword}`)
+        }
+        else {
+            navigate("/products")
+        }
+    }
 
     return (
         <AnimatedPage>
             <div className={styles.shopContainer}>
                 <div className={styles.wraper}>
-                    <div className={styles.left}>
+                    <form onSubmit={handleSearch} className={styles.left}>
                         <span>HR</span>
                         <label>
-                            <input onChange={event => setQuery(event.target.value)} />
-                            <BsIcons.BsSearch />
+                            <input onChange={(e) => setKeyword(e.target.value)} />
+                            <button><BsIcons.BsSearch /></button>
                         </label>
-                    </div>
+                    </form>
                     <div className={styles.center}>
                         <h1>Web Shop</h1>
                     </div>
@@ -48,20 +74,16 @@ function Shop() {
                     </div>
                 </div>
                 <hr />
+                <h3>{message}</h3>
                 <div className={styles.mainContainer}>
                     <div className={styles.menuContainer}>
+
                         {
                             loading ? (<Loading />) : error ? (<Error>Something went wrong</Error>)
                                 :
                                 (
                                     <>
-                                        {products.filter(item => {
-                                            if (query === "") {
-                                                return item;
-                                            } else if (item.title.toLowerCase().includes(query.toLowerCase())) {
-                                                return item;
-                                            }
-                                        }).map((item) => {
+                                        {products.map((item) => {
                                             return (
                                                 <div className={styles.itemsContainer} key={item._id}>
                                                     <img src={item.image} alt={item.title} />

@@ -34,6 +34,7 @@ function App() {
           <Route path='info' element={<Info />} />
           <Route path='gallery' element={<Gallery />} />
           <Route path='products' element={<Shop />} />
+          <Route path='products/search/:keyword' element={<Shop />} />
           <Route path="products/:id" element={<SingleProduct />} />
           <Route path="cart/:id?" element={<Cart />} />
           <Route element={<RequireAuth />}>
