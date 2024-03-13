@@ -85,6 +85,7 @@ label input {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-top: 3em;
 }
 
@@ -94,6 +95,13 @@ label input {
     justify-items: center;
     align-items: center;
     gap: 30px;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .itemsContainer {

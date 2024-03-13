@@ -8,8 +8,16 @@ import styles from "../../styles/fan-shop/shop.module.css"
 import Loading from '../../utils/messages/Loading'
 import Error from '../../utils/messages/Error'
 import AnimatedPage from '../../context/AnimatedPage'
+import Pagination from '../../hooks/Pagination'
 
 function Shop() {
+
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const [productsPerPage, setProductsPerPage] = useState(6);
+
+    const lastProductIndex = currentPage * productsPerPage;
+    const firstProductIndex = lastProductIndex - productsPerPage;
 
     const [keyword, setKeyword] = useState("")
 
@@ -77,13 +85,12 @@ function Shop() {
                 <h3>{message}</h3>
                 <div className={styles.mainContainer}>
                     <div className={styles.menuContainer}>
-
                         {
                             loading ? (<Loading />) : error ? (<Error>Something went wrong</Error>)
                                 :
                                 (
                                     <>
-                                        {products.map((item) => {
+                                        {products.slice(firstProductIndex, lastProductIndex).map((item) => {
                                             return (
                                                 <div className={styles.itemsContainer} key={item._id}>
                                                     <img src={item.image} alt={item.title} />
@@ -101,6 +108,14 @@ function Shop() {
                                 )
                         }
                     </div>
+                </div>
+                <div className={styles.pagination}>
+                    <Pagination
+                        totalItems={products.length}
+                        itemsPerPage={productsPerPage}
+                        currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}
+                    />
                 </div>
             </div>
 

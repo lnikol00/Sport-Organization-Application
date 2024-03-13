@@ -1,0 +1,22 @@
+.block {
+    background-color: yellow;
+    color: black;
+    width: 35px;
+    height: 30px;
+    margin: 8px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inactive {
+    background-color: white;
+}
+
+.active {
+    background-color: yellow;
+}
+
+.main {
+    display: flex;
+}

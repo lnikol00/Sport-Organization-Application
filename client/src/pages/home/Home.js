@@ -8,8 +8,16 @@ import Loading from '../../utils/messages/Loading'
 import Error from '../../utils/messages/Error'
 import { listNews } from '../../Redux/Actions/NewsAction'
 import moment from "moment"
+import Pagination from '../../hooks/Pagination'
 
 function Home() {
+
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const [newsPerPage, setNewsPerPage] = useState(6);
+
+    const lastNewsIndex = currentPage * newsPerPage;
+    const firstNewsIndex = lastNewsIndex - newsPerPage;
 
     const dispatch = useDispatch()
 
@@ -93,6 +101,12 @@ function Home() {
                             )
                     }
                 </div >
+                <Pagination
+                    totalItems={news.length}
+                    itemsPerPage={newsPerPage}
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
+                />
             </div >
         </AnimatedPage>
     )
