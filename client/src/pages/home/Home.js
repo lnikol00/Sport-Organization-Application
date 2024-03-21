@@ -79,7 +79,7 @@ function Home() {
                             :
                             (
                                 <>
-                                    {news.map((item) => {
+                                    {news.slice(firstNewsIndex, lastNewsIndex).map((item) => {
                                         return (
                                             <div key={item._id} className={styles.articles}>
                                                 <Link to={`news/${item._id}`}>

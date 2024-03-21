@@ -10,17 +10,17 @@ const Pagination = ({ totalItems, itemsPerPage, setCurrentPage, currentPage }) =
     }
 
     return (
-        <div>
+        <div className={styles.main}>
             {
                 pages.map((page, index) => {
                     return (
-                        <div
+                        <button
                             className={page === currentPage ? `${styles.block} ${styles.active}` : `${styles.inactive} ${styles.block}`}
                             key={index}
                             onClick={() => setCurrentPage(page)}
                         >
                             {page}
-                        </div>
+                        </button>
                     )
                 })
             }
