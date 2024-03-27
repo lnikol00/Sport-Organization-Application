@@ -19,7 +19,7 @@ function Signup() {
 
             <View className="h-full w-full justify-around pt-48 pb-10'">
                 <View className="flex items-center">
-                    <Animated.Text entering={FadeInUp.duration(1000).springify()} className="text-white font-bold tracking-wider text-5xl">
+                    <Animated.Text entering={FadeInUp.duration(1000).springify()} className="text-black font-bold tracking-wider text-5xl">
                         Registriraj se
                     </Animated.Text>
                 </View>
@@ -35,8 +35,8 @@ function Signup() {
                         <TextInput placeholder='Password' placeholderTextColor={'gray'} secureTextEntry />
                     </Animated.View>
                     <Animated.View entering={FadeInDown.delay(600).duration(1000).springify()} className="w-full">
-                        <TouchableOpacity className="w-full bg-sky-400 rounded-2xl mb-3 py-3">
-                            <Text className="text-xl font-bold text-white text-center">
+                        <TouchableOpacity className="w-full bg-yellow-200 rounded-2xl mb-3 py-3">
+                            <Text className="text-xl font-bold text-black text-center">
                                 Registriraj se
                             </Text>
                         </TouchableOpacity>
@@ -44,7 +44,7 @@ function Signup() {
                     <Animated.View entering={FadeInDown.delay(800).duration(1000).springify()} className="flex-row justify-center">
                         <Text>Već imate račun? </Text>
                         <TouchableOpacity onPress={() => navigation.push("Login")}>
-                            <Text className="text-sky-600">
+                            <Text className="text-black underline">
                                 Prijavi se!
                             </Text>
                         </TouchableOpacity>
