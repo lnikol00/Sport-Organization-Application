@@ -32,7 +32,7 @@ function Login() {
                         <TextInput placeholder='Password' placeholderTextColor={'gray'} secureTextEntry />
                     </Animated.View>
                     <Animated.View entering={FadeInDown.delay(400).duration(1000).springify()} className="w-full">
-                        <TouchableOpacity className="w-full bg-yellow-200 rounded-2xl mb-3 py-3">
+                        <TouchableOpacity onPress={() => navigation.push("Bottom")} className="w-full bg-yellow-200 rounded-2xl mb-3 py-3">
                             <Text className="text-xl font-bold text-black text-center">
                                 Prijavi se
                             </Text>
