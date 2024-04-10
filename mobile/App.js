@@ -5,19 +5,24 @@ import Login from "./src/pages/login/Login"
 import Signup from './src/pages/login/Signup';
 import BottomNav from './src/navigation/BottomNav';
 import { StatusBar } from 'react-native';
+import store from "./src/Redux/store"
+import { Provider } from 'react-redux';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
     return (
-        <NavigationContainer>
-            <StatusBar hidden={true} />
-            <Stack.Navigator initialRouteName='Login' screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Signup" component={Signup} />
-                <Stack.Screen name="Bottom" component={BottomNav} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Provider store={store}>
+            <NavigationContainer>
+                <StatusBar hidden={true} />
+                <Stack.Navigator initialRouteName='Login' screenOptions={{ headerShown: false }}>
+                    <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="Signup" component={Signup} />
+                    <Stack.Screen name="Bottom" component={BottomNav} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </Provider>
+
     );
 }
 
