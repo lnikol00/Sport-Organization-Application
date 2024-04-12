@@ -1,20 +1,20 @@
 import React from 'react'
-import { StyleSheet, Text, Image, ScrollView, SafeAreaView } from 'react-native'
+import { Text, Image, ScrollView, View } from 'react-native'
 
 function Basic() {
     return (
-        <SafeAreaView>
-            <ScrollView style={styles.scrollView}>
-                <Text style={styles.title}>
+        <View className="flex justify-center items-center m-3" >
+            <ScrollView >
+                <Text className="text-center mb-2 text-2xl after:content-none after:w-[200px] after:mx-auto after:block after:py-2 after:border-b-2">
                     Stanovništvo
                 </Text>
 
-                <Text style={styles.text}>
+                <Text className="text-lg pt-2">
                     Šarić Struga je naselje u Republici Hrvatskoj, u sastavu Grada Ploča, Dubrovačko-neretvanska
                     županija.
                 </Text>
 
-                <Text style={styles.text}>
+                <Text className="text-lg pt-2">
                     Šarić Struga je naseljavan s brdskim stanovništvom, koje je oduvijek nastojalo preseliti na neko
                     mjesto, gdje se bolje
                     živi.Tako su najprije na Šarić Strugu preselili Nikolci iz Vrbice i Trkalja, Smoljani sa Dubine,
@@ -22,7 +22,7 @@ function Basic() {
                     Eraci, Oršulići, Radonići, Bebići i ostali.
                 </Text>
 
-                <Text style={styles.text}>
+                <Text className="text-lg pt-2">
                     S vremenom je izgrađena cesta s kojom su se spojili sa rogotinskim naseljem Markote. Električnu
                     energiju su dobili 1956.
                     Naknadno su se priključili na vodovod koji ide sa Klokuna kroz pločanska naselja sve do Komina.
@@ -32,47 +32,18 @@ function Basic() {
                     turizam.
                 </Text>
 
-                <Text style={styles.text}>
+                <Text className="text-lg pt-2">
                     Prema popisu stanovništva iz 2011. godine, naselje je imalo 235 stanovnika.
                 </Text>
 
-                <Text style={styles.text}>
+                <Text className="text-lg pt-2">
                     Naselje Šarić Struga: Kretanje broja stanovnika od 1857. do 2021.
                 </Text>
 
-                <Image source={require("../../../assets/info/Izrezak.png")} />
+                <Image className="w-[100%] my-3" source={require("../../../assets/info/Izrezak.png")} />
             </ScrollView>
-        </SafeAreaView>
+        </View>
     )
 }
-
-const styles = StyleSheet.create({
-    scrollView: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 20,
-    },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        paddingBottom: 8,
-        borderBottomWidth: 2,
-        borderBottomColor: 'black',
-        width: 200,
-        marginBottom: 16,
-    },
-    text: {
-        fontSize: 16,
-        lineHeight: 24,
-        textAlign: 'justify',
-        marginBottom: 16,
-    },
-    image: {
-        width: '100%',
-        height: 200,
-        marginBottom: 16,
-    },
-});
 
 export default Basic
