@@ -40,7 +40,6 @@ function User() {
                     <div className={styles.chategories}>
                         <div className={styles.chategoriesInfo}>
                             <div onClick={handleImageClick}>
-                                {empty ? <h3>Učitajte sliku</h3> : null}
                                 {image ? <img src={URL.createObjectURL(image)} /> : <img alt={userInfo.name} src={userInfo.image} />}
                                 <input
                                     type='file'
