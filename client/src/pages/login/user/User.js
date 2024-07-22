@@ -11,7 +11,6 @@ function User() {
 
     const [change, setChange] = useState(false)
 
-    const [empty, setEmpty] = useState(true);
     const [image, setImage] = useState("")
     const inputRef = useRef();
 
@@ -26,6 +25,11 @@ function User() {
         dispatch(listMyOrders())
         dispatch(getUserDetails("profile"))
     }, [dispatch])
+
+    const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        setImage(file)
+    }
 
     const handleImageClick = () => {
         inputRef.current.click();
@@ -44,7 +48,7 @@ function User() {
                                 <input
                                     type='file'
                                     ref={inputRef}
-                                    onChange={(e) => setImage(e.target.value)}
+                                    onChange={handleImageChange}
                                     style={{ display: "none" }}
                                 />
                             </div>
