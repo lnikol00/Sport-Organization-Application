@@ -12,7 +12,7 @@ import {
     USER_LOGOUT
 } from "../Constants/UserConstants";
 
-import axios from "axios"
+import axios from "../../components/api/axios"
 import { toast } from "react-toastify"
 
 // LOGIN

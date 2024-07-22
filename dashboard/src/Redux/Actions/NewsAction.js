@@ -1,4 +1,5 @@
-import axios from "axios"
+import axios from "../../components/api/axios"
+
 import { NEWS_CREATE_FAIL, NEWS_CREATE_REQUEST, NEWS_CREATE_SUCCESS, NEWS_DELETE_FAIL, NEWS_DELETE_REQUEST, NEWS_DELETE_SUCCESS, NEWS_LIST_FAIL, NEWS_LIST_REQUEST, NEWS_LIST_SUCCESS } from "../Constants/NewsConstants"
 import { logout } from "./UserAction";
 

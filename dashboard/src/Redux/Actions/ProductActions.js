@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import {
     PRODUCT_CREATE_FAIL,
     PRODUCT_CREATE_REQUEST,
@@ -13,6 +13,8 @@ import {
     PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_SUCCESS
 } from "../Constants/ProductConstants"
+import axios from "../../components/api/axios"
+
 import { logout } from "./UserAction";
 
 // PRODUCT LIST
