@@ -1,24 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { View, Text, ScrollView } from 'react-native'
+import React from 'react'
+import { View, Text, ScrollView, Pressable, Image } from 'react-native'
 import Header from '../../components/header/Header'
 import ClockDown from './clock-down/ClockDown'
-import { useDispatch, useSelector } from "react-redux"
-import { listNews } from "../../Redux/Actions/NewsActions"
+import { news } from '../../Test/TestDatabase'
 
 function Home() {
 
-    const dispatch = useDispatch()
-    const newsList = useSelector(state => state.newsList)
-
-    const { error, loading, news } = newsList;
-
-    useEffect(() => {
-        dispatch(listNews());
-    }, [dispatch])
-
     return (
         <>
-
             <Header />
             <ScrollView>
                 <View className="p-3">
@@ -26,9 +15,23 @@ function Home() {
                     <Text className="text-center text-4xl pt-10">Novosti</Text>
                     <View>
                         <View className="flex-wrap flex-row justify-between">
-                            {news && news.map((item) => {
+                            {news.map((news) => {
                                 return (
-                                    <Text key={item.id}>{item.title}</Text>
+                                    <Pressable
+                                        key={news._id}
+                                        className="w-[48%] rounded-xl shadow-custom my-3 overflow-hidden"
+                                    >
+                                        <Image
+                                            source={news.image}
+                                            alt={news.title}
+                                            className="w-full h-[150px]"
+                                        />
+                                        <View className="px-2 py-3">
+                                            <Text className="text-[14px] font-bold">
+                                                {news.title}
+                                            </Text>
+                                        </View>
+                                    </Pressable>
                                 )
                             })}
                         </View>
